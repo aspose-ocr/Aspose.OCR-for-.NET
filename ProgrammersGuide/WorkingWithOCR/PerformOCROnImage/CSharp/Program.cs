@@ -28,7 +28,7 @@ namespace PerformOCROnImage
 
             // Initialize OcrEngine.
             OcrEngine ocr = new OcrEngine();
-            // Set the image
+            // Set the image.
             ocr.Image = ImageStream.FromFile(dataDir + imageFile);
             // Add language
             ocr.Languages.AddLanguage(Language.Load("english"));
