@@ -26,7 +26,7 @@ namespace PerformOCROnImage
 
             Console.WriteLine("Performing OCR on " + imageFile + "....");
 
-            // Initialize OcrEngine
+            // Initialize OcrEngine.
             OcrEngine ocr = new OcrEngine();
             // Set the image
             ocr.Image = ImageStream.FromFile(dataDir + imageFile);
