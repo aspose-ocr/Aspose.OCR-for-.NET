@@ -1,0 +1,26 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProgrammersGuide", "ProgrammersGuide", "{DF984366-BE7C-4D06-978F-A8BBBD410A2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkingWithOCR", "WorkingWithOCR", "{B78CD24F-D9B9-4F5B-8BDE-3C428C67A47B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformOCROnImage", "ProgrammersGuide\WorkingWithOCR\PerformOCROnImage\CSharp\PerformOCROnImage.csproj", "{F1E02859-D34A-4EE8-91BC-47A198153326}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1E02859-D34A-4EE8-91BC-47A198153326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E02859-D34A-4EE8-91BC-47A198153326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E02859-D34A-4EE8-91BC-47A198153326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B78CD24F-D9B9-4F5B-8BDE-3C428C67A47B} = {DF984366-BE7C-4D06-978F-A8BBBD410A2D}
+		{F1E02859-D34A-4EE8-91BC-47A198153326} = {B78CD24F-D9B9-4F5B-8BDE-3C428C67A47B}
+	EndGlobalSection
+EndGlobal
