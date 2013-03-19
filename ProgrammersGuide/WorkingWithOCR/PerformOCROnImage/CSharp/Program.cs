@@ -30,7 +30,7 @@ namespace PerformOCROnImage
             OcrEngine ocr = new OcrEngine();
             // Set the image.
             ocr.Image = ImageStream.FromFile(dataDir + imageFile);
-            // Add language
+            // Add language.
             ocr.Languages.AddLanguage(Language.Load("english"));
             // Load the resource file
             using (ocr.Resource = new FileStream(resourceFileName, FileMode.Open))
