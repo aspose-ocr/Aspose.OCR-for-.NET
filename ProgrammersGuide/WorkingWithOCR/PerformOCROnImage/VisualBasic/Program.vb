@@ -16,7 +16,7 @@ Namespace PerformOCROnImage
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
 
 			' Resource file
-			Const resourceFileName As String = "Aspose.OCR.Resources.zip"
+            Dim resourceFilePath As String = Path.GetFullPath("../../../../../../../Resources/Aspose.OCR.Resources.zip")
 			' Source file: the file on which OCR will be performed
 			Dim imageFile As String = "Sampleocr.bmp"
 
@@ -29,18 +29,16 @@ Namespace PerformOCROnImage
 			' Add language
 			ocr.Languages.AddLanguage(Language.Load("english"))
 			' Load the resource file
-			ocr.Resource = New FileStream(resourceFileName, FileMode.Open)
+            ocr.Resource = New FileStream(resourceFilePath, FileMode.Open)
             Try
                 ' Process the whole image
                 If ocr.Process() Then
                     ' Get the complete recognized text found from the image
-                    Console.WriteLine("Text recognized./n" & ocr.Text.ToString())
-                    'File result = new File
+                    Console.WriteLine("Text recognized: " & ocr.Text.ToString())
                     File.WriteAllText(dataDir & "Output.txt", CType(ocr.Text, Object).ToString())
-
                 End If
             Catch ex As Exception
-                Console.WriteLine("Exception: " & ex.Message)
+                Console.WriteLine("Exception: " & ex.ToString())
             End Try
 		End Sub
 	End Class

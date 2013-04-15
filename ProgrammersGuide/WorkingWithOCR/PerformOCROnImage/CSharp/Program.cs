@@ -20,7 +20,7 @@ namespace PerformOCROnImage
             string dataDir = Path.GetFullPath("../../../Data/");
 
             // Resource file
-            const string resourceFileName = "Aspose.OCR.Resources.zip";
+            string resourceFilePath = Path.GetFullPath("../../../../../../../Resources/Aspose.OCR.Resources.zip");
             // Source file: the file on which OCR will be performed.
             string imageFile = "Sampleocr.bmp";
 
@@ -33,7 +33,7 @@ namespace PerformOCROnImage
             // Add language.
             ocr.Languages.AddLanguage(Language.Load("english"));
             // Load the resource file.
-            using (ocr.Resource = new FileStream(resourceFileName, FileMode.Open))
+            using (ocr.Resource = new FileStream(resourceFilePath, FileMode.Open))
             {
                 try
                 {
@@ -41,15 +41,13 @@ namespace PerformOCROnImage
                     if (ocr.Process())
                     {
                         // Get the complete recognized text found from the image
-                        Console.WriteLine("Text recognized./n" + ocr.Text);
-                        //File result = new File
+                        Console.WriteLine("Text recognized: " + ocr.Text);
                         File.WriteAllText(dataDir + "Output.txt", ocr.Text.ToString());
-
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Exception: " + ex.Message);
+                    Console.WriteLine("Exception: " + ex.ToString());
                 }
             }
         }
