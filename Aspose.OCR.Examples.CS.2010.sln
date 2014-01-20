@@ -1,9 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProgrammersGuide", "ProgrammersGuide", "{DF984366-BE7C-4D06-978F-A8BBBD410A2D}"
-	ProjectSection(SolutionItems) = preProject
-		..\bin\net2.0\Aspose.OCR.Resources.zip = ..\bin\net2.0\Aspose.OCR.Resources.zip
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkingWithOCR", "WorkingWithOCR", "{B78CD24F-D9B9-4F5B-8BDE-3C428C67A47B}"
 EndProject

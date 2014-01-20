@@ -4,6 +4,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProgrammersGuide", "Program
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkingWithOCR", "WorkingWithOCR", "{B78CD24F-D9B9-4F5B-8BDE-3C428C67A47B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformOCROnImage", "ProgrammersGuide\WorkingWithOCR\PerformOCROnImage\VisualBasic\PerformOCROnImage.vbproj", "{F1E02859-D34A-4EE8-91BC-47A198153326}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
