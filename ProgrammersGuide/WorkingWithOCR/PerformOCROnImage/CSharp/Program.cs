@@ -22,7 +22,7 @@ namespace PerformOCROnImage
             // Resource file
             string resourceFilePath = Path.GetFullPath("../../../../../../../Resources/Aspose.OCR.Resources.zip");
             // Source file: the file on which OCR will be performed.
-            string imageFile = "Sampleocr.bmp";
+            string imageFile = dataDir+ "Sampleocr.bmp";
 
             Console.WriteLine("Performing OCR on " + imageFile + "....");
 

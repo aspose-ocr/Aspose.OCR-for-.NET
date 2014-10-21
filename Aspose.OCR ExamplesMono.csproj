@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4554EE7F-B30F-4E8C-B605-6631620A704F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Examples</RootNamespace>
+    <AssemblyName>Aspose.OCR.Examples</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <StartupObject>Examples.ProgrammersGuide.WorkingWithOCR.AsposeExamples</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Test\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Test\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.OCR">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\net2.0\Aspose.OCR.dll</HintPath>
+    </Reference>
+    <Reference Include="Helpers">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Helpers\Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Helpers\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnitTesting">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Helpers\UnitTesting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProgrammersGuide\WorkingWithOCR\ExtractingTextPartOfImage\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithOCR\PerformOCROnImage\CSharp\Program.cs" />
+    <Compile Include="ProgrammersGuide\WorkingWithOCR\WorkingWithOCRExamples.cs" />
+  </ItemGroup>
+  <ItemGroup>
+
+  </ItemGroup>
+  <!-- Conditional build path import - added for VS2005 compatibility (since there is no MSBuildToolsPath in VS2005) -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" Condition="$(MSBuildToolsPath) != ''" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" Condition="$(MSBuildToolsPath) == ''" />
+  <PropertyGroup>
+    <DefineConstants Condition=" '$(TargetFrameworkVersion)' == 'v2.0' ">NET20</DefineConstants>
+  </PropertyGroup>
+</Project>
