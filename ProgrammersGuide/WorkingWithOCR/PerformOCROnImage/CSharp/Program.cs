@@ -20,16 +20,16 @@ namespace PerformOCROnImage
             string dataDir = Path.GetFullPath("../../../Data/");
 
             // Resource file
-            string resourceFilePath = Path.GetFullPath("../../../../../../../Resources/Aspose.OCR.Resources.zip");
+            string resourceFilePath = dataDir+ "Resource.zip";
             // Source file: the file on which OCR will be performed.
-            string imageFile = dataDir+ "Sampleocr.bmp";
+            string imageFile = dataDir + "Sampleocr.bmp";
 
             Console.WriteLine("Performing OCR on " + imageFile + "....");
 
             // Initialize OcrEngine.
             OcrEngine ocr = new OcrEngine();
             // Set the image.
-            ocr.Image = ImageStream.FromFile(dataDir + imageFile);
+            ocr.Image = ImageStream.FromFile( imageFile);
             // Add language.
             ocr.Languages.AddLanguage(Language.Load("english"));
             // Load the resource file.

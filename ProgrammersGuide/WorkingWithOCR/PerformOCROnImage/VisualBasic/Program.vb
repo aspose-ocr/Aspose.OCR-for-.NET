@@ -19,7 +19,7 @@ Namespace PerformOCROnImage
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
 
 			' Resource file
-			Dim resourceFilePath As String = Path.GetFullPath("../../../../../../../Resources/Aspose.OCR.Resources.zip")
+			Dim resourceFilePath As String = dataDir & "Resource.zip"
 			' Source file: the file on which OCR will be performed.
 			Dim imageFile As String = dataDir & "Sampleocr.bmp"
 
@@ -28,7 +28,7 @@ Namespace PerformOCROnImage
 			' Initialize OcrEngine.
 			Dim ocr As New OcrEngine()
 			' Set the image.
-			ocr.Image = ImageStream.FromFile(dataDir & imageFile)
+			ocr.Image = ImageStream.FromFile(imageFile)
 			' Add language.
 			ocr.Languages.AddLanguage(Language.Load("english"))
 			' Load the resource file.

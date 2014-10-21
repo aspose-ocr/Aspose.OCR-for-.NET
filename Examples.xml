@@ -45,7 +45,15 @@ To perform OCR on an image using the OcrEngine class, this example describes the
                 <DataFile>
                   <Path>..\Data\Sampleocr.bmp</Path>
                 </DataFile>
+                <DataFile>
+                  <Path>..\Data\Resource.zip</Path>
+                </DataFile>
               </InputFiles>
+              <OutputFiles>
+                <DataFile>
+                  <Path>..\Data\Output.txt</Path>
+                </DataFile>
+              </OutputFiles>
               <Type>Console</Type>
             </Example>
           </Examples>
