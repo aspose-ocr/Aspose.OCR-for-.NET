@@ -1,0 +1,18 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithDifferentLanguages", "WorkingWithDifferentLanguages.csproj", "{0110CD7F-BF9B-4F71-A677-34A826F0AD0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0110CD7F-BF9B-4F71-A677-34A826F0AD0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0110CD7F-BF9B-4F71-A677-34A826F0AD0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0110CD7F-BF9B-4F71-A677-34A826F0AD0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -5,18 +5,27 @@
       <Title>Programmers Guide</Title>
       <Description>This section includes examples related to the following topics: 
 
-- Working with OCR</Description>
+ - Working with OCR Features
+ - Working with OMR Features
+ - Working with OMR Template Editor
+ - Migrating from Earlier Versions of Aspose.OCR</Description>
       <FolderName>ProgrammersGuide</FolderName>
       <Order>1</Order>
       <Folders>
         <Folder>
-          <Title>Working with OCR</Title>
+          <Title>Working with OCR Features</Title>
           <Description>This section includes examples related to the following topics: 
 
-- Performing OCR on an Image
-- Getting Notification for Each Recognized Word
-- Extracting Text from Part of an Image</Description>
-          <FolderName>WorkingWithOCR</FolderName>
+ - Performing OCR on an Image
+ - Getting Notification for Each Recognized Word
+ - Extracting Text from Part of an Image
+ - Read the Part Information of Recognized Text
+ - Get Location and Size of Identified Text in an Image
+ - Detecting Text Blocks on the Image
+ - Advanced Configurations
+ - Get Text Part Hierarchy of Recognized Text
+ - Working with Different Languages</Description>
+          <FolderName>WorkingWithOCRFeatures</FolderName>
           <Order>1</Order>
           <Examples>
             <Example>
@@ -48,7 +57,261 @@ To perform OCR on an image using the OcrEngine class, this example describes the
               </InputFiles>
               <Type>Console</Type>
             </Example>
+            <Example>
+              <Title>Getting Notification for Each Recognized Word</Title>
+              <Description>In this example, we will see how we can get the notification as soon as a word is recognized during the scan using Aspose.OCR for .NET.</Description>
+              <FolderName>GettingNotification</FolderName>
+              <Order>2</Order>
+              <DocLink>
+                <DisplayName>Getting Notification for Each Recognized Word</DisplayName>
+                <Url>http://www.aspose.com/docs/display/ocrnet/Getting+Notification+for+Each+Recognized+Word</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\Sampleocr.bmp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Extracting Text From Part Of An Image</Title>
+              <Description>In this example, we will see how we can extract the text from a specific part of the image document using Aspose.OCR for .NET.</Description>
+              <FolderName>ExtractingText</FolderName>
+              <Order>3</Order>
+              <DocLink>
+                <DisplayName>Extracting Text from Part of an Image</DisplayName>
+                <Url>http://www.aspose.com/docs/display/ocrnet/Extracting+Text+from+Part+of+an+Image</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\Sampleocr.bmp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Read The Part Information Of Recognized Text</Title>
+              <Description>You can read the extracted text either as a whole or by parts. Each part has its own style, font, text size, language, location in image and more.
+In this example, we will see how we can read the part information from extracted text using Aspose.OCR for .NET.</Description>
+              <FolderName>ReadPartInformation</FolderName>
+              <Order>4</Order>
+              <DocLink>
+                <DisplayName>Read the Part Information of Recognized Text</DisplayName>
+                <Url>http://www.aspose.com/docs/display/ocrnet/Read+the+Part+Information+of+Recognized+Text</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\Sampleocr.bmp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Get Location And Size Of Identified Text In An Image</Title>
+              <Description>While extracting the part information from the recognized text, you can also extract the rectangle surrounding the text symbols. This rectangle further contains the information such as Location and Size.
+
+In this example, we will see how we can extract the location and size of identified text in an image using Aspose.OCR for .NET.</Description>
+              <FolderName>GetLocationAndSize</FolderName>
+              <Order>5</Order>
+              <DocLink>
+                <DisplayName>Get Location and Size of Identified Text in an Image</DisplayName>
+                <Url>http://www.aspose.com/docs/display/ocrnet/Get+Location+and+Size+of+Identified+Text+in+an+Image</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\Sampleocr.bmp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Detecting Text Blocks On The Image</Title>
+              <Description>While extracting the part information from the recognized text, you can also extract the rectangle surrounding the text symbols. This rectangle further contains the information such as Location and Size.
+
+In this example, we will see how we can detect the textual blocks on an image using Aspose.OCR for .NET.</Description>
+              <FolderName>DetectingTextBlocks</FolderName>
+              <Order>6</Order>
+              <DocLink>
+                <DisplayName>Detecting Text Blocks on the Image</DisplayName>
+                <Url>http://www.aspose.com/docs/display/ocrnet/Detecting+Text+Blocks+on+the+Image</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\Sampleocr.bmp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Get Text Part Hierarchy Of Recognized Text</Title>
+              <Description>In this example, we will see how we can retrieve the hierarchy of each recognized part on the image as TextBlock, Line, Word or Character using Aspose.OCR for .NET.</Description>
+              <FolderName>GetTextPartHierarchy</FolderName>
+              <Order>7</Order>
+              <DocLink>
+                <DisplayName>Get Text Part Hierarchy of Recognized Text</DisplayName>
+                <Url>http://www.aspose.com/docs/display/ocrnet/Get+Text+Part+Hierarchy+of+Recognized+Text</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\Sampleocr.bmp</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
+            <Example>
+              <Title>Working With Different Languages</Title>
+              <Description>In this example, we will see how we can recognize any language other than english using Aspose.OCR for .NET.</Description>
+              <FolderName>WorkingWithDifferentLanguages</FolderName>
+              <Order>8</Order>
+              <DocLink>
+                <DisplayName>Working with Different Languages</DisplayName>
+                <Url>http://www.aspose.com/docs/display/ocrnet/Working+with+Different+Languages</Url>
+              </DocLink>
+              <InputFiles>
+                <DataFile>
+                  <Path>..\Data\SpanishOCR.bmp</Path>
+                </DataFile>
+                <DataFile>
+                  <Path>..\Data\Aspose.OCR.Spanish.Resources.zip</Path>
+                </DataFile>
+              </InputFiles>
+              <Type>Console</Type>
+            </Example>
           </Examples>
+          <Folders>
+            <Folder>
+              <Title>Advanced Configurations</Title>
+              <Description>This section includes the following topics:
+
+ - Applying Correction Filters before Document Recognition
+ - Setting the OcrEngine to Ignore Non-Textual Blocks
+ - Setting the OcrEngine to Automatically Detect the Reading Order
+ - Setting the OcrEngine to Automatically Detect the Text Blocks
+ - Setting the OcrEngine to Automatically Correct the Spellings
+ - Adding User Defined Recognition Blocks
+  - Setting OcrEngine to Recognize Only White Listed Characters</Description>
+              <FolderName>AdvancedConfigurations</FolderName>
+              <Order>9</Order>
+              <Examples>
+                <Example>
+                  <Title>Applying Correction Filters Before Document Recognition</Title>
+                  <Description>In image recognition, we often need to perform some kind of noise reduction corrections on an image. Such noise reduction is a typical pre-processing step to improve the results of later processing.
+
+In this example, we will see how we can use a correction filter before running the document recognition process using Aspose.OCR for .NET.</Description>
+                  <FolderName>ApplyingCorrectionFilters</FolderName>
+                  <Order>1</Order>
+                  <DocLink>
+                    <DisplayName>Applying Correction Filters before Document Recognition</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/ocrnet/Applying+Correction+Filters+before+Document+Recognition</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\Sampleocr.bmp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Setting The OcrEngine To Ignore Non-Textual Blocks</Title>
+                  <Description>In this example, we will see how we can detect and ignore the non-textual contents (graphics) from the operation using Aspose.OCR for .NET.</Description>
+                  <FolderName>SettingtheOcrEngine</FolderName>
+                  <Order>2</Order>
+                  <DocLink>
+                    <DisplayName>Setting the OcrEngine to Ignore Non-Textual Blocks</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/ocrnet/Setting+the+OcrEngine+to+Ignore+Non-Textual+Blocks</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\Sampleocr.bmp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Setting the OcrEngine To Automatically Detect The Reading Order</Title>
+                  <Description>Images that contain text can be divided into several text recognition areas. It is sometime important to apply a special sorting so that the correct text block order is maintained.
+
+In this example, we will see how we can auto-detect the reading order using Aspose.OCR for .NET,</Description>
+                  <FolderName>SettingOcrEngineAutomaticallyDetect</FolderName>
+                  <Order>3</Order>
+                  <DocLink>
+                    <DisplayName>Setting the OcrEngine to Automatically Detect the Reading Order</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/ocrnet/Setting+the+OcrEngine+to+Automatically+Detect+the+Reading+Order</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\Sampleocr.bmp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Setting the OcrEngine to Automatically Detect the Text Blocks</Title>
+                  <Description>In this example, we will see how we can set the OcrEngine  to automatically detect the text blocks using Aspose.OCR for .NET.</Description>
+                  <FolderName>SettingtheOcrEngineAutomaticallyDetectTextBlocks</FolderName>
+                  <Order>4</Order>
+                  <DocLink>
+                    <DisplayName>Setting the OcrEngine to Automatically Detect the Text Blocks</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/ocrnet/Setting+the+OcrEngine+to+Automatically+Detect+the+Text+Blocks</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\Sampleocr.bmp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Setting The OcrEngine To Automatically Correct The Spellings</Title>
+                  <Description>In this example, we will see how we can auto correct the spelling in recognized text using Aspose.OCR for .NET.</Description>
+                  <FolderName>AutomaticallyCorrectTheSpellings</FolderName>
+                  <Order>5</Order>
+                  <DocLink>
+                    <DisplayName>Setting the OcrEngine to Automatically Correct the Spellings</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/ocrnet/Setting+the+OcrEngine+to+Automatically+Correct+the+Spellings</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\sampleocr_spell.bmp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Adding User Defined Recognition Blocks</Title>
+                  <Description>In this example, we will see how we can add the user defined blocks  using Aspose.OCR for .NET.</Description>
+                  <FolderName>AddingUserDefinedRecognitionBlocks</FolderName>
+                  <Order>6</Order>
+                  <DocLink>
+                    <DisplayName>Adding User Defined Recognition Blocks</DisplayName>
+                    <Url>www.aspose.com/docs/display/ocrnet/Adding+User+Defined+Recognition+Blocks</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\Sampleocr.bmp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+                <Example>
+                  <Title>Setting OcrEngine to Recognize Only White Listed Characters</Title>
+                  <Description>In this example, we will see how we can recognize the white listed characters using Aspose.OCR for .NET.</Description>
+                  <FolderName>RecognizeWhiteListedCharacters</FolderName>
+                  <Order>7</Order>
+                  <DocLink>
+                    <DisplayName>Setting OcrEngine to Recognize Only White Listed Characters</DisplayName>
+                    <Url>http://www.aspose.com/docs/display/ocrnet/Setting+OcrEngine+to+Recognize+Only+White+Listed+Characters</Url>
+                  </DocLink>
+                  <InputFiles>
+                    <DataFile>
+                      <Path>..\Data\Sampleocr.bmp</Path>
+                    </DataFile>
+                  </InputFiles>
+                  <Type>Console</Type>
+                </Example>
+              </Examples>
+            </Folder>
+          </Folders>
         </Folder>
       </Folders>
     </Folder>
