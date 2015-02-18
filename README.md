@@ -3,7 +3,7 @@
 This repository contains C# and VB.NET Example Projects for [Aspose.OCR for .NET](http://www.aspose.com/categories/.net-components/aspose.ocr-for-.net/default.aspx).
 <br/><br/>
 <p align="center">
-  <a title="Download Examples Dashboard" href="http://www.aspose.com/community/files/72/java-components/aspose-examples-for-java/default.aspx">
+  <a title="Download Examples Dashboard" href="http://www.aspose.com/community/files/51/.net-components/aspose-examples-for-.net/default.aspx">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadDasboard-Button-Large.png" />
   </a>
   &nbsp;
@@ -47,8 +47,18 @@ All examples are each contained in separate folders at the root of the repositor
 
 <table>
   <tr><th>Example<th>Description</th></tr>
-  <tr><td>ExtractText</td><td>Demonstrates how to extract text from images.</td></tr>
-  <tr><td>RecognitionBlock</td><td>Demonstrates how to extract text from a specific block of the image.</td></tr>
+  <tr><td>Extract Text from an Image</td><td>Demonstrates the use of Aspose.OCR for .NET to extract text from images.</td></tr>
+  <tr><td>Extract Text from a specific block</td><td>Demonstrates the use of Aspose.OCR for .NET to extract the text from a specific block on the image.</td></tr>
+  <tr><td>Extract Text from a Specific Block</td><td>Demonstrates the use of Aspose.OCR for .NET to extract the text from a specific block on the image.</td></tr>
+  <tr><td>Detect Block Coordinates</td><td>Demonstrates the use of Aspose.OCR for .NET to extract the text block coordinates on the image.</td></tr>
+  <tr><td>Extract Part Information</td><td>Demonstrates the use of Aspose.OCR for .NET to extract part information of recognized text.</td></tr>
+  <tr><td>Extract Part Information</td><td>Demonstrates the use of Aspose.OCR for .NET to extract part information of recognized text.</td></tr>
+  <tr><td>Get Notifications</td><td>Demonstrates the use of Aspose.OCR for .NET to get notifications about every recognized text part.</td></tr>
+  <tr><td>Recognize Text in Languages other than English</td><td>Demonstrates the use of Aspose.OCR for .NET to recognize text in languages such as French & Spanish.</td></tr>
+  <tr><td>Apply Correction Filters</td><td>Demonstrates the use of Aspose.OCR for .NET to apply different filters before processing the image for OCR.</td></tr>
+  <tr><td>Correct Spellings</td><td>Demonstrates the use of Aspose.OCR for .NET to enable the spelling correction algorithm.</td></tr>
+  <tr><td>Character Whitelisting</td><td>Demonstrates the use of Aspose.OCR for .NET to recognize only specific set of characters.</td></tr>
+  <tr><td>Character Whitelisting</td><td>Demonstrates the use of Aspose.OCR for .NET to recognize only specific set of characters.</td></tr>
 </table>
 
 ##Contact Us
