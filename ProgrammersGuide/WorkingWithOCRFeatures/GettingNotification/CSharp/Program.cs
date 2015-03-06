@@ -25,7 +25,7 @@ namespace GettingNotificationExample
             ocrEngine.Image = ImageStream.FromFile(dataDir+ "Sampleocr.bmp");
 
             //Get an instance of INotifier
-            INotifier processorWord = Notifier.Word();
+            INotifier processorWord = NotifierFactory.WordNotifier();
 
             //Write a delegate to handle the Elapsed event
             processorWord.Elapsed += delegate

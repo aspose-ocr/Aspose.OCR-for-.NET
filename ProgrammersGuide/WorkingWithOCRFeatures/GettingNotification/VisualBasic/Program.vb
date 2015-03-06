@@ -23,22 +23,22 @@ Namespace GettingNotificationExample
 			'Set the Image property by loading the image from file path location or an instance of MemoryStream 
 			ocrEngine.Image = ImageStream.FromFile(dataDir & "Sampleocr.bmp")
 
-			'Get an instance of INotifier
-			Dim processorWord As INotifier = Notifier.Word()
+			Dim processorWord As INotifier = NotifierFactory.WordNotifier()
+            AddHandler processorWord.Elapsed, AddressOf [Delegate]
 
-			'Write a delegate to handle the Elapsed event
-'TODO: INSTANT VB TODO TASK: Anonymous methods are not converted by Instant VB if local variables of the outer method are referenced within the anonymous method:
-			processorWord.Elapsed += delegate(Object sender, System.EventArgs e)
-				'Display the recognized text on screen
-				Console.WriteLine(processorWord.Text)
 
 			' Add the word processor to the OcrEngine
 			ocrEngine.AddNotifier(processorWord)
 
 			'Process the image
-			ocrEngine.Process()
-
+            ocrEngine.Process()
+            
 
 		End Sub
-	End Class
+
+        Private Shared Sub [Delegate](sender As Object, recognizedText As IRecognizedText)
+            Console.WriteLine("A word was recognized: " & recognizedText.ToString())
+        End Sub
+
+    End Class
 End Namespace
