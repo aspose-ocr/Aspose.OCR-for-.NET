@@ -29,9 +29,10 @@ Namespace DetectingTextBlocksExample
 
 			'Run recognition process
 			If ocrEngine.Process() Then
-				'Display text block locations
-				Console.WriteLine(ocrEngine.Text.PartsInfo(0).Box)
-				Console.WriteLine(ocrEngine.Text.PartsInfo(1).Box)
+                'Display text block locations
+                For Each part In ocrEngine.Text.PartsInfo
+                    Console.WriteLine(part.Box)
+                Next part
 			End If
 		End Sub
 	End Class

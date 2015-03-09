@@ -37,9 +37,9 @@ Namespace GetLocationAndSizeExample
 					'Get the rectangle sourronding the symbol
 					Dim box As Rectangle = symbol.Box
 					'Display the rectangle location on the image canvas
-					Console.WriteLine("Box Location:" & box.Location)
+                    Console.WriteLine("Box Location:" & box.Location.ToString())
 					'Display the rectangle dimensions
-					Console.WriteLine("Box Size:" & box.Size)
+                    Console.WriteLine("Box Size:" & box.Size.ToString())
 
 				Next symbol
 			End If

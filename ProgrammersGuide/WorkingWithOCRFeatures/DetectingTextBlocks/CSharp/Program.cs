@@ -32,8 +32,10 @@ namespace DetectingTextBlocksExample
             if (ocrEngine.Process())
             {
                 //Display text block locations
-                Console.WriteLine(ocrEngine.Text.PartsInfo[0].Box);
-                Console.WriteLine(ocrEngine.Text.PartsInfo[1].Box);
+                foreach (var part in ocrEngine.Text.PartsInfo)
+                {
+                    Console.WriteLine(part.Box);
+                }
             }
         }
     }

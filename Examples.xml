@@ -30,18 +30,12 @@
           <Examples>
             <Example>
               <Title>Performing OCR on an Image</Title>
-              <Description>Aspose.OCR provides the OcrEngine class for performing OCR on images. The OcrEngine class requires the following to perform character recognition:
-
-- Source image
-- Language setting
-- Resource file
+              <Description>Aspose.OCR provides the OcrEngine class for performing OCR on images. The OcrEngine class requires setting the source image using the OcrEngine.Image property. 
 
 To perform OCR on an image using the OcrEngine class, this example describes the flow as follows:
 
 - Create an instance of OcrEngine and initialize it using the default constructor.
 - Set the image file on which OCR is to be performed using the OcrEngine.Image property.
-- Add language(s) using the OcrEngine.Languages.AddLanguage() method.
-- Set the resource file using the OcrEngine.Resource property.
 - Call the OcrEngine.Process() method to perform OCR on the whole image.
 - If OcrEngine.Process() returns true, get the recognized text with the OcrEngine.Text property.</Description>
               <FolderName>PerformOCROnImage</FolderName>
@@ -80,7 +74,7 @@ To perform OCR on an image using the OcrEngine class, this example describes the
               <Order>3</Order>
               <DocLink>
                 <DisplayName>Extracting Text from Part of an Image</DisplayName>
-                <Url>http://www.aspose.com/docs/display/ocrnet/Extracting+Text+from+Part+of+an+Image</Url>
+                <Url>Extracting+Text+from+Part+of+an+Image</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>

@@ -29,22 +29,17 @@ Namespace PerformOCROnImage
 			Dim ocr As New OcrEngine()
 			' Set the image.
 			ocr.Image = ImageStream.FromFile(imageFile)
-			' Add language.
-			ocr.Languages.AddLanguage(Language.Load("english"))
-			' Load the resource file.
-			ocr.Resource = New FileStream(resourceFilePath, FileMode.Open)
-			Using ocr.Resource
-				Try
-					' Process the whole image
-					If ocr.Process() Then
-						' Get the complete recognized text found from the image
-						Console.WriteLine("Text recognized: " & ocr.Text)
-						File.WriteAllText(dataDir & "Output.txt", ocr.Text.ToString())
-					End If
-				Catch ex As Exception
-					Console.WriteLine("Exception: " & ex.ToString())
-				End Try
-			End Using
+			
+            Try
+                ' Process the whole image
+                If ocr.Process() Then
+                    ' Get the complete recognized text found from the image
+                    Console.WriteLine("Text recognized: " & ocr.Text.ToString())
+                    File.WriteAllText(dataDir & "Output.txt", ocr.Text.ToString())
+                End If
+            Catch ex As Exception
+                Console.WriteLine("Exception: " & ex.ToString())
+            End Try
 		End Sub
 	End Class
 End Namespace
