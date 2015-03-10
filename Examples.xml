@@ -58,7 +58,7 @@ To perform OCR on an image using the OcrEngine class, this example describes the
               <Order>2</Order>
               <DocLink>
                 <DisplayName>Getting Notification for Each Recognized Word</DisplayName>
-                <Url>http://www.aspose.com/docs/display/ocrnet/Getting+Notification+for+Each+Recognized+Word</Url>
+                <Url>Getting+Notification+for+Each+Recognized+Word</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
@@ -91,7 +91,7 @@ In this example, we will see how we can read the part information from extracted
               <Order>4</Order>
               <DocLink>
                 <DisplayName>Read the Part Information of Recognized Text</DisplayName>
-                <Url>http://www.aspose.com/docs/display/ocrnet/Read+the+Part+Information+of+Recognized+Text</Url>
+                <Url>Read+the+Part+Information+of+Recognized+Text</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
@@ -109,7 +109,7 @@ In this example, we will see how we can extract the location and size of identif
               <Order>5</Order>
               <DocLink>
                 <DisplayName>Get Location and Size of Identified Text in an Image</DisplayName>
-                <Url>http://www.aspose.com/docs/display/ocrnet/Get+Location+and+Size+of+Identified+Text+in+an+Image</Url>
+                <Url>Get+Location+and+Size+of+Identified+Text+in+an+Image</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
@@ -127,7 +127,7 @@ In this example, we will see how we can detect the textual blocks on an image us
               <Order>6</Order>
               <DocLink>
                 <DisplayName>Detecting Text Blocks on the Image</DisplayName>
-                <Url>http://www.aspose.com/docs/display/ocrnet/Detecting+Text+Blocks+on+the+Image</Url>
+                <Url>Detecting+Text+Blocks+on+the+Image</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
@@ -143,7 +143,7 @@ In this example, we will see how we can detect the textual blocks on an image us
               <Order>7</Order>
               <DocLink>
                 <DisplayName>Get Text Part Hierarchy of Recognized Text</DisplayName>
-                <Url>http://www.aspose.com/docs/display/ocrnet/Get+Text+Part+Hierarchy+of+Recognized+Text</Url>
+                <Url>Get+Text+Part+Hierarchy+of+Recognized+Text</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
@@ -159,7 +159,7 @@ In this example, we will see how we can detect the textual blocks on an image us
               <Order>8</Order>
               <DocLink>
                 <DisplayName>Working with Different Languages</DisplayName>
-                <Url>http://www.aspose.com/docs/display/ocrnet/Working+with+Different+Languages</Url>
+                <Url>Working+with+Different+Languages</Url>
               </DocLink>
               <InputFiles>
                 <DataFile>
@@ -196,7 +196,7 @@ In this example, we will see how we can use a correction filter before running t
                   <Order>1</Order>
                   <DocLink>
                     <DisplayName>Applying Correction Filters before Document Recognition</DisplayName>
-                    <Url>http://www.aspose.com/docs/display/ocrnet/Applying+Correction+Filters+before+Document+Recognition</Url>
+                    <Url>http://www.aspose.com/docsApplying+Correction+Filters+before+Document+Recognition</Url>
                   </DocLink>
                   <InputFiles>
                     <DataFile>
@@ -212,7 +212,7 @@ In this example, we will see how we can use a correction filter before running t
                   <Order>2</Order>
                   <DocLink>
                     <DisplayName>Setting the OcrEngine to Ignore Non-Textual Blocks</DisplayName>
-                    <Url>http://www.aspose.com/docs/display/ocrnet/Setting+the+OcrEngine+to+Ignore+Non-Textual+Blocks</Url>
+                    <Url>Setting+the+OcrEngine+to+Ignore+Non-Textual+Blocks</Url>
                   </DocLink>
                   <InputFiles>
                     <DataFile>
@@ -230,7 +230,7 @@ In this example, we will see how we can auto-detect the reading order using Aspo
                   <Order>3</Order>
                   <DocLink>
                     <DisplayName>Setting the OcrEngine to Automatically Detect the Reading Order</DisplayName>
-                    <Url>http://www.aspose.com/docs/display/ocrnet/Setting+the+OcrEngine+to+Automatically+Detect+the+Reading+Order</Url>
+                    <Url>Setting+the+OcrEngine+to+Automatically+Detect+the+Reading+Order</Url>
                   </DocLink>
                   <InputFiles>
                     <DataFile>
@@ -262,7 +262,7 @@ In this example, we will see how we can auto-detect the reading order using Aspo
                   <Order>5</Order>
                   <DocLink>
                     <DisplayName>Setting the OcrEngine to Automatically Correct the Spellings</DisplayName>
-                    <Url>http://www.aspose.com/docs/display/ocrnet/Setting+the+OcrEngine+to+Automatically+Correct+the+Spellings</Url>
+                    <Url>Setting+the+OcrEngine+to+Automatically+Correct+the+Spellings</Url>
                   </DocLink>
                   <InputFiles>
                     <DataFile>
@@ -278,7 +278,7 @@ In this example, we will see how we can auto-detect the reading order using Aspo
                   <Order>6</Order>
                   <DocLink>
                     <DisplayName>Adding User Defined Recognition Blocks</DisplayName>
-                    <Url>www.aspose.com/docs/display/ocrnet/Adding+User+Defined+Recognition+Blocks</Url>
+                    <Url>Adding+User+Defined+Recognition+Blocks</Url>
                   </DocLink>
                   <InputFiles>
                     <DataFile>
@@ -294,7 +294,7 @@ In this example, we will see how we can auto-detect the reading order using Aspo
                   <Order>7</Order>
                   <DocLink>
                     <DisplayName>Setting OcrEngine to Recognize Only White Listed Characters</DisplayName>
-                    <Url>http://www.aspose.com/docs/display/ocrnet/Setting+OcrEngine+to+Recognize+Only+White+Listed+Characters</Url>
+                    <Url>Setting+OcrEngine+to+Recognize+Only+White+Listed+Characters</Url>
                   </DocLink>
                   <InputFiles>
                     <DataFile>

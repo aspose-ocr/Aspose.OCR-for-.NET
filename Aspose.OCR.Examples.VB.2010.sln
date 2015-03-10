@@ -1,6 +1,40 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Aspose.OCR Examples", "Aspose.OCR Examples.vbproj", "{5CDDDEEF-585E-4A01-9997-C5D10CB9070B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProgrammersGuide", "ProgrammersGuide", "{8562684B-440A-4778-8A6D-D3D462D49192}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkingWithOCRFeatures", "WorkingWithOCRFeatures", "{C10F8557-43EB-47B7-83D0-DABE90CC78A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformOCROnImage", "ProgrammersGuide\WorkingWithOCRFeatures\PerformOCROnImage\VisualBasic\PerformOCROnImage.vbproj", "{F1E02859-D34A-4EE8-91BC-47A198153326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingNotification", "ProgrammersGuide\WorkingWithOCRFeatures\GettingNotification\VisualBasic\GettingNotification.vbproj", "{6F8E3A98-0264-4168-A452-53F17D7385CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractingText", "ProgrammersGuide\WorkingWithOCRFeatures\ExtractingText\VisualBasic\ExtractingText.vbproj", "{16E58B66-720B-4D66-85B4-54644C9B1BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadPartInformation", "ProgrammersGuide\WorkingWithOCRFeatures\ReadPartInformation\VisualBasic\ReadPartInformation.vbproj", "{635D11BB-26E7-4140-80ED-60AAB48E2850}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetLocationAndSize", "ProgrammersGuide\WorkingWithOCRFeatures\GetLocationAndSize\VisualBasic\GetLocationAndSize.vbproj", "{B47A5851-121A-4E7E-9A2B-9288A24BF9C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetectingTextBlocks", "ProgrammersGuide\WorkingWithOCRFeatures\DetectingTextBlocks\VisualBasic\DetectingTextBlocks.vbproj", "{361F6CE7-686A-414A-8F70-2B8F1E0746DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetTextPartHierarchy", "ProgrammersGuide\WorkingWithOCRFeatures\GetTextPartHierarchy\VisualBasic\GetTextPartHierarchy.vbproj", "{70D19CED-3036-4980-AD33-E4616013F67B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithDifferentLanguages", "ProgrammersGuide\WorkingWithOCRFeatures\WorkingWithDifferentLanguages\VisualBasic\WorkingWithDifferentLanguages.vbproj", "{0110CD7F-BF9B-4F71-A677-34A826F0AD0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdvancedConfigurations", "AdvancedConfigurations", "{866CC809-C4DF-4217-9A26-8BBE93A3EE04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplyingCorrectionFilters", "ProgrammersGuide\WorkingWithOCRFeatures\AdvancedConfigurations\ApplyingCorrectionFilters\VisualBasic\ApplyingCorrectionFilters.vbproj", "{08C04DA1-E0CA-48B0-84D9-AAA8A6AD534B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingtheOcrEngine", "ProgrammersGuide\WorkingWithOCRFeatures\AdvancedConfigurations\SettingtheOcrEngine\VisualBasic\SettingtheOcrEngine.vbproj", "{825E5C14-D730-42FE-A51F-AC827A3AFC86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingOcrEngineAutomaticallyDetect", "ProgrammersGuide\WorkingWithOCRFeatures\AdvancedConfigurations\SettingOcrEngineAutomaticallyDetect\VisualBasic\SettingOcrEngineAutomaticallyDetect.vbproj", "{8BFC9903-9255-4A3A-A152-56448A20C22D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SettingtheOcrEngineAutomaticallyDetectTextBlocks", "ProgrammersGuide\WorkingWithOCRFeatures\AdvancedConfigurations\SettingtheOcrEngineAutomaticallyDetectTextBlocks\VisualBasic\SettingtheOcrEngineAutomaticallyDetectTextBlocks.vbproj", "{63D65418-D293-49C0-9C16-278DF15A05FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomaticallyCorrectTheSpellings", "ProgrammersGuide\WorkingWithOCRFeatures\AdvancedConfigurations\AutomaticallyCorrectTheSpellings\VisualBasic\AutomaticallyCorrectTheSpellings.vbproj", "{A16A7CE4-3D0C-4C21-BE00-2396944360CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingUserDefinedRecognitionBlocks", "ProgrammersGuide\WorkingWithOCRFeatures\AdvancedConfigurations\AddingUserDefinedRecognitionBlocks\VisualBasic\AddingUserDefinedRecognitionBlocks.vbproj", "{E272A8B8-C6A0-4069-B26F-F8CEACD7F7CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecognizeWhiteListedCharacters", "ProgrammersGuide\WorkingWithOCRFeatures\AdvancedConfigurations\RecognizeWhiteListedCharacters\VisualBasic\RecognizeWhiteListedCharacters.vbproj", "{413C805A-3601-4FCC-87AA-FD7B02A977CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,11 +42,72 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5CDDDEEF-585E-4A01-9997-C5D10CB9070B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CDDDEEF-585E-4A01-9997-C5D10CB9070B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CDDDEEF-585E-4A01-9997-C5D10CB9070B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E02859-D34A-4EE8-91BC-47A198153326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E02859-D34A-4EE8-91BC-47A198153326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E02859-D34A-4EE8-91BC-47A198153326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F8E3A98-0264-4168-A452-53F17D7385CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F8E3A98-0264-4168-A452-53F17D7385CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F8E3A98-0264-4168-A452-53F17D7385CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19EB3672-3B5B-43A4-97DB-D6077F45D0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19EB3672-3B5B-43A4-97DB-D6077F45D0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19EB3672-3B5B-43A4-97DB-D6077F45D0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{635D11BB-26E7-4140-80ED-60AAB48E2850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{635D11BB-26E7-4140-80ED-60AAB48E2850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{635D11BB-26E7-4140-80ED-60AAB48E2850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B47A5851-121A-4E7E-9A2B-9288A24BF9C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B47A5851-121A-4E7E-9A2B-9288A24BF9C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B47A5851-121A-4E7E-9A2B-9288A24BF9C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{361F6CE7-686A-414A-8F70-2B8F1E0746DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{361F6CE7-686A-414A-8F70-2B8F1E0746DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{361F6CE7-686A-414A-8F70-2B8F1E0746DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D19CED-3036-4980-AD33-E4616013F67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D19CED-3036-4980-AD33-E4616013F67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D19CED-3036-4980-AD33-E4616013F67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0110CD7F-BF9B-4F71-A677-34A826F0AD0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0110CD7F-BF9B-4F71-A677-34A826F0AD0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0110CD7F-BF9B-4F71-A677-34A826F0AD0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C04DA1-E0CA-48B0-84D9-AAA8A6AD534B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C04DA1-E0CA-48B0-84D9-AAA8A6AD534B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C04DA1-E0CA-48B0-84D9-AAA8A6AD534B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{825E5C14-D730-42FE-A51F-AC827A3AFC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{825E5C14-D730-42FE-A51F-AC827A3AFC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{825E5C14-D730-42FE-A51F-AC827A3AFC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFC9903-9255-4A3A-A152-56448A20C22D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFC9903-9255-4A3A-A152-56448A20C22D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFC9903-9255-4A3A-A152-56448A20C22D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D65418-D293-49C0-9C16-278DF15A05FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D65418-D293-49C0-9C16-278DF15A05FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D65418-D293-49C0-9C16-278DF15A05FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16A7CE4-3D0C-4C21-BE00-2396944360CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16A7CE4-3D0C-4C21-BE00-2396944360CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16A7CE4-3D0C-4C21-BE00-2396944360CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E272A8B8-C6A0-4069-B26F-F8CEACD7F7CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E272A8B8-C6A0-4069-B26F-F8CEACD7F7CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E272A8B8-C6A0-4069-B26F-F8CEACD7F7CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413C805A-3601-4FCC-87AA-FD7B02A977CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413C805A-3601-4FCC-87AA-FD7B02A977CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413C805A-3601-4FCC-87AA-FD7B02A977CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C10F8557-43EB-47B7-83D0-DABE90CC78A7} = {8562684B-440A-4778-8A6D-D3D462D49192}
+		{F1E02859-D34A-4EE8-91BC-47A198153326} = {C10F8557-43EB-47B7-83D0-DABE90CC78A7}
+		{6F8E3A98-0264-4168-A452-53F17D7385CA} = {C10F8557-43EB-47B7-83D0-DABE90CC78A7}
+		{19EB3672-3B5B-43A4-97DB-D6077F45D0CE} = {C10F8557-43EB-47B7-83D0-DABE90CC78A7}
+		{635D11BB-26E7-4140-80ED-60AAB48E2850} = {C10F8557-43EB-47B7-83D0-DABE90CC78A7}
+		{B47A5851-121A-4E7E-9A2B-9288A24BF9C9} = {C10F8557-43EB-47B7-83D0-DABE90CC78A7}
+		{361F6CE7-686A-414A-8F70-2B8F1E0746DD} = {C10F8557-43EB-47B7-83D0-DABE90CC78A7}
+		{70D19CED-3036-4980-AD33-E4616013F67B} = {C10F8557-43EB-47B7-83D0-DABE90CC78A7}
+		{0110CD7F-BF9B-4F71-A677-34A826F0AD0F} = {C10F8557-43EB-47B7-83D0-DABE90CC78A7}
+		{866CC809-C4DF-4217-9A26-8BBE93A3EE04} = {C10F8557-43EB-47B7-83D0-DABE90CC78A7}
+		{08C04DA1-E0CA-48B0-84D9-AAA8A6AD534B} = {866CC809-C4DF-4217-9A26-8BBE93A3EE04}
+		{825E5C14-D730-42FE-A51F-AC827A3AFC86} = {866CC809-C4DF-4217-9A26-8BBE93A3EE04}
+		{8BFC9903-9255-4A3A-A152-56448A20C22D} = {866CC809-C4DF-4217-9A26-8BBE93A3EE04}
+		{63D65418-D293-49C0-9C16-278DF15A05FB} = {866CC809-C4DF-4217-9A26-8BBE93A3EE04}
+		{A16A7CE4-3D0C-4C21-BE00-2396944360CC} = {866CC809-C4DF-4217-9A26-8BBE93A3EE04}
+		{E272A8B8-C6A0-4069-B26F-F8CEACD7F7CD} = {866CC809-C4DF-4217-9A26-8BBE93A3EE04}
+		{413C805A-3601-4FCC-87AA-FD7B02A977CB} = {866CC809-C4DF-4217-9A26-8BBE93A3EE04}
 	EndGlobalSection
 EndGlobal
