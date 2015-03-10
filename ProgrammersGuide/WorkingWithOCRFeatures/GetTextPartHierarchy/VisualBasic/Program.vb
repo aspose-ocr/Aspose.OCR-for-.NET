@@ -38,19 +38,19 @@ Namespace GetTextPartHierarchyExample
 				Dim firstLine As IRecognizedTextPartInfo = (TryCast(linesOfFirstBlock(0), IRecognizedTextPartInfo))
 
 				'Display the level of line
-				Console.WriteLine(firstLine.Level)
+                Console.WriteLine(firstLine.Level.ToString())
 
 				'Retrieve the fist word from the collection of words
 				Dim firstWord As IRecognizedTextPartInfo = (TryCast(firstLine.Children(0), IRecognizedTextPartInfo))
 
 				'Display the level of word
-				Console.WriteLine(firstWord.Level)
+                Console.WriteLine(firstWord.Level.ToString())
 
 				'Retrieve the fist character from the collection of characters
 				Dim firstCharacter As IRecognizedTextPartInfo = (TryCast(firstWord.Children(0), IRecognizedTextPartInfo))
 
 				'Display the level of character
-				Console.WriteLine(firstCharacter.Level)
+                Console.WriteLine(firstCharacter.Level.ToString())
 			End If
 
 

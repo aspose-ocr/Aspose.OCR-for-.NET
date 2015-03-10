@@ -18,8 +18,6 @@ Namespace PerformOCROnImage
 			' The path to the documents directory.
 			Dim dataDir As String = Path.GetFullPath("../../../Data/")
 
-			' Resource file
-			Dim resourceFilePath As String = dataDir & "Resource.zip"
 			' Source file: the file on which OCR will be performed.
 			Dim imageFile As String = dataDir & "Sampleocr.bmp"
 

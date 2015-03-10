@@ -27,13 +27,13 @@ Namespace DetectingTextBlocksExample
 			'Remove non-textual blocks
 			ocrEngine.Config.RemoveNonText = True
 
-			'Run recognition process
-			If ocrEngine.Process() Then
+            'Run recognition process
+            If ocrEngine.Process() Then
                 'Display text block locations
-                For Each part In ocrEngine.Text.PartsInfo
+                For Each part As IRecognizedPartInfo In ocrEngine.Text.PartsInfo
                     Console.WriteLine(part.Box)
                 Next part
-			End If
+            End If
 		End Sub
 	End Class
 End Namespace

@@ -32,7 +32,7 @@ namespace DetectingTextBlocksExample
             if (ocrEngine.Process())
             {
                 //Display text block locations
-                foreach (var part in ocrEngine.Text.PartsInfo)
+                foreach (IRecognizedPartInfo part in ocrEngine.Text.PartsInfo)
                 {
                     Console.WriteLine(part.Box);
                 }
