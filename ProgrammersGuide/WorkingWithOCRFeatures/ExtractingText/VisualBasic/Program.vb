@@ -28,8 +28,8 @@ Namespace ExtractingTextExample
             ocrEngine.Config.ClearRecognitionBlocks()
 
             'Add 2 rectangles to user defined recognition blocks
-            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(35, 21, 22, 26))
-            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(340, 63, 29, 37))
+            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(27, 63, 34, 38)) 'Detecting A
+            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(209, 111, 28, 34)) 'Detecting 6
 
             'Ignore everything else on the image other than the user defined recognition blocks
             ocrEngine.Config.DetectTextRegions = False
@@ -39,25 +39,7 @@ Namespace ExtractingTextExample
 
             'Run recognition process
             If ocrEngine.Process() Then
-                'Retrieve user defined blocks that determines the page layout
-                Dim blocks As IList(Of IRecognitionBlock) = ocrEngine.Config.RecognitionBlocks
-                'Loop over the list of blocks
-                For Each block As IRecognitionBlock In blocks
-                    'Display if block is set to be recognized
-                    Console.WriteLine(block.ToRecognize)
-                    'Check if block has recognition data
-                    If block.RecognitionData Is Nothing Then
-                        Console.WriteLine("Null{0}", Environment.NewLine)
-                        Continue For
-                    End If
-                    'Display dimension & size of rectangle that defines the recognition block
-                    Console.WriteLine("Block: {0}", block.Rectangle)
-                    If TypeOf block.RecognitionData Is IRecognizedTextPartInfo Then
-                        'Display the recognition results
-                        Dim textPartInfo As IRecognizedTextPartInfo = CType(block.RecognitionData, IRecognizedTextPartInfo)
-                        Console.WriteLine("Text: {0}{1}", textPartInfo.Text, Environment.NewLine)
-                    End If
-                Next block
+                Console.WriteLine(ocrEngine.Text)
             End If
 
 		End Sub

@@ -7,7 +7,6 @@
 //////////////////////////////////////////////////////////////////////////
 using System;
 using System.IO;
-using System.Collections.Generic;
 using Aspose.OCR;
 
 namespace ExtractingText
@@ -29,40 +28,19 @@ namespace ExtractingText
             ocrEngine.Config.ClearRecognitionBlocks();
 
             //Add 2 rectangles to user defined recognition blocks
-            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(35, 21, 22, 26));
-            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(340, 63, 29, 37));
+            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(27, 63, 34, 38)); //Detecting A
+            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(209, 111, 28, 34)); //Detecting 6
             
             //Ignore everything else on the image other than the user defined recognition blocks
             ocrEngine.Config.DetectTextRegions = false;
 
             //Set Image property by loading an image from file path
-            ocrEngine.Image = ImageStream.FromFile(dataDir + "sampleocr.bmp");
+            ocrEngine.Image = ImageStream.FromFile(dataDir + "sampleocr.bmp"); 
 
             //Run recognition process
             if (ocrEngine.Process())
             {
-                //Retrieve user defined blocks that determines the page layout
-                IList<IRecognitionBlock> blocks = ocrEngine.Config.RecognitionBlocks;
-                //Loop over the list of blocks
-                foreach (IRecognitionBlock block in blocks)
-                {
-                    //Display if block is set to be recognized
-                    Console.WriteLine(block.ToRecognize);
-                    //Check if block has recognition data
-                    if (block.RecognitionData == null)
-                    {
-                        Console.WriteLine("Null{0}", Environment.NewLine);
-                        continue;
-                    }
-                    //Display dimension & size of rectangle that defines the recognition block
-                    Console.WriteLine("Block: {0}", block.Rectangle);
-                    if (block.RecognitionData is IRecognizedTextPartInfo)
-                    {
-                        //Display the recognition results
-                        IRecognizedTextPartInfo textPartInfo = (IRecognizedTextPartInfo)block.RecognitionData;
-                        Console.WriteLine("Text: {0}{1}", textPartInfo.Text, Environment.NewLine);
-                    }
-                }
+                Console.WriteLine(ocrEngine.Text);
             }
             
         }
