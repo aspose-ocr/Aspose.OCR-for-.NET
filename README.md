@@ -1,4 +1,4 @@
-##Aspose.OCR for .NET Examples Repository
+##Aspose.OCR for .NET Examples
 
 This repository contains C# and VB.NET Example Projects for [Aspose.OCR for .NET](http://www.aspose.com/categories/.net-components/aspose.ocr-for-.net/default.aspx).
 <br/><br/>
