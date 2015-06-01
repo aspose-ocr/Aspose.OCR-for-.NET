@@ -1,4 +1,4 @@
-##Aspose.OCR for .NET Examples
+##Aspose.OCR for .NET
 
 This package contains C# and VB.NET example code for [Aspose.OCR for .NET](http://www.aspose.com/categories/.net-components/aspose.ocr-for-.net/default.aspx).
 
