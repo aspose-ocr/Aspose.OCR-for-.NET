@@ -46,8 +46,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.OCR, Version=2.8.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.OCR.2.8.0\lib\net45\Aspose.OCR.dll</HintPath>
+    <Reference Include="Aspose.OCR, Version=3.0.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.OCR.3.0.0\lib\net45\Aspose.OCR.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

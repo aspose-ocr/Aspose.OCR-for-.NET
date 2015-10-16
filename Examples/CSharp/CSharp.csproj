@@ -35,8 +35,8 @@
     <StartupObject>Aspose.OCR.Examples.Utils</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.OCR, Version=2.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.OCR.2.7.0\lib\net45\Aspose.OCR.dll</HintPath>
+    <Reference Include="Aspose.OCR, Version=3.0.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.OCR.3.0.0\lib\net45\Aspose.OCR.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -65,6 +65,7 @@
     <Compile Include="Features\PerformOCROnImage.cs" />
     <Compile Include="Features\ReadPartInformation.cs" />
     <Compile Include="Features\WorkingWithDifferentLanguages.cs" />
+    <Compile Include="OMR\LoadTemplateFromUrl.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkingWithOcr\PerformOCROnImage.cs" />
