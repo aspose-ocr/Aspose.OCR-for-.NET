@@ -1,22 +1,14 @@
-'////////////////////////////////////////////////////////////////////////
-' Copyright 2001-2015 Aspose Pty Ltd. All Rights Reserved.
-'
-' This file is part of Aspose.OCR. The source code in this file
-' is only intended as a supplement to the documentation, and is provided
-' "as is", without warranty of any kind, either expressed or implied.
-'////////////////////////////////////////////////////////////////////////
-
 Imports Microsoft.VisualBasic
 Imports System
 Imports System.IO
 
 Imports Aspose.OCR
 
-Namespace Aspose.OCR.Examples.Features
+Namespace Aspose.OCR.Examples.VisualBasic.Features
     Public Class PerformOCROnImage
-        Public Shared Sub Main(ByVal args() As String)
+        Public Shared Sub Run()
             ' The path to the documents directory.
-            Dim dataDir As String = Aspose.OCR.Examples.Utils.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
+            Dim dataDir As String = RunExamples.GetDataDir(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType)
 
             ' Source file: the file on which OCR will be performed.
             Dim imageFile As String = dataDir & "Sampleocr.bmp"
