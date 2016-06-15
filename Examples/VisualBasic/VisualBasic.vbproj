@@ -5,8 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{38F42D53-98AF-4659-84E2-CB813593F12A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>VisualBasic.Aspose.OCR.Examples.Features.DetectingTextBlocks</StartupObject>
-    <RootNamespace>VisualBasic</RootNamespace>
+    <StartupObject>Aspose.OCR.Examples.VisualBasic.RunExamples</StartupObject>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>VisualBasic</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
@@ -107,7 +108,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Utils.vb" />
+    <Compile Include="RunExamples.vb" />
     <Compile Include="WorkingWithOcr\PerformOCROnImage.vb" />
   </ItemGroup>
   <ItemGroup>
