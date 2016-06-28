@@ -34,15 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Aspose.OCR.Examples.CSharp.RunExample</StartupObject>
+    <StartupObject>Aspose.OCR.Examples.CSharp.RunExamples</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aspose.Imaging, Version=3.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.Imaging.3.7.0\lib\net40\Aspose.Imaging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Aspose.OCR, Version=3.0.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.OCR.3.0.0\lib\net45\Aspose.OCR.dll</HintPath>
+    <Reference Include="Aspose.OCR, Version=3.6.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.OCR.3.6.0\lib\net40\Aspose.OCR.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -55,31 +55,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\AdvancedConfiguration\AddingUserDefinedRecognitionBlocks.cs" />
-    <Compile Include="Features\AdvancedConfiguration\ApplyingCorrectionFilters.cs" />
-    <Compile Include="Features\AdvancedConfiguration\AutomaticallyCorrectTheSpellings.cs" />
-    <Compile Include="Features\AdvancedConfiguration\RecognizeWhiteListedCharacters.cs" />
-    <Compile Include="Features\AdvancedConfiguration\SettingOcrEngineAutomaticallyDetect.cs" />
-    <Compile Include="Features\AdvancedConfiguration\SettingtheOcrEngine.cs" />
-    <Compile Include="Features\AdvancedConfiguration\SettingtheOcrEngineAutomaticallyDetectTextBlocks.cs" />
-    <Compile Include="Features\AdvancedConfiguration\UserDefinedRecognitionBlocks.cs" />
-    <Compile Include="Features\DetectingTextBlocks.cs" />
-    <Compile Include="Features\ExtractingText.cs" />
-    <Compile Include="Features\GetLocationAndSize.cs" />
-    <Compile Include="Features\GetTextPartHierarchy.cs" />
-    <Compile Include="Features\GettingNotification.cs" />
-    <Compile Include="Features\PerformOCROnImage.cs" />
-    <Compile Include="Features\ReadPartInformation.cs" />
-    <Compile Include="Features\WorkingWithDifferentLanguages.cs" />
-    <Compile Include="OMR\LoadTemplateFromUrl.cs" />
-    <Compile Include="RunExample.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\ExtractText.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\SkewedImageSecondMethod.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\SkewImageCorrectionUsingAlgorithm.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\DetectImageResolutionAutomatically.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\SetImageResolution.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\DetectUsingElements.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\SetElementLevelThreshold.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\SetPageLevelThreshold.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\SettingMarkThreshold.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\ExtractBarcodeData.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\ExtractOMRDataUsingScannedImage.cs" />
+    <Compile Include="FormattingAndManipulatingOCR\AddingUserDefinedRecognitionBlocks.cs" />
+    <Compile Include="FormattingAndManipulatingOCR\ApplyingCorrectionFilters.cs" />
+    <Compile Include="FormattingAndManipulatingOCR\AutomaticallyCorrectTheSpellings.cs" />
+    <Compile Include="FormattingAndManipulatingOCR\RecognizeWhiteListedCharacters.cs" />
+    <Compile Include="FormattingAndManipulatingOCR\SettingOcrEngineAutomaticallyDetect.cs" />
+    <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngine.cs" />
+    <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngineAutomaticallyDetectTextBlocks.cs" />
+    <Compile Include="FormattingAndManipulatingOCR\UserDefinedRecognitionBlocks.cs" />
+    <Compile Include="PerformingandManagingOCR\DetectingTextBlocks.cs" />
+    <Compile Include="PerformingandManagingOCR\ExtractingText.cs" />
+    <Compile Include="PerformingandManagingOCR\GetLocationAndSize.cs" />
+    <Compile Include="PerformingandManagingOCR\GetTextPartHierarchy.cs" />
+    <Compile Include="PerformingandManagingOCR\GettingNotification.cs" />
+    <Compile Include="PerformingandManagingOCR\ReadPartInformation.cs" />
+    <Compile Include="PerformingandManagingOCR\WorkingWithDifferentLanguages.cs" />
+    <Compile Include="PerformingandManagingOCR\LoadTemplateFromUrl.cs" />
+    <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorkingWithOcr\PerformOCROnImage.cs" />
+    <Compile Include="PerformingandManagingOCR\PerformOCROnImage.cs" />
+    <Compile Include="PerformingandManagingOCR\OCROnMultipageTIFF.cs" />
+    <Compile Include="FormattingAndManipulatingOCR\PreprocesImagesFromOCROperation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
