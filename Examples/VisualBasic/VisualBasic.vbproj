@@ -49,12 +49,12 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Imaging, Version=3.6.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Imaging.3.6.0\lib\net40\Aspose.Imaging.dll</HintPath>
+    <Reference Include="Aspose.Imaging, Version=3.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.Imaging.3.7.0\lib\net40\Aspose.Imaging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Aspose.OCR, Version=3.0.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.OCR.3.0.0\lib\net45\Aspose.OCR.dll</HintPath>
+    <Reference Include="Aspose.OCR, Version=3.6.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.OCR.3.6.0\lib\net40\Aspose.OCR.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -78,21 +78,36 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Features\AdvancedConfigurations\AddingUserDefinedRecognitionBlocks.vb" />
-    <Compile Include="Features\AdvancedConfigurations\ApplyingCorrectionFilters.vb" />
-    <Compile Include="Features\AdvancedConfigurations\AutomaticallyCorrectTheSpellings.vb" />
-    <Compile Include="Features\AdvancedConfigurations\AutomaticallyDetectTextBlocks.vb" />
-    <Compile Include="Features\AdvancedConfigurations\RecognizeWhiteListedCharacters.vb" />
-    <Compile Include="Features\AdvancedConfigurations\SettingOcrEngineAutomaticallyDetect.vb" />
-    <Compile Include="Features\AdvancedConfigurations\SettingtheOcrEngine.vb" />
-    <Compile Include="Features\DetectingTextBlocks.vb" />
-    <Compile Include="Features\ExtractingText.vb" />
-    <Compile Include="Features\GetLocationAndSize.vb" />
-    <Compile Include="Features\GetTextPartHierarchy.vb" />
-    <Compile Include="Features\GettingNotification.vb" />
-    <Compile Include="Features\PerformOCROnImage.vb" />
-    <Compile Include="Features\ReadPartInformation.vb" />
-    <Compile Include="Features\WorkingWithDifferentLanguages.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\AddingUserDefinedRecognitionBlocks.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\PreprocesImagesFromOCROperation.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\UserDefinedRecognitionBlocks.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\ApplyingCorrectionFilters.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\AutomaticallyCorrectTheSpellings.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngineAutomaticallyDetectTextBlocks.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\RecognizeWhiteListedCharacters.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\SettingOcrEngineAutomaticallyDetect.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngine.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\SkewImageCorrectionUsingAlgorithm.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\SkewedImageSecondMethod.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\SettingMarkThreshold.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\SetPageLevelThreshold.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\SetImageResolution.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\SetElementLevelThreshold.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\ExtractText.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\ExtractOMRDataUsingScannedImage.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\DetectUsingElements.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\DetectImageResolutionAutomatically.vb" />
+    <Compile Include="PerformingandManagingOCR\GetLocationAndSizeExample.vb" />
+    <Compile Include="PerformingandManagingOCR\DetectingTextBlocks.vb" />
+    <Compile Include="PerformingandManagingOCR\ExtractingText.vb" />
+    <Compile Include="PerformingandManagingOCR\GetLocationAndSize.vb" />
+    <Compile Include="PerformingandManagingOCR\GetTextPartHierarchy.vb" />
+    <Compile Include="PerformingandManagingOCR\GettingNotification.vb" />
+    <Compile Include="PerformingandManagingOCR\PerformOCROnImage.vb" />
+    <Compile Include="PerformingandManagingOCR\OCROnMultipageTIFF.vb" />
+    <Compile Include="PerformingandManagingOCR\ReadPartInformation.vb" />
+    <Compile Include="PerformingandManagingOCR\LoadTemplateFromUrl.vb" />
+    <Compile Include="PerformingandManagingOCR\WorkingWithDifferentLanguages.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -109,7 +124,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RunExamples.vb" />
-    <Compile Include="WorkingWithOcr\PerformOCROnImage.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -132,6 +146,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

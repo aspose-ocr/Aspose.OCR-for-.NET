@@ -6,6 +6,7 @@ generated/
 *.suo
 bin/
 * Out*
+*_out_*
 * out*
 *.ldb
 Thumbs.db
@@ -20,3 +21,5 @@ TestResults/
 *.vsmdi
 test-results/
 *.userprefs
+packages/
+*.gitattributes
