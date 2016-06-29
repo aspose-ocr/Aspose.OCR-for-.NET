@@ -16,10 +16,8 @@ Namespace Aspose.OCR.Examples.VisualBasic.PerformingandManagingOCR
 
         Public Shared Sub Run()
             ' ExStart:LoadTemplateFromUrl
-            Dim templateUrl As String = "https://Github.com/asposeocr/Aspose_OCR_NET/raw/master/Examples/Data/OCR/question" & _
-            "s.amr"
-            Dim imageUrl As String = "https://Github.com/asposeocr/Aspose_OCR_NET/raw/master/Examples/Data/OMR/answers." & _
-            "jpg"
+            Dim templateUrl As String = "https://Github.com/asposeocr/Aspose_OCR_NET/raw/master/Examples/Data/OCR/questions.amr"
+            Dim imageUrl As String = "https://Github.com/asposeocr/Aspose_OCR_NET/raw/master/Examples/Data/OCR/answers.jpg"
             ' Initialize an instance of OmrTemplate by loading the OMR template from URL
             Dim template As OmrTemplate = OmrTemplate.LoadFromUrl(templateUrl)
             ' image loading from url

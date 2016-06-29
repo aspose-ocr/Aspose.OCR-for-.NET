@@ -27,6 +27,9 @@ Namespace Aspose.OCR.Examples.VisualBasic.FormattingAndManipulatingOMR
             ' Load the image to be analyzed
             Dim image As OmrImage = OmrImage.Load(dataDir & Convert.ToString("answers.jpg"))
 
+            ' Set the auto image resolution detection property
+            image.AutoDetectResolution = True
+
             ' Instantiate the recognition engine for the template
             Dim engine As New OmrEngine(template)
 
