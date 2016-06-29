@@ -30,6 +30,9 @@ namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOMR
             // Load the image to be analyzed
             OmrImage image = OmrImage.Load(dataDir + "answers.jpg");
 
+            //Set the auto image resolution detection property
+            image.AutoDetectResolution = true;
+
             // Instantiate the recognition engine for the template
             OmrEngine engine = new OmrEngine(template);
 
