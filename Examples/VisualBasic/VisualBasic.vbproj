@@ -53,8 +53,8 @@
       <HintPath>..\packages\Aspose.Imaging.3.7.0\lib\net40\Aspose.Imaging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Aspose.OCR, Version=3.6.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.OCR.3.6.0\lib\net40\Aspose.OCR.dll</HintPath>
+    <Reference Include="Aspose.OCR, Version=16.10.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.OCR.16.10.0\lib\net40\Aspose.OCR.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -78,6 +78,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormattingAndManipulatingOCR\SupplyMultipleWhiteLists.vb" />
     <Compile Include="FormattingAndManipulatingOCR\AddingUserDefinedRecognitionBlocks.vb" />
     <Compile Include="FormattingAndManipulatingOCR\PreprocesImagesFromOCROperation.vb" />
     <Compile Include="FormattingAndManipulatingOCR\UserDefinedRecognitionBlocks.vb" />

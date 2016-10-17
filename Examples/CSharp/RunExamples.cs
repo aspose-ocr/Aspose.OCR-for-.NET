@@ -36,6 +36,8 @@ namespace Aspose.OCR.Examples.CSharp
             //LoadTemplateFromUrl.Run();
             //OCROnMultipageTIFF.Run();
             //PreprocesImagesFromOCROperation.Run();
+            //SupplyMultipleWhiteLists.Run();
+
           
             //// =====================================================
             //// =====================================================
@@ -71,6 +73,7 @@ namespace Aspose.OCR.Examples.CSharp
             //SettingMarkThreshold.Run();
             //SkewImageCorrectionUsingAlgorithm.Run();
             //SkewedImageSecondMethod.Run();
+
            
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
