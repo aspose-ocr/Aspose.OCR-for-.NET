@@ -32,6 +32,7 @@ Namespace Aspose.OCR.Examples.VisualBasic
             'WorkingWithDifferentLanguages.Run()
             'OCROnMultipageTIFF.Run()
             'PreprocesImagesFromOCROperation.Run()
+            'SupplyMultipleWhiteLists.Run()
 
             ' =====================================================
             ' =====================================================
