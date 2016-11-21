@@ -49,7 +49,8 @@ Namespace Aspose.OCR.Examples.VisualBasic
             'SettingtheOcrEngine.Run()
             'SettingtheOcrEngineAutomaticallyDetectTextBlocks.Run()
             'UserDefinedRecognitionBlocks.Run()
-
+            'ExtractPreprocessedImages.Run()
+            'UsingNotifierFactory.Run()
 
             ' =====================================================
             ' =====================================================
@@ -68,7 +69,8 @@ Namespace Aspose.OCR.Examples.VisualBasic
             'SettingMarkThreshold.Run()
             'SkewImageCorrectionUsingAlgorithm.Run()
             'SkewedImageSecondMethod.Run()
-
+            'DynamicallyCreateOMRTemplates.Run()
+            'AdjustImageProcessPipeline.Run()
 
             ' Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....")
