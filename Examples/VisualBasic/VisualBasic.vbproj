@@ -78,6 +78,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormattingAndManipulatingOCR\UsingNotifierFactory.vb" />
+    <Compile Include="FormattingAndManipulatingOCR\ExtractPreprocessedImages.vb" />
     <Compile Include="FormattingAndManipulatingOCR\SupplyMultipleWhiteLists.vb" />
     <Compile Include="FormattingAndManipulatingOCR\AddingUserDefinedRecognitionBlocks.vb" />
     <Compile Include="FormattingAndManipulatingOCR\PreprocesImagesFromOCROperation.vb" />
@@ -88,6 +90,8 @@
     <Compile Include="FormattingAndManipulatingOCR\RecognizeWhiteListedCharacters.vb" />
     <Compile Include="FormattingAndManipulatingOCR\SettingOcrEngineAutomaticallyDetect.vb" />
     <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngine.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\AdjustImageProcessPipeline.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\DynamicallyCreateOMRTemplates.vb" />
     <Compile Include="FormattingAndManipulatingOMR\SkewImageCorrectionUsingAlgorithm.vb" />
     <Compile Include="FormattingAndManipulatingOMR\SkewedImageSecondMethod.vb" />
     <Compile Include="FormattingAndManipulatingOMR\SettingMarkThreshold.vb" />

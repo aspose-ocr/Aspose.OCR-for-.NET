@@ -38,7 +38,7 @@ namespace Aspose.OCR.Examples.CSharp
             //PreprocesImagesFromOCROperation.Run();
             //SupplyMultipleWhiteLists.Run();
 
-          
+
             //// =====================================================
             //// =====================================================
             //// Formatting And Manipulating OCR   
@@ -54,7 +54,8 @@ namespace Aspose.OCR.Examples.CSharp
             //SettingtheOcrEngine.Run();
             //SettingtheOcrEngineAutomaticallyDetectTextBlocks.Run();
             //UserDefinedRecognitionBlocks.Run();
- 
+            //ExtractPreprocessedImages.Run();
+            //UsingNotifierFactory.Run();
 
             //// =====================================================
             //// =====================================================
@@ -72,9 +73,10 @@ namespace Aspose.OCR.Examples.CSharp
             //SetPageLevelThreshold.Run();
             //SettingMarkThreshold.Run();
             //SkewImageCorrectionUsingAlgorithm.Run();
-            //SkewedImageSecondMethod.Run();
+            //SkewedImageSecondMethod.Run();            
+            //DynamicallyCreateOMRTemplates.Run();
+            //AdjustImageProcessPipeline.Run();
 
-           
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
             Console.ReadKey();
