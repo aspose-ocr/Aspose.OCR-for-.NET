@@ -92,6 +92,7 @@
     <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngine.vb" />
     <Compile Include="FormattingAndManipulatingOMR\AdjustImageProcessPipeline.vb" />
     <Compile Include="FormattingAndManipulatingOMR\DynamicallyCreateOMRTemplates.vb" />
+    <Compile Include="FormattingAndManipulatingOMR\MeteredLicensingOMR.vb" />
     <Compile Include="FormattingAndManipulatingOMR\SkewImageCorrectionUsingAlgorithm.vb" />
     <Compile Include="FormattingAndManipulatingOMR\SkewedImageSecondMethod.vb" />
     <Compile Include="FormattingAndManipulatingOMR\SettingMarkThreshold.vb" />

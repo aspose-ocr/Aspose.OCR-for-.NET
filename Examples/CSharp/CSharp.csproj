@@ -61,6 +61,7 @@
     <Compile Include="FormattingAndManipulatingOMR\AdjustImageProcessPipeline.cs" />
     <Compile Include="FormattingAndManipulatingOMR\DynamicallyCreateOMRTemplates.cs" />
     <Compile Include="FormattingAndManipulatingOMR\ExtractText.cs" />
+    <Compile Include="FormattingAndManipulatingOMR\MeteredLicensingOMR.cs" />
     <Compile Include="FormattingAndManipulatingOMR\SkewedImageSecondMethod.cs" />
     <Compile Include="FormattingAndManipulatingOMR\SkewImageCorrectionUsingAlgorithm.cs" />
     <Compile Include="FormattingAndManipulatingOMR\DetectImageResolutionAutomatically.cs" />
