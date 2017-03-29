@@ -1,4 +1,4 @@
-##Aspose.OCR for .NET
+## Aspose.OCR for .NET
 
 [Aspose.OCR for .NET](http://www.aspose.com/products/ocr/net) is a character and optical mark recognition API that allows developers to add OCR and OMR functionality in their ASP.NET web applications, web services and Windows applications without requiring any additional tool or API. It provides a simple set of classes for controlling character recognition.
 
