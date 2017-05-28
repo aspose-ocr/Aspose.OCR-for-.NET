@@ -30,10 +30,6 @@ namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR
             filter = new GaussBlurFilter();
             filters.Add(filter);
 
-            // Create Noise Removal filter
-            filter = new RemoveNoiseFilter();
-            filters.Add(filter);
-
             // Assign collection to OcrEngine
             ocrEngine.Config.CorrectionFilters = filters;
 
