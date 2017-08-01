@@ -20,5 +20,5 @@ Directory | Description
 + **Product Home:** [Aspose.OCR for .NET](https://www.aspose.com/products/ocr/net)
 + **Download:** [Download Aspose.OCR for .NET](https://downloads.aspose.com/ocr/net)
 + **Documentation:** [Aspose.OCR for .NET Documentation](https://docs.aspose.com/display/ocrnet/Home)
-+ **Forum:** [Aspose.OCR for .NET Forum](https://www.aspose.com/community/forums/aspose.ocr-product-family/493/showforum.aspx)
++ **Forum:** [Aspose.OCR for .NET Forum](https://forum.aspose.com/c/ocr)
 + **Blog:** [Aspose.OCR for .NET Blog](https://blog.aspose.com/category/aspose-products/aspose-ocr-product-family/)
