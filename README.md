@@ -17,7 +17,7 @@ Directory | Description
 ## Resources
 
 + **Website:** [www.aspose.com](https://www.aspose.com/)
-+ **Product Home:** [Aspose.OCR for .NET](https://www.aspose.com/products/ocr/net)
++ **Product Home:** [Aspose.OCR for .NET](https://products.aspose.com/ocr/net)
 + **Download:** [Download Aspose.OCR for .NET](https://downloads.aspose.com/ocr/net)
 + **Documentation:** [Aspose.OCR for .NET Documentation](https://docs.aspose.com/display/ocrnet/Home)
 + **Forum:** [Aspose.OCR for .NET Forum](https://forum.aspose.com/c/ocr)
