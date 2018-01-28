@@ -37,13 +37,8 @@
     <StartupObject>Aspose.OCR.Examples.CSharp.RunExamples</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Imaging, Version=3.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.Imaging.3.7.0\lib\net40\Aspose.Imaging.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Aspose.OCR, Version=16.10.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.OCR.16.10.0\lib\net40\Aspose.OCR.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Aspose.OCR">
+      <HintPath>..\..\..\..\Ctrash\test.aspose.win\test.aspose.win\bin\Debug\Aspose.OCR.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,20 +53,6 @@
     <Compile Include="FormattingAndManipulatingOCR\AddingUserDefinedRecognitionBlocks.cs" />
     <Compile Include="FormattingAndManipulatingOCR\SupplyMultipleWhiteLists.cs" />
     <Compile Include="FormattingAndManipulatingOCR\ExtractPreprocessedImages.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\AdjustImageProcessPipeline.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\DynamicallyCreateOMRTemplates.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\ExtractText.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\MeteredLicensingOMR.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\SkewedImageSecondMethod.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\SkewImageCorrectionUsingAlgorithm.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\DetectImageResolutionAutomatically.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\SetImageResolution.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\DetectUsingElements.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\SetElementLevelThreshold.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\SetPageLevelThreshold.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\SettingMarkThreshold.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\ExtractBarcodeData.cs" />
-    <Compile Include="FormattingAndManipulatingOMR\ExtractOMRDataUsingScannedImage.cs" />
     <Compile Include="FormattingAndManipulatingOCR\UsingNotifierFactory.cs" />
     <Compile Include="FormattingAndManipulatingOCR\ApplyingCorrectionFilters.cs" />
     <Compile Include="FormattingAndManipulatingOCR\AutomaticallyCorrectTheSpellings.cs" />

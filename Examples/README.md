@@ -1,6 +1,6 @@
 ## Aspose.OCR for .NET Examples
 
-This directory contains C# examples for [Aspose.OCR for .NET](http://www.aspose.com/products/ocr/net).
+This directory contains C# examples for [Aspose.OCR for .NET](https://products.aspose.com/ocr/net).
 
 ## How to use the examples?
 
