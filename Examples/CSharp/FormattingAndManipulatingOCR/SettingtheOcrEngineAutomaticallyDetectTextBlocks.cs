@@ -10,7 +10,7 @@ namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR
         {
             // ExStart:SettingtheOcrEngineAutomaticallyDetectTextBlocks
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_OMR();
+            string dataDir = RunExamples.GetDataDir_OCR();
 
             // Create an instance of OcrEngine class
             OcrEngine ocr = new OcrEngine();

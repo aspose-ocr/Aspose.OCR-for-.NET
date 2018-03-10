@@ -10,7 +10,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
         {
             // ExStart:PerformOCROnImage   
             // The path to the documents directory.
-            string dataDir = RunExamples.GetDataDir_OMR();
+            string dataDir = RunExamples.GetDataDir_OCR();
 
             // Initialize an instance of OcrEngine
             OcrEngine ocrEngine = new OcrEngine();
