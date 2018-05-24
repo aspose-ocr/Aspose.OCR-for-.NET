@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR;
-using Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOMR;
 using Aspose.OCR.Examples.CSharp.PerformingandManagingOCR;
 
 namespace Aspose.OCR.Examples.CSharp
