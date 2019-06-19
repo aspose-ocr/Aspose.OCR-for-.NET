@@ -10,11 +10,11 @@ please feel free to contact us using http://www.aspose.com/community/forums/defa
 
 namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR
 {
-    public class UsingNotifierFactory
+    public class GettingBlockNotification
     {
         public static void Run()
         {
-            // ExStart:UsingNotifierFactory
+            // ExStart:GettingBlockNotification
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_OCR();
 
@@ -22,7 +22,7 @@ namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR
             OcrEngine ocrEngine = new OcrEngine();
 
             // Set the Image property by loading the image from file path location or an instance of MemoryStream 
-            ocrEngine.Image = ImageStream.FromFile(dataDir + "answers.jpg");
+            ocrEngine.Image = ImageStream.FromFile(dataDir + "Sampleocr.bmp");
 
             // Get an instance of WordNotifier, Write a delegate to handle the Elapsed event and Display the recognized text on screen
             INotifier processorBlock = NotifierFactory.BlockNotifier();
@@ -34,7 +34,7 @@ namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR
             // Add the word processor to the OcrEngine and Process the image
             ocrEngine.AddNotifier(processorBlock);
             ocrEngine.Process();
-            // ExEnd:UsingNotifierFactory            
+            // ExEnd:GettingBlockNotification            
         }
     }
 }

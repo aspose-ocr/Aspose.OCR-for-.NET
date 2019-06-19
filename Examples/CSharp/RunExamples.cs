@@ -13,6 +13,12 @@ namespace Aspose.OCR.Examples.CSharp
     {
         static void Main(string[] args)
         {
+            Aspose.OCR.License ocrLicense = new Aspose.OCR.License();
+            ocrLicense.SetLicense("D:\\DotNet Projects\\Aspose\\2019\\Aspose.Total.NET.lic");
+            Aspose.Pdf.License pdfLicense = new Aspose.Pdf.License();
+            pdfLicense.SetLicense("D:\\DotNet Projects\\Aspose\\2019\\Aspose.Total.NET.lic");
+
+
             Console.WriteLine("Open RunExamples.cs. \nIn Main() method Uncomment the example that you want to run.");
             Console.WriteLine("=====================================================");
 
@@ -25,18 +31,17 @@ namespace Aspose.OCR.Examples.CSharp
             //// =====================================================
 
             //PerformOCROnImage.Run();
-            //GettingNotification.Run();
+            //GettingWordNotification.Run();
             //ExtractingText.Run();
             //GetLocationAndSizeExample.Run();
             //ReadPartInformation.Run();
             //DetectingTextBlocks.Run();
             //GetTextPartHierarchy.Run();
             //WorkingWithDifferentLanguages.Run();
-            //LoadTemplateFromUrl.Run();
             //OCROnMultipageTIFF.Run();
             //PreprocesImagesFromOCROperation.Run();
-            //SupplyMultipleWhiteLists.Run();
-
+            //ExtractPreprocessedImage.Run();
+            //PerformOCROnPDF.Run();
 
             //// =====================================================
             //// =====================================================
@@ -52,39 +57,11 @@ namespace Aspose.OCR.Examples.CSharp
             //SettingOcrEngineAutomaticallyDetect.Run();
             //SettingtheOcrEngine.Run();
             //SettingtheOcrEngineAutomaticallyDetectTextBlocks.Run();
-            //UserDefinedRecognitionBlocks.Run();
-            //ExtractPreprocessedImages.Run();
-            //UsingNotifierFactory.Run();
-
-            //// =====================================================
-            //// =====================================================
-            //// Formatting And Manipulating OMR   
-            //// =====================================================
-            //// =====================================================
-
-            //DetectImageResolutionAutomatically.Run();
-            //DetectUsingElements.Run();
-            //ExtractOMRDataUsingScannedImage.Run();
-            //ExtractText.Run();
-            //PerformOCROnImage.Run();
-            //SetElementLevelThreshold.Run();
-            //SetImageResolution.Run();
-            //SetPageLevelThreshold.Run();
-            //SettingMarkThreshold.Run();
-            //SkewImageCorrectionUsingAlgorithm.Run();
-            //SkewedImageSecondMethod.Run();            
-            //DynamicallyCreateOMRTemplates.Run();
-            //AdjustImageProcessPipeline.Run();
+            //GettingBlockNotification.Run();
 
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
             Console.ReadKey();
-        }
-
-
-        public static String GetDataDir_OMR()
-        {
-            return Path.GetFullPath(GetDataDir_Data() + "OMR/");
         }
 
         public static String GetDataDir_OCR()

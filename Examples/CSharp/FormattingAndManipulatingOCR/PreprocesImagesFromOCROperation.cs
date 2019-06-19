@@ -32,6 +32,7 @@ namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR
             if (ocr.Process())
             {
                 // Do processing
+                Console.WriteLine(ocr.Text);
             }
             // ExEnd:PreprocesImagesFromOCROperation
         }

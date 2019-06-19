@@ -24,7 +24,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
                 // Retrieve the first block of the recognized text part
                 IRecognizedTextPartInfo firstBlock = (ocrEngine.Text.PartsInfo[0] as IRecognizedTextPartInfo);
 
-                // Get the children of the first block that will the the lines in the block
+                // Get the children of the first block that will be the lines in the block
                 if (firstBlock != null)
                 {
                     IRecognizedPartInfo[] linesOfFirstBlock = firstBlock.Children;

@@ -22,20 +22,20 @@ namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR
             ocrEngine.Config.ClearRecognitionBlocks();
 
             // Add 3 rectangle blocks to user defined recognition blocks
-            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(0, 10, 20, 40));
-            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(0, 4, 5, 6));
-            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(0, 5, 5, 6));
+            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(27, 35, 857, 75));
+            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(899, 104, 552, 63));
+            ocrEngine.Config.AddRecognitionBlock(RecognitionBlock.CreateTextBlock(702, 163, 623, 68));
             
             // Ignore everything else on the image other than the user defined recognition blocks
             ocrEngine.Config.DetectTextRegions = false;
 
             // Set Image property by loading an image from file path
-            ocrEngine.Image = ImageStream.FromFile(dataDir + "sample1.jpg");
+            ocrEngine.Image = ImageStream.FromFile(dataDir + "Sampleocr.bmp");
 
             // Run recognition process
             if (ocrEngine.Process())
             {
-                // Retrieve user defined blocks that determines the paye layout
+                // Retrieve user defined blocks that determines the page layout
                 var blocks = ocrEngine.Config.RecognitionBlocks;
                 // Loop over the list of blocks
                 foreach (var block in blocks)

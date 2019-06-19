@@ -30,8 +30,11 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
                 {
                     // Display part intomation
                     Console.WriteLine("Text : " + symbol.Text);
-                    Console.WriteLine("isItalic : " + symbol.Italic);                    
-                    Console.WriteLine("Language : " + symbol.Language);
+                    Console.WriteLine("isItalic : " + symbol.Italic);
+                    Console.WriteLine("Text Color : " + symbol.TextColor);
+                    Console.WriteLine("Is Trimmed : " + symbol.IsTrimmed);
+                    float[] quality = symbol.CharactersQuality;
+                    Console.WriteLine("Quality of first Character : " + quality[0]);
                 }
             }
             // ExStart:ReadPartInformation            

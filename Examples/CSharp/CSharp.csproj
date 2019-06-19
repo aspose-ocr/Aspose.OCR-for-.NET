@@ -41,6 +41,9 @@
       <HintPath>..\packages\Aspose.OCR.17.11.0\lib\net40\Aspose.OCR.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Aspose.PDF, Version=19.3.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.PDF.19.3.0\lib\net4.0\Aspose.PDF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -59,13 +62,14 @@
     <Compile Include="FormattingAndManipulatingOCR\SettingOcrEngineAutomaticallyDetect.cs" />
     <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngine.cs" />
     <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngineAutomaticallyDetectTextBlocks.cs" />
-    <Compile Include="FormattingAndManipulatingOCR\UserDefinedRecognitionBlocks.cs" />
     <Compile Include="PerformingandManagingOCR\DetectingTextBlocks.cs" />
     <Compile Include="PerformingandManagingOCR\ExtractingText.cs" />
     <Compile Include="PerformingandManagingOCR\GetLocationAndSize.cs" />
     <Compile Include="PerformingandManagingOCR\GetTextPartHierarchy.cs" />
-    <Compile Include="PerformingandManagingOCR\GettingNotification.cs" />
+    <Compile Include="PerformingandManagingOCR\GettingWordNotification.cs" />
+    <Compile Include="PerformingandManagingOCR\PerformOCROnPDF.cs" />
     <Compile Include="PerformingandManagingOCR\ReadPartInformation.cs" />
+    <Compile Include="PerformingandManagingOCR\ExtractPreprocessedImage.cs" />
     <Compile Include="PerformingandManagingOCR\WorkingWithDifferentLanguages.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

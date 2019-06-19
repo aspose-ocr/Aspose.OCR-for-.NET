@@ -15,7 +15,7 @@ namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR
             OcrEngine ocr = new OcrEngine();
 
             // Set the Image property of OcrEngine by reading an image file
-            ocr.Image = ImageStream.FromFile(dataDir + "sampleocr_spell.bmp");
+            ocr.Image = ImageStream.FromFile(dataDir + "SampleSpellingCorrection.jpg");
 
             // Set the DoSpellingCorrection to true
             ocr.Config.DoSpellingCorrection = true;
