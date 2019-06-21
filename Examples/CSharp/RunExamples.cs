@@ -42,6 +42,7 @@ namespace Aspose.OCR.Examples.CSharp
             //PreprocesImagesFromOCROperation.Run();
             //ExtractPreprocessedImage.Run();
             //PerformOCROnPDF.Run();
+            //LoadImagefromURLtoPerformOCR.Run();
 
             //// =====================================================
             //// =====================================================

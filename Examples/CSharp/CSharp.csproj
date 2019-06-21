@@ -62,6 +62,7 @@
     <Compile Include="FormattingAndManipulatingOCR\SettingOcrEngineAutomaticallyDetect.cs" />
     <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngine.cs" />
     <Compile Include="FormattingAndManipulatingOCR\SettingtheOcrEngineAutomaticallyDetectTextBlocks.cs" />
+    <Compile Include="PerformingandManagingOCR\LoadImagefromURLtoPerformOCR.cs" />
     <Compile Include="PerformingandManagingOCR\DetectingTextBlocks.cs" />
     <Compile Include="PerformingandManagingOCR\ExtractingText.cs" />
     <Compile Include="PerformingandManagingOCR\GetLocationAndSize.cs" />

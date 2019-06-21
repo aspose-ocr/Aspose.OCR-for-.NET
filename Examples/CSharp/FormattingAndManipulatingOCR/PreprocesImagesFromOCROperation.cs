@@ -27,7 +27,7 @@ namespace Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR
             ocr.Image = ImageStream.FromFile(dataDir);
 
             // Set the SavePreprocessedImages property to false.
-            ocr.Config.SavePreprocessedImages = true;
+            ocr.Config.SavePreprocessedImages = false;
 
             if (ocr.Process())
             {
