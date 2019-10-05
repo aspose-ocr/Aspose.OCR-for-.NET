@@ -1,8 +1,8 @@
 # Aspose.OCR for .NET
 
-[Aspose.OCR for .NET](https://products.aspose.com/ocr/net) is a character and optical mark recognition API that allows developers to add OCR and OMR functionality in their ASP.NET web applications, web services and Windows applications without requiring any additional tool or API. It provides a simple set of classes for controlling character recognition.
+[Aspose.OCR for .NET](https://products.aspose.com/ocr/net) is a character and optical mark recognition API that allows developers to add OCR functionality in their ASP.NET web applications, web services, and Windows applications without requiring any additional tool or API. It provides a simple set of classes for controlling character recognition.
 
-This repository contains [Examples](Examples) and Showcase projects for [Aspose.OCR for .NET](https://products.aspose.com/ocr/net) to help you learn and write your own applications.
+This repository contains [Examples](Examples) and Showcase projects for [Aspose.OCR for .NET](https://products.aspose.com/ocr/net) to help you learn and write your applications.
 
 <p align="center">
   <a href="https://github.com/asposeocr/Aspose_OCR_NET/archive/master.zip">
@@ -25,7 +25,7 @@ Directory | Description
 * Open **RunExamples.cs** file, all the examples are called from here.
 * Uncomment the examples you want to run from within the project.
 
-Please find more details for how to run the examples [here](https://docs.aspose.com/display/ocrnet/How+to+Run+the+Examples).
+Please find more details on how to run the examples [here](https://docs.aspose.com/display/ocrnet/How+to+Run+the+Examples).
 
 ## Resources
 
