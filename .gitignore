@@ -16,8 +16,6 @@ out/
 *.lic
 *.user
 Out/
-Out*/
-Data/*Out*
 TestResults/
 *.vsmdi
 test-results/
