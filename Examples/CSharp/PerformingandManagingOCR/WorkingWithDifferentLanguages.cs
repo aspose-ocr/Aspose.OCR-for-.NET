@@ -9,29 +9,21 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
     {
         public static void Run()
         {
-            // ExStart:WorkingWithDifferentLanguages
+            // ExStart:1
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_OCR();
 
-            // Initialize an instance of OcrEngine
-            OcrEngine ocrEngine = new OcrEngine();
+            // Initialize an instance of AsposeOcr
+            AsposeOcr api = new AsposeOcr();
 
-            // Set the Image property by loading the image from file path location or an instance of Stream
-            ocrEngine.Image = ImageStream.FromFile(dataDir + "SpanishOCR.bmp");
+            // Recognize image
+            string result = api.RecognizeImage(dataDir + "SpanishOCR.bmp");
 
-            // Clear the default language (English)
-            ocrEngine.LanguageContainer.Clear();
+            // Display the recognized text
+            Console.WriteLine(result);
+            // ExEnd:1
 
-            // Load the resources of the language from file path location or an instance of Stream
-            ocrEngine.LanguageContainer.AddLanguage(LanguageFactory.Load(dataDir + "Aspose.OCR.Spanish.Resources.zip"));
-
-            // Process the image
-            if (ocrEngine.Process())
-            {
-                // Display the recognized text
-                Console.WriteLine(ocrEngine.Text);
-            }
-            // ExEnd:WorkingWithDifferentLanguages
+            Console.WriteLine("WorkingWithDifferentLanguages executed successfully");
         }
     }
 }

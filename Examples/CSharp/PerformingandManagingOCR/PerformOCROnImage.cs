@@ -8,23 +8,21 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
     {
         public static void Run()
         {
-            // ExStart:PerformOCROnImage   
+            // ExStart:1   
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_OCR();
 
-            // Initialize an instance of OcrEngine
-            OcrEngine ocrEngine = new OcrEngine();
+            // Initialize an instance of AsposeOcr
+            AsposeOcr api = new AsposeOcr();
 
-            // Set the Image property by loading the image from file path location or an instance of MemoryStream 
-            ocrEngine.Image = ImageStream.FromFile(dataDir + "Sampleocr.bmp");
+            // Recognize image
+            string result = api.RecognizeImage(dataDir + "sample.png");
 
-            // Process the image
-            if (ocrEngine.Process())
-            {
-                // Display the recognized text
-                Console.WriteLine(ocrEngine.Text);
-            }
-            // ExEnd:PerformOCROnImage   
+            // Display the recognized text
+            Console.WriteLine(result);
+            // ExEnd:1
+
+            Console.WriteLine("PerformOCROnImage executed successfully");
         }
     }
 }

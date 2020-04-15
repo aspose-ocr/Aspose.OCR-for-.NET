@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using Aspose.OCR.Examples.CSharp.FormattingAndManipulatingOCR;
 using Aspose.OCR.Examples.CSharp.PerformingandManagingOCR;
 
 namespace Aspose.OCR.Examples.CSharp
@@ -13,10 +12,8 @@ namespace Aspose.OCR.Examples.CSharp
     {
         static void Main(string[] args)
         {
-            Aspose.OCR.License ocrLicense = new Aspose.OCR.License();
-            ocrLicense.SetLicense("D:\\DotNet Projects\\Aspose\\2019\\Aspose.Total.NET.lic");
-            Aspose.Pdf.License pdfLicense = new Aspose.Pdf.License();
-            pdfLicense.SetLicense("D:\\DotNet Projects\\Aspose\\2019\\Aspose.Total.NET.lic");
+            //License ocrLicense = new License();
+            //ocrLicense.SetLicense(@"LicenseFile");
 
 
             Console.WriteLine("Open RunExamples.cs. \nIn Main() method Uncomment the example that you want to run.");
@@ -31,34 +28,8 @@ namespace Aspose.OCR.Examples.CSharp
             //// =====================================================
 
             //PerformOCROnImage.Run();
-            //GettingWordNotification.Run();
-            //ExtractingText.Run();
-            //GetLocationAndSizeExample.Run();
-            //ReadPartInformation.Run();
-            //DetectingTextBlocks.Run();
-            //GetTextPartHierarchy.Run();
+            //RecognizeLine.Run();
             //WorkingWithDifferentLanguages.Run();
-            //OCROnMultipageTIFF.Run();
-            //PreprocesImagesFromOCROperation.Run();
-            //ExtractPreprocessedImage.Run();
-            //PerformOCROnPDF.Run();
-            //LoadImagefromURLtoPerformOCR.Run();
-
-            //// =====================================================
-            //// =====================================================
-            //// Formatting And Manipulating OCR   
-            //// =====================================================
-            //// =====================================================
-
-
-            //AddingUserDefinedRecognitionBlocks.Run();
-            //ApplyingCorrectionFilters.Run();
-            //AutomaticallyCorrectTheSpellings.Run();
-            //RecognizeWhiteListedCharacters.Run();
-            //SettingOcrEngineAutomaticallyDetect.Run();
-            //SettingtheOcrEngine.Run();
-            //SettingtheOcrEngineAutomaticallyDetectTextBlocks.Run();
-            //GettingBlockNotification.Run();
 
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
@@ -72,7 +43,7 @@ namespace Aspose.OCR.Examples.CSharp
 
         private static string GetDataDir_Data()
         {
-            var parent = Directory.GetParent(Directory.GetCurrentDirectory()).Parent;
+            var parent = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent;
             string startDirectory = null;
             if (parent != null)
             {
