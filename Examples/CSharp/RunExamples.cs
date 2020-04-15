@@ -13,7 +13,7 @@ namespace Aspose.OCR.Examples.CSharp
         static void Main(string[] args)
         {
             //License ocrLicense = new License();
-            //ocrLicense.SetLicense(@"LicenseFile");
+            //ocrLicense.SetLicense("LicenseFilePath");
 
 
             Console.WriteLine("Open RunExamples.cs. \nIn Main() method Uncomment the example that you want to run.");
@@ -43,7 +43,7 @@ namespace Aspose.OCR.Examples.CSharp
 
         private static string GetDataDir_Data()
         {
-            var parent = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent;
+            var parent = Directory.GetParent(Directory.GetCurrentDirectory()).Parent;
             string startDirectory = null;
             if (parent != null)
             {
