@@ -5,7 +5,7 @@
 This repository contains [Examples](Examples) and Showcase projects for [Aspose.OCR for .NET](https://products.aspose.com/ocr/net) to help you learn and write your applications.
 
 <p align="center">
-  <a href="https://github.com/asposeocr/Aspose_OCR_NET/archive/master.zip">
+  <a href="https://github.com/aspose-ocr/Aspose.OCR-for-.NET/archive/master.zip">
     <img src="http://i.imgur.com/hwNhrGZ.png" />
   </a>
 </p>
@@ -13,6 +13,26 @@ This repository contains [Examples](Examples) and Showcase projects for [Aspose.
 Directory | Description
 --------- | -----------
 [Examples](Examples)  | A collection of .NET examples that help you learn the product features
+
+## Supported Characters
+
+|   |   |   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|---|---|
+| space | ! | " | # | $ | % | & | ' | ( | ) |
+| * | + | , | - | . | / | 0 | 1 | 2 | 3 |
+| 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | = |
+| > | ? | @ | [ | \ | ] | _ | ` | { | \| |
+| } | ~ | A | B | C | D | E | F | G | H |
+| I | J | K | L | M | N | O | P | Q | R |
+| S | T | U | V | W | X | Y | Z | a | b |
+| c | d | e | f | g | h | i | j | k | l |
+| m | n | o | p | q | r | s | t | u | v |
+| w | x | y | z | Â | À | Á | Ã | Ä | Æ |
+| Ç | È | É | Ê | Ë | Ì | Í | Î | Ï | Ñ |
+| Ò | Ó | Ô | Õ | Ö | Ù | Ú | Û | Ü | ẞ |
+| ß | à | á | â | ã | ä | æ | ç | è | é |
+| ê | ë | ì | í | î | ï | ñ | ò | ó | ô |
+| õ | ö | ù | ú | û | ü | ÿ | Œ | œ | Ÿ |
 
 ## How to Run the Examples
 
@@ -24,6 +44,7 @@ Directory | Description
 * Data folder at the root folder of Examples contains input files used in the examples. It is mandatory that you download the Data folder along with the examples project.
 * Open **RunExamples.cs** file, all the examples are called from here.
 * Uncomment the examples you want to run from within the project.
+* Build the application in x64 mode.
 
 Please find more details on how to run the examples [here](https://docs.aspose.com/display/ocrnet/How+to+Run+the+Examples).
 
