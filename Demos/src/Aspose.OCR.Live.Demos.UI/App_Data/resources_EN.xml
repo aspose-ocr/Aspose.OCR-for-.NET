@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <res name="ApplicationTitle">Aspose.OCR Live Demos</res>
+  <res name="ApplicationTitle2">On premise APIs or Free Apps to compose archive, add entries or delete entries from existing archives. Encrypt using ZipCrypto or AES128, 192 and AES256.</res>
+
+  <res name="HomePageTitle">Home</res>
+  <res name="DownloadFileLinkTitle">Download your file</res>
+	<res name="NoSearchResultsMessage">No search results</res>
+  
+  <res name="InvalidFileExtension">Invalid file, please upload a file with extension</res>
+  <res name="InvalidFile">Invalid file, please ensure that uploading correct file</res>
+	<res name="FileAmountMessageOne">Please select only one file</res>
+	<res name="FileAmountMessageLessTen">Please select less than ten files</res>  
+	<res name="AsposeOCR">Aspose.OCR</res>
+	<res name="AsposeOcr">Aspose.OCR</res>
+  <res name="PageNotFound">404 Page not found</res>
+  <res name="BrokenLinkTitle">The link you followed probably broken or the page has been moved</res>
+  <res name="btnBackHome">Back to Home</res>
+	<res name="FileSelectMessage">Please select files to scan</res>
+  <res name="SaveAs">Save As</res>
+	<res name="ocrSaveAsOptions"></res>
+	
+  <res name="DropOrUploadFile">Drop or upload your file</res>
+  <res name="DropOrUploadFiles">Drop or upload your file</res>
+	<res name="ocrValidationExpression">.jpg|.bmp|.tiff|.gif|.png|.emf|.svg|.eps</res>
+	
+
+  <res name="DownLoadNow">DOWNLOAD NOW</res>
+  <res name="FileWrongTypeMessage">You are trying to upload document(s) of unsupported type: </res>
+	<res name="ocrScanImagePageTitle">Convert image to text with our free OCR software</res>
+	<res name="ocrScanImageMetaDescription">Aspose.OCR is a free online OCR service that allows converting scanned images of popular formats like JPG, BMP, TIFF, GIF, PNG to plain editable text.</res>
+	<res name="ocrScanImageTitle">Convert image to text with our free OCR software</res>
+	<res name="ocrScanImageSubTitle">Just upload your images to convert image to text for JPG, BMP, TIFF, GIF, PNG, EMF, SVG formats.</res>
+	<!-- scan-Image App - How To-->
+	<res name="HowtoScanImageTitle">How to Scan Image using Aspose.OCR Scan Image App</res>
+	<res name="HowtoScanImageFeature1">Click inside the file drop area to upload file or drag &amp; drop file.</res>
+	<res name="HowtoScanImageFeature2">Your file will be uploaded to scan.</res>
+	<res name="HowtoScanImageFeature3">Wait until the recognition result displayed.</res>
+	<res name="WrongRegExpMessage">Wrong regular expression</res>
+ 
+  
+	<res name="AsposeProductFor"></res>
+
+ 
+  <res name="ScanImageFeature1">Fast and Easy Perform OCR</res>
+  <res name="ScanImageFeature1Description">Upload your image and click on “Perform OCR” button to convert image to text. You will get the text as soon as the OCR is performed</res>
+
+	<res name="ScanImageFeature2">Perform OCR from Anywhere</res>
+  <res name="ScanImageFeature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
+  <res name="ScanImageFeature3">High recognition quality</res>
+  <res name="Feature3Description">. All files are processed using Aspose APIs, which are being used by many Fortune 100 companies across 114 countries</res>
+	
+  <res name="PoweredBy">Powered by</res>
+ 
+  <res name="SaveAsDescription">Save as: {0}</res>
+  <res name="ConversionCategory">conversion</res>
+  <res name="AsposeProductFamilyInclude">{0} Product Family Includes</res>	
+	<res name="ScanImageButton">Scan Image</res>
+	<res name="ScanImageAnotherFile">Scan Other Images</res>
+	<res name="ScanImageSuccessMessage">Your Image Scanned successfully</res>	
+	<res name="ScanImageAction">Scan Image</res>
+	
+</resources>
+
+
+
