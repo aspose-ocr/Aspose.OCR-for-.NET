@@ -30,6 +30,14 @@ namespace Aspose.OCR.Examples.CSharp
             //PerformOCROnImage.Run();
             //RecognizeLine.Run();
             //WorkingWithDifferentLanguages.Run();
+            //RecognizeImageFromStream.Run();
+            //RecognizeImageWithoutTextAreaDetection.Run();
+            //RecognizeImageWithTextAreaDetectionAndWithoutSkewCorrection.Run();
+            //PrepareRectangles.Run();
+            //RecognizeTextFromSpecificRectangle.Run();
+            //SpecifyAllowedCharacters.Run();
+            //CalculateSkewAngle.Run();
+            //CalculateSkewAngleFromStream.Run();
 
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
