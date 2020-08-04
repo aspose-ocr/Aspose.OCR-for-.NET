@@ -1,0 +1,27 @@
+name: Hugo-CI
+on:
+  push:
+    branches: [ develop ]
+    paths:
+      - 'Docs/**'
+
+jobs:
+  job-one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: build Hugo public site
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSHKEY }}
+        port: ${{ secrets.SSHPORT }}
+        script: |
+          cd aspose-html-docs
+          git clone --single-branch --branch develop https://github.com/aspose-ocr/Aspose.OCR-for-.NET.git || (cd Aspose.OCR-for-.NET; git pull)
+          cp -R Aspose.OCR-for-.NET/Docs/* aspose-prototype-ocr/content/net
+          cd aspose-prototype-ocr
+          hugo --baseURL https://docs.aspose.com/html
+          sudo cp -R public/java/* ${{ secrets.PROJECTPATH }}
+          sudo nginx -s reload
