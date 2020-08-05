@@ -22,6 +22,6 @@ jobs:
           git clone --single-branch --branch develop https://github.com/aspose-ocr/Aspose.OCR-for-.NET.git || (cd Aspose.OCR-for-.NET; git pull)
           cp -R Aspose.OCR-for-.NET/Docs/* aspose-prototype-ocr/content/net
           cd aspose-prototype-ocr
-          hugo --baseURL https://docs.aspose.com/html
+          hugo --baseURL https://docs.aspose.com/ocr
           sudo cp -R public/net/* ${{ secrets.PROJECTPATH }}
           sudo nginx -s reload
