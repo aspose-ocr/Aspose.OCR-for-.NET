@@ -22,3 +22,4 @@ test-results/
 *.userprefs
 packages/
 *.gitattributes
+.DS_Store
