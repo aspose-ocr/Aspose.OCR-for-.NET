@@ -8,20 +8,14 @@ on:
 jobs:
   job-one:
     name: Deploy
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64, dev4-github]
     steps:
-    - name: build Hugo public site
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSHKEY }}
-        port: ${{ secrets.SSHPORT }}
-        script: |
-          cd aspose-ocr-docs
-          git clone --single-branch --branch develop https://github.com/aspose-ocr/Aspose.OCR-for-.NET.git || (cd Aspose.OCR-for-.NET; git pull)
-          cp -R Aspose.OCR-for-.NET/Docs/* aspose-prototype-ocr/content/net
-          cd aspose-prototype-ocr
-          hugo --baseURL https://docs.aspose.com/ocr
-          sudo cp -R public/net/* ${{ secrets.PROJECTPATH }}
-          sudo nginx -s reload
+      - name: hugo build
+        run: |
+          cd aspose-ocr-docs || (mkdir aspose-ocr-docs; cd aspose-ocr-docs)
+          git clone --single-branch --branch develop https://github.com/aspose-html/Aspose.OCR-for-.NET.git || (cd Aspose.OCR-for-.NET; git pull)
+          git clone --single-branch --branch master https://git.dev.dynabic.com/containerize-hugo/lutsk-aspose-prototype.git || (cd lutsk-aspose-prototype; git pull)
+          cd lutsk-aspose-prototype
+          git clone --single-branch --branch master https://git.dev.dynabic.com/containerize-hugo/lutsk-aspose-theme.git || (cd lutsk-aspose-theme; git pull)
+          sudo npm install -D --save autoprefixer
+          sudo npm install -D --save postcss-cli
