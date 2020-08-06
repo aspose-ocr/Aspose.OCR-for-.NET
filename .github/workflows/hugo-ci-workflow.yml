@@ -13,7 +13,7 @@ jobs:
       - name: hugo build
         run: |
           cd aspose-ocr-docs || (mkdir aspose-ocr-docs && cd aspose-ocr-docs)
-          git clone --single-branch --branch develop https://github.com/aspose-html/Aspose.OCR-for-.NET.git || (cd Aspose.OCR-for-.NET && git pull)
+          git clone --single-branch --branch develop https://github.com/aspose-ocr/Aspose.OCR-for-.NET.git || (cd Aspose.OCR-for-.NET && git pull)
           git clone --single-branch --branch master https://git.dev.dynabic.com/containerize-hugo/lutsk-aspose-prototype.git || (cd lutsk-aspose-prototype && git pull)
           cd lutsk-aspose-prototype
           git clone --single-branch --branch master https://git.dev.dynabic.com/containerize-hugo/lutsk-aspose-theme.git || (cd lutsk-aspose-theme && git pull)
