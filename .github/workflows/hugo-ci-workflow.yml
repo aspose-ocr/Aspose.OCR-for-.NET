@@ -15,12 +15,11 @@ jobs:
           cd aspose-ocr-docs
           git clone --single-branch --branch develop https://github.com/aspose-ocr/Aspose.OCR-for-.NET.git || (cd Aspose.OCR-for-.NET && git pull)
           git clone --single-branch --branch master https://git.dev.dynabic.com/containerize-hugo/lutsk-aspose-prototype.git || (cd lutsk-aspose-prototype && git pull)
-          cd lutsk-aspose-prototype/themes
-          git clone --single-branch --branch master https://git.dev.dynabic.com/containerize-hugo/lutsk-aspose-theme.git || (cd lutsk-aspose-theme && git pull)
-          cd ..
+          cd lutsk-aspose-prototype
+          git clone --single-branch --branch master https://git.dev.dynabic.com/containerize-hugo/lutsk-aspose-theme.git themes/lutsk-aspose-theme || (cd themes/lutsk-aspose-theme && git pull)
           sudo npm install -D --save autoprefixer
           sudo npm install -D --save postcss-cli
-          cp -R ${{ secrets.PROJECTPATH }} content/net
+          cp -R /home/valeriyten/ocr-actions-runner/_work/Aspose.OCR-for-.NET/Aspose.OCR-for-.NET/aspose-ocr-docs/Aspose.OCR-for-.NET/Docs/* content/net
           hugo --baseURL https://docs.aspose.com/ocr
           scp -r public/net/* ${{ secrets.TRANSFERPATH }}
       - name: hugo deploy
