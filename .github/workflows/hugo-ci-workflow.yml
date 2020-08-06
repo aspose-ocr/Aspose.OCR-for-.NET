@@ -19,3 +19,6 @@ jobs:
           git clone --single-branch --branch master https://git.dev.dynabic.com/containerize-hugo/lutsk-aspose-theme.git || (cd lutsk-aspose-theme && git pull)
           sudo npm install -D --save autoprefixer
           sudo npm install -D --save postcss-cli
+          cp -R ${{ secrets.PROJECTPATH }} content/net
+          hugo --baseURL https://docs.aspose.com/html
+          scp -r public/net/* ${{ secrets.TRANSFERPATH }}
