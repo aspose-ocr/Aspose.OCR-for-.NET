@@ -9,7 +9,7 @@ url: /net/
 
 ![Aspose.OCR for .NET Product Logo](home_1.png)
 
-**Welcome to Aspose.OCR for .NETTTTTT** 
+**Welcome to Aspose.OCR for .NETTTTTTest** 
 
 Aspose.OCR for .NET is a character and optical mark recognition component that allows developers to add OCR functionality to their .NET applications using a simple set of classes.
 
