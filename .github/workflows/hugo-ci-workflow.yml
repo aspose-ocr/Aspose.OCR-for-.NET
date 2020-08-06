@@ -22,3 +22,13 @@ jobs:
           cp -R ${{ secrets.PROJECTPATH }} content/net
           hugo --baseURL https://docs.aspose.com/html
           scp -r public/net/* ${{ secrets.TRANSFERPATH }}
+      - name: hugo deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY }}
+          port: ${{ secrets.SSHPORT }}
+          script: |
+            sudo cp -R ${{ secrets.PUBLICCONTENTPATH }} ${{ secrets.DEPLOYPATH }}
+            sudo nginx -s reload
