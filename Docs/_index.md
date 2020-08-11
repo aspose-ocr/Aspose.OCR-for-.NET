@@ -3,6 +3,7 @@ title: Aspose.OCR for .NET
 type: docs
 weight: 10
 url: /net/
+is_root: true
 ---
 
 {{% alert color="primary" %}} 
