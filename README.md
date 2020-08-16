@@ -8,7 +8,7 @@ It is a standalone OCR API that enhances your .NET apps to [perform OCR on JPEG,
   <a href="https://github.com/aspose-ocr/Aspose.OCR-for-.NET/archive/master.zip">
     <img src="http://i.imgur.com/hwNhrGZ.png" />
   </a>
-</p>produ
+</p>
 
 Directory | Description
 --------- | -----------
