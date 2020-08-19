@@ -52,7 +52,8 @@ Directory | Description
 
 ## Platform Independence
 
-You can use Aspose.OCR for .NET to develop applications in any development environment that targets the .NET Framework 2.0 and higher. This includes support for Mono and Client Profiles.
+You can use Aspose.OCR for .NET to develop applications in any development environment that targets the .NET Framework 4.6.1 and higher, .NET Core 2.0 and higher. 
+This includes support for Mono, Xamarin and Client Profiles.
 
 ## Get Started with Aspose.OCR for .NET
 
