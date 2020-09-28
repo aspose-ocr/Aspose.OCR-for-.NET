@@ -69,8 +69,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.OCR, Version=20.8.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=AMD64">
-      <HintPath>..\packages\Aspose.OCR.20.8.0\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
+    <Reference Include="Aspose.OCR, Version=20.9.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=AMD64">
+      <HintPath>..\packages\Aspose.OCR.20.9.0\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ML.OnnxRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f27f157f0a5b7bb6, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ML.OnnxRuntime.Managed.1.4.0\lib\netstandard1.1\Microsoft.ML.OnnxRuntime.dll</HintPath>
@@ -224,6 +224,7 @@
   <ItemGroup>
     <Compile Include="PerformingandManagingOCR\CalculateSkewAngleFromStream.cs" />
     <Compile Include="PerformingandManagingOCR\CalculateSkewAngle.cs" />
+    <Compile Include="PerformingandManagingOCR\PerformOCROnImageFromUrl.cs" />
     <Compile Include="PerformingandManagingOCR\SpecifyAllowedCharacters.cs" />
     <Compile Include="PerformingandManagingOCR\RecognizeTextFromSpecificRectangle.cs" />
     <Compile Include="PerformingandManagingOCR\PrepareRectangles.cs" />

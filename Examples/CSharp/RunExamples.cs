@@ -38,6 +38,7 @@ namespace Aspose.OCR.Examples.CSharp
             //SpecifyAllowedCharacters.Run();
             //CalculateSkewAngle.Run();
             //CalculateSkewAngleFromStream.Run();
+            //PerformOCROnImageFromUrl.Run();
 
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
