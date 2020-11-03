@@ -7,7 +7,7 @@ using Aspose.OCR.Models;
 
 namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 {
-    public class PerformOCROnImageFromUrl
+    public class OCROperationWithLanguageSelection
     {
         public static void Run()
         {
@@ -15,23 +15,20 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_OCR();
 
-            // Get image for recognize
-            string uri = "https://qph.fs.quoracdn.net/main-qimg-0ff82d0dc3543dcd3b06028f5476c2e4";
-
             // Initialize an instance of AsposeOcr
             AsposeOcr api = new AsposeOcr();
 
+            // Image Path
+            string fullPath = dataDir + "sample.png";
+
             // Recognize image           
-            RecognitionResult result = api.RecognizeImageFromUri(uri, new RecognitionSettings
+            RecognitionResult result = api.RecognizeImage(fullPath, new RecognitionSettings
             {
                 DetectAreas = true,
                 RecognizeSingleLine = false,
                 AutoSkew = true,
-                RecognitionAreas = new List<Rectangle>()
-                {
-                    new Rectangle(1,3,400,70),
-                    new Rectangle(1,72,400,70)
-                }
+                Skew = 0.2F,
+                Language = Language.en,
             });
 
             // Print result
@@ -43,7 +40,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             Console.WriteLine($"JSON: {result.GetJson()}");
             // ExEnd:1
 
-            Console.WriteLine("PerformOCROnImageFromUrl executed successfully");
+            Console.WriteLine("OCROperationWithLanguageSelection executed successfully");
         }
     }
 }
