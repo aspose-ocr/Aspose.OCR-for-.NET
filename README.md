@@ -1,3 +1,5 @@
+![Nuget](https://img.shields.io/nuget/v/Aspose.OCR) ![Nuget](https://img.shields.io/nuget/dt/Aspose.OCR) ![GitHub](https://img.shields.io/github/license/aspose-ocr/Aspose.OCR-for-.NET)
+
 # Optical Character Recognition (OCR) .NET API
 
 It is a standalone OCR API that enhances your .NET apps to [perform OCR on JPEG, PNG, GIF, BMP & TIFF images](https://docs.aspose.com/ocr/net/supported-file-formats/) for extraction of English, French, Spanish & Portuguese content.
