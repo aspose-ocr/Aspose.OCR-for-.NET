@@ -4,11 +4,11 @@ using Aspose.OCR;
 
 namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 {
-    public class WorkingWithDifferentLanguages
+    public class GetResultAsJson
     {
         public static void Run()
         {
-            // ExStart:1
+            // ExStart:1   
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_OCR();
 
@@ -16,13 +16,13 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             AsposeOcr api = new AsposeOcr();
 
             // Recognize image
-            string result = api.RecognizeImage(dataDir + "SpanishOCR.bmp");
+            RecognitionResult result = api.RecognizeImage(dataDir + "sample.png", new RecognitionSettings { });
 
-            // Display the recognized text
-            Console.WriteLine(result);
+            // Display the recognition result in JSON format
+            Console.WriteLine(result.GetJson());
             // ExEnd:1
 
-            Console.WriteLine("WorkingWithDifferentLanguages executed successfully");
+            Console.WriteLine("GetResultAsJson executed successfully");
         }
     }
 }

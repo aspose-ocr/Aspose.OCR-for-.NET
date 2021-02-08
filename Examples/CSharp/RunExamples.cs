@@ -40,6 +40,9 @@ namespace Aspose.OCR.Examples.CSharp
             //CalculateSkewAngleFromStream.Run();
             //PerformOCROnImageFromUrl.Run();
             //OCROperationWithLanguageSelection.Run();
+            //GetResultAsJson.Run();
+            //SaveResultAsDocument.Run();
+            //SetThresholdValue.Run();
 
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");

@@ -29,8 +29,8 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
                 AutoSkew = true,
                 RecognitionAreas = new List<Rectangle>()
                 {
-                    new Rectangle(1,3,400,70),
-                    new Rectangle(1,72,400,70)
+                    new Rectangle(1,3,390,70),
+                    new Rectangle(1,72,390,70)
                 }
             });
 

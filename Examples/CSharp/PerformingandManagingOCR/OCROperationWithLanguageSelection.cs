@@ -1,9 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using Aspose.OCR;
-using Aspose.OCR.Models;
 
 namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 {
@@ -27,7 +24,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
                 DetectAreas = true,
                 RecognizeSingleLine = false,
                 AutoSkew = true,
-                Skew = 0.2F,
+               // Skew = 0.2F,
                 Language = Language.en,
             });
 
