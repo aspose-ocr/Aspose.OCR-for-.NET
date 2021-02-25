@@ -67,9 +67,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.OCR, Version=21.1.2.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=AMD64">
-      <HintPath>..\packages\Aspose.OCR.21.1.2\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Aspose.OCR, Version=21.2.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=AMD64">
+      <HintPath>..\packages\Aspose.OCR.21.2.0\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
     </Reference>
     <Reference Include="Aspose.Words, Version=20.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.Words.20.12.0\lib\net461\Aspose.Words.dll</HintPath>
@@ -226,15 +225,16 @@
     <Compile Include="PerformingandManagingOCR\GetResultAsJson.cs" />
     <Compile Include="PerformingandManagingOCR\OCROperationWithLanguageSelection.cs" />
     <Compile Include="PerformingandManagingOCR\PerformOCROnImageFromUrl.cs" />
+    <Compile Include="PerformingandManagingOCR\ResultCorrectionWithSpellChecking.cs" />
     <Compile Include="PerformingandManagingOCR\SaveResultAsDocument.cs" />
     <Compile Include="PerformingandManagingOCR\SetThresholdValue.cs" />
     <Compile Include="PerformingandManagingOCR\SpecifyAllowedCharacters.cs" />
-    <Compile Include="PerformingandManagingOCR\RecognizeTextFromSpecificRectangle.cs" />
     <Compile Include="PerformingandManagingOCR\PrepareRectangles.cs" />
     <Compile Include="PerformingandManagingOCR\RecognizeImageWithTextAreaDetectionAndWithoutSkewCorrection.cs" />
     <Compile Include="PerformingandManagingOCR\RecognizeImageWithoutTextAreaDetection.cs" />
     <Compile Include="PerformingandManagingOCR\RecognizeImageFromStream.cs" />
     <Compile Include="PerformingandManagingOCR\RecognizeLine.cs" />
+    <Compile Include="PerformingandManagingOCR\SpecifyIgnoredCharacters.cs" />
     <Compile Include="PerformingandManagingOCR\WorkingWithDifferentLanguages.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

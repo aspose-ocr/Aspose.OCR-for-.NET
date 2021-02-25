@@ -34,7 +34,6 @@ namespace Aspose.OCR.Examples.CSharp
             //RecognizeImageWithoutTextAreaDetection.Run();
             //RecognizeImageWithTextAreaDetectionAndWithoutSkewCorrection.Run();
             //PrepareRectangles.Run();
-            //RecognizeTextFromSpecificRectangle.Run();
             //SpecifyAllowedCharacters.Run();
             //CalculateSkewAngle.Run();
             //CalculateSkewAngleFromStream.Run();
@@ -43,6 +42,9 @@ namespace Aspose.OCR.Examples.CSharp
             //GetResultAsJson.Run();
             //SaveResultAsDocument.Run();
             //SetThresholdValue.Run();
+            //SpecifyIgnoredCharacters.Run();
+            //ResultCorrectionWithSpellChecking.Run();
+            
 
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");

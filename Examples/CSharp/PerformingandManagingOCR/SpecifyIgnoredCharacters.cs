@@ -5,7 +5,7 @@ using System;
 
 namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 {
-    public class WorkingWithDifferentLanguages
+    public class SpecifyIgnoredCharacters
     {
         public static void Run()
         {
@@ -17,10 +17,13 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             AsposeOcr api = new AsposeOcr();
 
             // Recognize image
-            string result = api.RecognizeImage(dataDir + "SpanishOCR.bmp");
+            RecognitionResult result = api.RecognizeImage(dataDir + "SpanishOCR.bmp", new RecognitionSettings
+            {
+                IgnoredCharacters = "ab1"
+            });
 
             // Display the recognized text
-            Console.WriteLine(result);
+            Console.WriteLine(result.RecognitionText);
             // ExEnd:1
 
             Console.WriteLine("WorkingWithDifferentLanguages executed successfully");
