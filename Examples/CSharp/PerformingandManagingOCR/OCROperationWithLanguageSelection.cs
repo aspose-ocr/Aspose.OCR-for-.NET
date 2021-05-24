@@ -27,7 +27,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
                 RecognizeSingleLine = false,
                 AutoSkew = true,
                 SkewAngle = 0.2F,
-                Language = Language.En,
+                Language = Language.Eng,
             });
 
             // Print result

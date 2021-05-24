@@ -22,17 +22,17 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 			Console.WriteLine(result.RecognitionText);
 
 			// Get corrected result
-			string correctedResult = result.GetSpellCheckCorrectedText(SpellCheckLanguage.En);
+			string correctedResult = result.GetSpellCheckCorrectedText(SpellCheckLanguage.Eng);
 			Console.WriteLine(correctedResult);
 
 			//Get list of misspelled words with suggestions
-			List<SpellCheckError> errorsList = result.GetSpellCheckErrorList(SpellCheckLanguage.En);
+			List<SpellCheckError> errorsList = result.GetSpellCheckErrorList(SpellCheckLanguage.Eng);
 			foreach (var word in errorsList)
 			{
-				Console.Write(word.Word);
-				Console.Write(word.StartPosition);
-				Console.Write(word.Length);
-
+				Console.Write("Word:" + word.Word);
+				Console.Write(" StartPosition:" + word.StartPosition);
+				Console.WriteLine(" Length:" + word.Length);
+				Console.WriteLine("SuggestedWords:");
 				foreach (var suggest in word.SuggestedWords)
 				{
 					Console.Write(suggest.Word + " ");
