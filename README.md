@@ -20,32 +20,49 @@ Directory | Description
 ## Image OCR API Features
 
 - Programmatically [detect, identify and read characters](https://docs.aspose.com/ocr/net/performing-ocr-on-an-image/) from images.
-- Support English, French, Spanish and Portuguese text.
+- Currently, it supports 20 European languages and Chinese.
 - Detect and read popular font faces such as Arial, Times New Roman, Courier New, Tahoma, Calibri & Verdana.
 - Supports regular, bold and italic font styles.
 - Scan whole image or only a specific portion of the image.
 - Scan rotated images.
 - Application of various noise removal filters to assist image recognition.
+- Calculate the bounding boxes of lines or paragraphs.
+- Get possible choices for each recognized character.
+- Pass URI and recognize the image from it.
+- Recognize multiple images in a folder or zip archive.
+- Get result in JSON format.
+- Save results in text, DOCX or PDF formats
 
 ## Supported Characters
-
-|   |   |   |   |   |   |   |   |   |   |
-|---|---|---|---|---|---|---|---|---|---|
-| space | ! | " | # | $ | % | & | ' | ( | ) |
-| * | + | , | - | . | / | 0 | 1 | 2 | 3 |
-| 4 | 5 | 6 | 7 | 8 | 9 | : | ; | < | = |
-| > | ? | @ | [ | \ | ] | _ | ` | { | \| |
-| } | ~ | A | B | C | D | E | F | G | H |
-| I | J | K | L | M | N | O | P | Q | R |
-| S | T | U | V | W | X | Y | Z | a | b |
-| c | d | e | f | g | h | i | j | k | l |
-| m | n | o | p | q | r | s | t | u | v |
-| w | x | y | z | Â | À | Á | Ã | Ä | Æ |
-| Ç | È | É | Ê | Ë | Ì | Í | Î | Ï | Ñ |
-| Ò | Ó | Ô | Õ | Ö | Ù | Ú | Û | Ü | ẞ |
-| ß | à | á | â | ã | ä | æ | ç | è | é |
-| ê | ë | ì | í | î | ï | ñ | ò | ó | ô |
-| õ | ö | ù | ú | û | ü | ÿ | Œ | œ | Ÿ |
+|       |       |       |       |       |       |       |       |       |       |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| space |   !   |   "   |   #   |   $   |   %   |   &   |   '   |   (   |   )   |
+|   *   |   +   |   ,   |   -   |   .   |   /   |   0   |   1   |   2   |   3   |
+|   4   |   5   |   6   |   7   |   8   |   9   |   :   |   ;   |   <   |   =   |
+|   >   |   ?   |   @   |   [   |   \   |   ]   |   _   |   `   |   {   |  \|   |
+|   }   |   ~   |   A   |   B   |   C   |   D   |   E   |   F   |   G   |   H   |
+|   I   |   J   |   K   |   L   |   M   |   N   |   O   |   P   |   Q   |   R   |
+|   S   |   T   |   U   |   V   |   W   |   X   |   Y   |   Z   |   a   |   b   |
+|   c   |   d   |   e   |   f   |   g   |   h   |   i   |   j   |   k   |   l   |
+|   m   |   n   |   o   |   p   |   q   |   r   |   s   |   t   |   u   |   v   |
+|   w   |   x   |   y   |   z   |   À   |   Á   |   Â   |   Ã   |   Ä   |   Å   |
+|   Æ   |   Ā   |   Ă   |   Ą   |   Ç   |   Ć   |   Ĉ   |   Ċ   |   Č   |   Ð   |
+|   Ď   |   Đ   |   È   |   É   |   Ê   |   Ë   |   Ē   |   Ė   |   Ę   |   Ě   |
+|   Ə   |   à   |   á   |   â   |   ã   |   ä   |   å   |   æ   |   ā   |   ă   |
+|   ą   |   ç   |   ć   |   ĉ   |   ċ   |   č   |   ð   |   ď   |   đ   |   è   |
+|   é   |   ê   |   ë   |   ē   |   ė   |   ę   |   ě   |   ə   |   Ĝ   |   Ğ   |
+|   Ġ   |   Ģ   |   Ĥ   |   Ħ   |   Ì   |   Í   |   Î   |   Ï   |   Ī   |   Į   |
+|   İ   |   Ĳ   |   Ĵ   |   Ķ   |   Ļ   |   Ł   |   Ñ   |   Ń   |   Ņ   |   Ň   |
+|   ĝ   |   ğ   |   ġ   |   ģ   |   ĥ   |   ħ   |   ì   |   í   |   î   |   ï   |
+|   ī   |   į   |   ı   |   ĳ   |   ĵ   |   ķ   |   ļ   |   ł   |   ñ   |   ń   |
+|   ņ   |   ň   |   Ò   |   Ó   |   Ô   |   Õ   |   Ö   |   Ø   |   Ő   |   Œ   |
+|   Ơ   |   Ŕ   |   Ř   |   ẞ   |   Ś   |   Ŝ   |   Ş   |   Ș   |   Š   |   Þ   |
+|   Ţ   |   Ť   |   Ù   |   Ú   |   Û   |   Ü   |   Ū   |   Ŭ   |   Ů   |   Ű   |
+|   Ų   |   Ư   |   Ŵ   |   Ý   |   Ŷ   |   Ÿ   |   Ź   |   Ż   |   Ž   |   ò   |
+|   ó   |   ô   |   õ   |   ö   |   ø   |   ő   |   œ   |   ơ   |   ŕ   |   ř   |
+|   ß   |   ś   |   ŝ   |   ş   |   ș   |   š   |   þ   |   ţ   |   ť   |   ù   |
+|   ú   |   û   |   ü   |   ū   |   ŭ   |   ů   |   ű   |   ų   |   ư   |   ŵ   |
+|   ý   |   ŷ   |   ÿ   |   ź   |   ż   |   ž   |   c   |
 
 
 ## Load Images for OCR
@@ -55,6 +72,7 @@ Directory | Description
 ## Platform Independence
 
 You can use Aspose.OCR for .NET to develop applications in any development environment that targets the .NET Framework 4.6.1 and higher, .NET Core 2.0 and higher. 
+Supports x64, x86, AnyCPU
 This includes support for Mono, Xamarin and Client Profiles.
 
 ## Get Started with Aspose.OCR for .NET

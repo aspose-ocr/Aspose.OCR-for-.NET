@@ -44,8 +44,11 @@ namespace Aspose.OCR.Examples.CSharp
             //SetThresholdValue.Run();
             //SpecifyIgnoredCharacters.Run();
             //ResultCorrectionWithSpellChecking.Run();
-            
-
+            //GetChoiceForRecognizedCharacters.Run();
+            //GetRectanglesParagraphs.Run();
+            //GetRectanglesLines.Run();
+            //OCROperationWithArchive.Run();
+            OCROperationWithFolder.Run();
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
             Console.ReadKey();

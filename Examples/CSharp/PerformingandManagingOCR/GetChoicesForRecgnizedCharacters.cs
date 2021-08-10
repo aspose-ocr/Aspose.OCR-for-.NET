@@ -6,7 +6,7 @@ using Aspose.OCR;
 
 namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 {
-    public class OCROperationWithLanguageSelection
+    public class GetChoiceForRecognizedCharacters
     {
         public static void Run()
         {
@@ -23,23 +23,17 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Recognize image           
             RecognitionResult result = api.RecognizeImage(fullPath, new RecognitionSettings
             {
-                DetectAreas = true,
-                RecognizeSingleLine = false,
-                AutoSkew = true,
-                SkewAngle = 0.2F,
-                Language = Language.Eng,//none, eng, deu, por, spa, fra, ita, cze, dan, dum, est, fin, lav, lit, nor, pol, rum, srp_hrv, slk, slv, swe, chi
+                //default or custom
             });
 
+            List<char[]> resultWithChoices = result.RecognitionCharactersList;
             // Print result
             Console.WriteLine($"Text:\n {result.RecognitionText}");
-            Console.WriteLine("Areas:");
-            result.RecognitionAreasText.ForEach(a => Console.WriteLine($"{a}"));
-            Console.WriteLine("Warnings:");
-            result.Warnings.ForEach(w => Console.WriteLine($"{w}"));
-            Console.WriteLine($"JSON: {result.GetJson()}");
+            Console.WriteLine("Choices:");
+            resultWithChoices.ForEach(a => Console.WriteLine($"character: {a[0]} . Choices: {a[1]} {a[2]} {a[3]} {a[4]}"));
             // ExEnd:1
 
-            Console.WriteLine("OCROperationWithLanguageSelection executed successfully");
+            Console.WriteLine("GetChoiceForRecognizedCharacters executed successfully");
         }
     }
 }

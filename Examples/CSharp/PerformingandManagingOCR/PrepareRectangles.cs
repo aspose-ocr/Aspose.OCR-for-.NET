@@ -26,6 +26,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
                 new Rectangle(104, 2147, 2076, 819)
             };
 
+            // first case
             List<string> listResult = api.RecognizeImage(dataDir + "sample.png", rects);
 
             // Display the recognized text
@@ -33,8 +34,21 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             {
                 Console.WriteLine(s);
             }
-            // ExEnd:1
+           
 
+            // second case
+            RecognitionResult result = api.RecognizeImage(dataDir + "sample.png", new RecognitionSettings
+            {
+                RecognitionAreas = rects
+            });
+
+            // Display the recognized text
+            foreach (string s in result.RecognitionAreasText)
+            {
+                Console.WriteLine(s);
+            }
+
+            // ExEnd:1
             Console.WriteLine("PrepareRectangles executed successfully");
         }
     }

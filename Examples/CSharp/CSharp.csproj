@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.ML.OnnxRuntime.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.props')" />
   <Import Project="..\packages\Microsoft.ML.OnnxRuntime.MKLML.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.MKLML.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.MKLML.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.MKLML.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -67,8 +68,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.OCR, Version=21.4.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=AMD64">
-      <HintPath>..\packages\Aspose.OCR.21.4.0\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
+    <Reference Include="Aspose.OCR, Version=21.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.OCR.21.7.0\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
     </Reference>
     <Reference Include="Aspose.Words, Version=20.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.Words.20.12.0\lib\net461\Aspose.Words.dll</HintPath>
@@ -77,7 +78,7 @@
       <HintPath>..\packages\Aspose.Words.20.12.0\lib\net461\Aspose.Words.Pdf2Word.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ML.OnnxRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f27f157f0a5b7bb6, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ML.OnnxRuntime.Managed.1.6.0\lib\netstandard1.1\Microsoft.ML.OnnxRuntime.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ML.OnnxRuntime.Managed.1.7.0\lib\netstandard1.1\Microsoft.ML.OnnxRuntime.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
@@ -223,6 +224,11 @@
     <Compile Include="PerformingandManagingOCR\CalculateSkewAngleFromStream.cs" />
     <Compile Include="PerformingandManagingOCR\CalculateSkewAngle.cs" />
     <Compile Include="PerformingandManagingOCR\GetResultAsJson.cs" />
+    <Compile Include="PerformingandManagingOCR\GetRectanglesPragraphs.cs" />
+    <Compile Include="PerformingandManagingOCR\GetRectanglesLines.cs" />
+    <Compile Include="PerformingandManagingOCR\GetChoicesForRecgnizedCharacters.cs" />
+    <Compile Include="PerformingandManagingOCR\OCROperationWithArchive.cs" />
+    <Compile Include="PerformingandManagingOCR\OCROperationWithFolder.cs" />
     <Compile Include="PerformingandManagingOCR\OCROperationWithLanguageSelection.cs" />
     <Compile Include="PerformingandManagingOCR\PerformOCROnImageFromUrl.cs" />
     <Compile Include="PerformingandManagingOCR\ResultCorrectionWithSpellChecking.cs" />
@@ -246,16 +252,19 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\Microsoft.ML.OnnxRuntime.Managed.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.Managed.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.Managed.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.Managed.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.Managed.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.Managed.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.Managed.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.Managed.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.MKLML.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.MKLML.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.MKLML.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.MKLML.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.MKLML.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.MKLML.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.MKLML.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.MKLML.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.Managed.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.Managed.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.Managed.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.Managed.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.targets'))" />
   </Target>
   <Import Project="..\packages\Microsoft.ML.OnnxRuntime.MKLML.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.MKLML.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.MKLML.1.6.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.MKLML.targets')" />
+  <Import Project="..\packages\Microsoft.ML.OnnxRuntime.Managed.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.Managed.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.Managed.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.Managed.targets')" />
+  <Import Project="..\packages\Microsoft.ML.OnnxRuntime.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.1.7.0\build\netstandard1.1\Microsoft.ML.OnnxRuntime.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
