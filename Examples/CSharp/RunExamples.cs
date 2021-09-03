@@ -48,7 +48,9 @@ namespace Aspose.OCR.Examples.CSharp
             //GetRectanglesParagraphs.Run();
             //GetRectanglesLines.Run();
             //OCROperationWithArchive.Run();
-            OCROperationWithFolder.Run();
+            //OCROperationWithFolder.Run();
+            //GetRecognitionResult.Run();
+            RecognizePdf.Run();
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
             Console.ReadKey();

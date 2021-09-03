@@ -68,8 +68,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.OCR, Version=21.7.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.OCR.21.7.0\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
+    <Reference Include="Aspose.OCR, Version=21.8.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.OCR.21.8.0\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
     </Reference>
     <Reference Include="Aspose.Words, Version=20.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.Words.20.12.0\lib\net461\Aspose.Words.dll</HintPath>
@@ -223,6 +223,8 @@
   <ItemGroup>
     <Compile Include="PerformingandManagingOCR\CalculateSkewAngleFromStream.cs" />
     <Compile Include="PerformingandManagingOCR\CalculateSkewAngle.cs" />
+    <Compile Include="PerformingandManagingOCR\RecognizePdf.cs" />
+    <Compile Include="PerformingandManagingOCR\GetRecognitionResult.cs" />
     <Compile Include="PerformingandManagingOCR\GetResultAsJson.cs" />
     <Compile Include="PerformingandManagingOCR\GetRectanglesPragraphs.cs" />
     <Compile Include="PerformingandManagingOCR\GetRectanglesLines.cs" />
