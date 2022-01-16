@@ -27,30 +27,37 @@ namespace Aspose.OCR.Examples.CSharp
             //// =====================================================
             //// =====================================================
 
+            //CalculateSkewAngle.Run();
+            //CalculateSkewAngleFromStream.Run();
+            //CalculateSkewAngleFromUri.Run();
+            //GetChoiceForRecognizedCharacters.Run();
+            //GetRecognitionResult.Run();
+            //GetRectanglesLines.Run();
+            //GetRectanglesParagraphs.Run();
+            //GetResultAsJson.Run();
+            //OCROperationWithArchive.Run();
+            //OCROperationWithFolder.Run();
+            //OCROperationWithList.Run();
+            //OCROperationWithLanguageSelection.Run();
             //PerformOCROnImage.Run();
-            //RecognizeLine.Run();
-            //WorkingWithDifferentLanguages.Run();
+            //PerformOCROnImageFromUrl.Run();
+            //PrepareRectangles.Run();
+            //PreprocessingFiltersForImage.Run();
             //RecognizeImageFromStream.Run();
             //RecognizeImageWithoutTextAreaDetection.Run();
             //RecognizeImageWithTextAreaDetectionAndWithoutSkewCorrection.Run();
-            //PrepareRectangles.Run();
-            //SpecifyAllowedCharacters.Run();
-            //CalculateSkewAngle.Run();
-            //CalculateSkewAngleFromStream.Run();
-            //PerformOCROnImageFromUrl.Run();
-            //OCROperationWithLanguageSelection.Run();
-            //GetResultAsJson.Run();
-            //SaveResultAsDocument.Run();
-            //SetThresholdValue.Run();
-            //SpecifyIgnoredCharacters.Run();
+            //RecognizeLine.Run();
+            //RecognizePdf.Run();
+            //RecognizeTable.Run();
             //ResultCorrectionWithSpellChecking.Run();
-            //GetChoiceForRecognizedCharacters.Run();
-            //GetRectanglesParagraphs.Run();
-            //GetRectanglesLines.Run();
-            //OCROperationWithArchive.Run();
-            //OCROperationWithFolder.Run();
-            //GetRecognitionResult.Run();
-            RecognizePdf.Run();
+            //SaveMultipageResultAsDocument.Run();
+            //SaveResultAsDocument.Run();
+            //SetThreadsCount.Run();
+            //SetThresholdValue.Run();
+            //SpecifyAllowedCharacters.Run();
+            //SpecifyIgnoredCharacters.Run();
+            //WorkingWithDifferentLanguages.Run();
+
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
             Console.ReadKey();

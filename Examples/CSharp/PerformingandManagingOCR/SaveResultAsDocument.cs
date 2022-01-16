@@ -22,6 +22,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             result.Save(RunExamples.GetDataDir_OCR()+"sample.docx", SaveFormat.Docx);
             result.Save(RunExamples.GetDataDir_OCR() + "sample.txt", SaveFormat.Text);
             result.Save(RunExamples.GetDataDir_OCR() + "sample.pdf", SaveFormat.Pdf);
+            result.Save(RunExamples.GetDataDir_OCR() + "sample.xlsx", SaveFormat.Xlsx);
             // ExEnd:1
 
             Console.WriteLine("SaveResultAsDocument executed successfully");

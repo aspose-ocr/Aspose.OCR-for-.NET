@@ -68,8 +68,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.OCR, Version=21.8.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aspose.OCR.21.8.0\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
+    <Reference Include="Aspose.OCR, Version=21.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aspose.OCR.21.12.0\lib\netstandard2.0\Aspose.OCR.dll</HintPath>
     </Reference>
     <Reference Include="Aspose.Words, Version=20.12.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
       <HintPath>..\packages\Aspose.Words.20.12.0\lib\net461\Aspose.Words.dll</HintPath>
@@ -221,20 +221,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PerformingandManagingOCR\CalculateSkewAngleFromUri.cs" />
     <Compile Include="PerformingandManagingOCR\CalculateSkewAngleFromStream.cs" />
     <Compile Include="PerformingandManagingOCR\CalculateSkewAngle.cs" />
+    <Compile Include="PerformingandManagingOCR\PreprocessingFiltersForImage.cs" />
+    <Compile Include="PerformingandManagingOCR\OCROperationWithList.cs" />
     <Compile Include="PerformingandManagingOCR\RecognizePdf.cs" />
     <Compile Include="PerformingandManagingOCR\GetRecognitionResult.cs" />
     <Compile Include="PerformingandManagingOCR\GetResultAsJson.cs" />
     <Compile Include="PerformingandManagingOCR\GetRectanglesPragraphs.cs" />
     <Compile Include="PerformingandManagingOCR\GetRectanglesLines.cs" />
-    <Compile Include="PerformingandManagingOCR\GetChoicesForRecgnizedCharacters.cs" />
+    <Compile Include="PerformingandManagingOCR\GetChoicesForRecognizedCharacters.cs" />
     <Compile Include="PerformingandManagingOCR\OCROperationWithArchive.cs" />
     <Compile Include="PerformingandManagingOCR\OCROperationWithFolder.cs" />
     <Compile Include="PerformingandManagingOCR\OCROperationWithLanguageSelection.cs" />
     <Compile Include="PerformingandManagingOCR\PerformOCROnImageFromUrl.cs" />
     <Compile Include="PerformingandManagingOCR\ResultCorrectionWithSpellChecking.cs" />
+    <Compile Include="PerformingandManagingOCR\SaveMultipageResultAsDocument.cs" />
     <Compile Include="PerformingandManagingOCR\SaveResultAsDocument.cs" />
+    <Compile Include="PerformingandManagingOCR\RecognizeTable.cs" />
+    <Compile Include="PerformingandManagingOCR\SetThreadsCount.cs" />
     <Compile Include="PerformingandManagingOCR\SetThresholdValue.cs" />
     <Compile Include="PerformingandManagingOCR\SpecifyAllowedCharacters.cs" />
     <Compile Include="PerformingandManagingOCR\PrepareRectangles.cs" />

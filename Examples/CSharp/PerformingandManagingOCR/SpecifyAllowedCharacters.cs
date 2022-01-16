@@ -12,6 +12,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_OCR();
 
+            // The first case:
             // Initialize an instance of AsposeOcr with allowed symbols
             AsposeOcr api = new AsposeOcr("0123456789");
 
@@ -20,6 +21,20 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 
             // Display the recognized text
             Console.WriteLine(result);
+
+            // The second case:
+            // Initialize an instance of AsposeOcr with allowed symbols
+            AsposeOcr api2 = new AsposeOcr();
+
+            // Recognize image            
+            RecognitionResult result2 = api2.RecognizeImage(dataDir + "0001460985.Jpeg", 
+                new RecognitionSettings { 
+                    AllowedCharacters = CharactersAllowedType.DIGITS,
+                    RecognizeSingleLine = true
+                });
+
+            // Display the recognized text
+            Console.WriteLine(result2.RecognitionText);
             // ExEnd:1
 
             Console.WriteLine("SpecifyAllowedCharacters executed successfully");

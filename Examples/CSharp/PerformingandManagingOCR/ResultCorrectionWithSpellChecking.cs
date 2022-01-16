@@ -16,14 +16,14 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 			AsposeOcr api = new AsposeOcr();
 
 			// Recognize image           
-			RecognitionResult result = api.RecognizeImage(dataDir + "sample.png", new RecognitionSettings());
+			RecognitionResult result = api.RecognizeImage(dataDir + "sample_bad.png", new RecognitionSettings(Language.Eng));
 
 			// Get result
-			Console.WriteLine(result.RecognitionText);
+			Console.WriteLine("BEFORE CORRECTION:\n" + result.RecognitionText);
 
 			// Get corrected result
 			string correctedResult = result.GetSpellCheckCorrectedText(SpellCheckLanguage.Eng);
-			Console.WriteLine(correctedResult);
+			Console.WriteLine("AFTER CORRECTION:\n" + correctedResult);
 
 			//Get list of misspelled words with suggestions
 			List<SpellCheckError> errorsList = result.GetSpellCheckErrorList(SpellCheckLanguage.Eng);
@@ -40,7 +40,15 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 				Console.WriteLine();
 			}
 
-			Console.WriteLine(api.CorrectSpelling("recogniition"));
+
+			//Corect user text
+			Console.WriteLine("recogniition -> " + api.CorrectSpelling("recogniition"));
+
+			//Upload cusom dictionary
+			// Get corrected result
+			string correctedResultUserDict = result.GetSpellCheckCorrectedText(SpellCheckLanguage.Eng, dataDir+"dictionary.txt");
+			Console.WriteLine("AFTER CORRECTION WITH USER DICTIONARY:\n" + correctedResultUserDict);
+
 			// ExEnd:1
 
 			Console.WriteLine("WorkingWithDifferentLanguages executed successfully");

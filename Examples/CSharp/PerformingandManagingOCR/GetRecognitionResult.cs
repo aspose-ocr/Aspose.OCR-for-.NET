@@ -37,6 +37,10 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
         {
             Console.WriteLine($"Text: {result.RecognitionText}");
             Console.WriteLine($"skew: {result.Skew}");
+
+            Console.WriteLine("Paragraphes:");
+            result.RecognitionAreasRectangles.ForEach(w => Console.WriteLine($"{w.X} {w.Y} {w.Width} {w.Height}"));
+
             Console.WriteLine("Areas:");
             result.RecognitionAreasText.ForEach(a => Console.WriteLine($"{a}"));
 
@@ -48,9 +52,6 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             result.RecognitionCharactersList.ForEach(a => Console.WriteLine($"{a[0]} {a[1]} {a[2]} {a[3]} {a[4]}"));
 
             Console.WriteLine($"JSON: {result.GetJson()}");
-
-            Console.WriteLine("Paragraphes:");
-            result.RecognitionAreasRectangles.ForEach(w => Console.WriteLine($"{w.X} {w.Y} {w.Width} {w.Height}"));
 
             Console.WriteLine("Warnings:");
             result.Warnings.ForEach(w => Console.WriteLine($"{w}"));
