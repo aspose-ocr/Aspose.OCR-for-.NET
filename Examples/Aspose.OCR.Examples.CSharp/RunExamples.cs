@@ -30,11 +30,12 @@ namespace Aspose.OCR.Examples.CSharp
             //CalculateSkewAngle.Run();
             //CalculateSkewAngleFromStream.Run();
             //CalculateSkewAngleFromUri.Run();
-            GetChoiceForRecognizedCharacters.Run();
+            //GetChoiceForRecognizedCharacters.Run();
             //GetRecognitionResult.Run();
             //GetRectanglesLines.Run();
             //GetRectanglesParagraphs.Run();
             //GetResultAsJson.Run();
+            OCRDetectAreasMode.Run();
             //OCROperationWithArchive.Run();
             //OCROperationWithFolder.Run();
             //OCROperationWithList.Run();
