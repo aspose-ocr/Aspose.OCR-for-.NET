@@ -23,3 +23,4 @@ test-results/
 packages/
 *.gitattributes
 .DS_Store
+.vs
