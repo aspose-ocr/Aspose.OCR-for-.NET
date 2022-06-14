@@ -14,32 +14,58 @@ It is a standalone OCR API that enhances your .NET apps to [perform OCR on JPEG,
 
 Directory | Description
 --------- | -----------
-[Demos](Demos)  | source code for live demos hosted at https://products.aspose.app/ocr/family.
+[Applications_Aspose_Ocr_Net_6](Applications_Aspose_Ocr_Net_6)  | A collection of .NET projects that can be easily built with a script.
 [Examples](Examples)  | A collection of .NET examples that help you learn the product features.
 
 ## Image OCR API Features
 
 - Programmatically [detect, identify and read characters](https://docs.aspose.com/ocr/net/performing-ocr-on-an-image/) from images.
-- Currently, it supports 20 European languages and Chinese.
+- Currently, it supports 26 European languages and Chinese.
 - Detect and read popular font faces such as Arial, Times New Roman, Courier New, Tahoma, Calibri & Verdana.
 - Supports regular, bold and italic font styles.
 - Scan whole image or only a specific portion of the image.
 - Scan rotated images.
 - Application of various noise removal filters to assist image recognition.
-- Calculate the bounding boxes of lines or paragraphs.
+- Calculate the bounding boxes of lines, paragraphs, words.
 - Get possible choices for each recognized character.
 - Pass URI and recognize the image from it.
-- Recognize multiple images in a folder or zip archive.
-- Get result in JSON format.
-- Save results in text, DOCX or PDF formats
+- Recognize multiple images in a folder, zip archive or in the list.
+- Get result in JSON or XML format.
+- Save results in text, DOCX, PDF, XLSX, XML, JSON formats
 
-## Supported Characters
+Aspose.OCR can recognize a large number of languages and all popular writing scripts, including texts with mixed languages.
+
+## Extended Latin alphabet
+
+- Croatian
+- Czech
+- Danish
+- Dutch
+- English
+- Estonian
+- Finnish
+- French
+- German
+- Italian
+- Latvian
+- Lithuanian
+- Norwegian
+- Polish
+- Portuguese
+- Romanian
+- Slovak
+- Slovenian
+- Spanish
+- Swedish
+
+### Supported characters
+
 |       |       |       |       |       |       |       |       |       |       |
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| space |   !   |   "   |   #   |   $   |   %   |   &   |   '   |   (   |   )   |
+|       |   !   |   "   |   #   |   $   |   %   |   &   |   '   |   (   |   )   |
 |   *   |   +   |   ,   |   -   |   .   |   /   |   0   |   1   |   2   |   3   |
 |   4   |   5   |   6   |   7   |   8   |   9   |   :   |   ;   |   <   |   =   |
-|   >   |   ?   |   @   |   [   |   \   |   ]   |   _   |   `   |   {   |  \|   |
+|   >   |   ?   |   @   |   [   |   \   |   ]   |   _   |  \`   |   {   |  \|   |
 |   }   |   ~   |   A   |   B   |   C   |   D   |   E   |   F   |   G   |   H   |
 |   I   |   J   |   K   |   L   |   M   |   N   |   O   |   P   |   Q   |   R   |
 |   S   |   T   |   U   |   V   |   W   |   X   |   Y   |   Z   |   a   |   b   |
@@ -63,6 +89,39 @@ Directory | Description
 |   ß   |   ś   |   ŝ   |   ş   |   ș   |   š   |   þ   |   ţ   |   ť   |   ù   |
 |   ú   |   û   |   ü   |   ū   |   ŭ   |   ů   |   ű   |   ų   |   ư   |   ŵ   |
 |   ý   |   ŷ   |   ÿ   |   ź   |   ż   |   ž   |   c   |
+
+## Cyrillic alphabet
+
+- Belorussian
+- Bulgarian
+- Kazakh
+- Russian
+- Serbian
+- Ukrainian
+
+### Supported characters
+
+|       |       |       |       |       |       |       |       |       |       |
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+|       |   !   |   \   |   "   |   #   |   $   |   %   |   &   |   '   |   (   |
+|   )   |   *   |   +   |   ,   |   -   |   .   |   /   |   0   |   1   |   2   |
+|   3   |   4   |   5   |   6   |   7   |   8   |   9   |   :   |   ;   |   <   |
+|   =   |   >   |   ?   |   @   |   [   |   ]   |   _   |   {   |  \|   |   }   |
+|   ~   |   А   |   Б   |   В   |   Г   |   Д   |   Е   |   Ё   |   Ж   |   З   |
+|   И   |   Й   |   К   |   Л   |   М   |   Н   |   О   |   П   |   Р   |   С   |
+|   Т   |   У   |   Ф   |   Х   |   Ц   |   Ч   |   Ш   |   Щ   |   Ъ   |   Ы   |
+|   Ь   |   Э   |   Ю   |   Я   |   а   |   б   |   в   |   г   |   д   |   е   |
+|   ё   |   ж   |   з   |   и   |   й   |   к   |   л   |   м   |   н   |   о   |
+|   п   |   р   |   с   |   т   |   у   |   ф   |   х   |   ц   |   ч   |   ш   |
+|   щ   |   ъ   |   ы   |   ь   |   э   |   ю   |   я   |   Ў   |   ў   |   І   |
+|   і   |   Ѕ   |   Ј   |   Љ   |   Њ   |   Ќ   |   Џ   |   ѕ   |   ј   |   љ   |
+|   њ   |   ќ   |   џ   |   Ђ   |   ђ   |   Ћ   |   ћ   |   Ә   |   Ғ   |   Қ   |
+|   Ң   |   Ө   |   Ұ   |   Һ   |   ә   |   ғ   |   қ   |   ң   |   ө   |   ұ   |
+|   һ   |   Ї   |   ї   |   Є   |   є   |
+
+## Asian languages
+
+- Chinese (more than 6,000 characters)
 
 
 ## Load Images for OCR
