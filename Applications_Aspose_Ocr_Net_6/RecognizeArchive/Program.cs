@@ -1,6 +1,7 @@
 ﻿using Aspose.OCR;
 using Aspose.OCR.Models.PreprocessingFilters;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -21,7 +22,7 @@ namespace RecognizePNG
 
             // you can recognize zip archive, images in folder or list of images
             // make sure that only supported formats and no subfolders are among the files
-            RecognitionResult[] res = api.RecognizeMultipleImages("test.zip", new RecognitionSettings 
+            List<RecognitionResult> res = api.RecognizeMultipleImages("test.zip", new RecognitionSettings 
             {
                 //// allowed options
                 // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols
@@ -50,7 +51,7 @@ namespace RecognizePNG
             Console.WriteLine("RESULT");
             Console.ResetColor();
             Console.WriteLine("------------------------------------------------------------------------------");
-            for (int i = 0; i < res.Length; i++)
+            for (int i = 0; i < res.Count; i++)
             {
                 Console.WriteLine($"IMAGE {i + 1}\n------------------------------");
                 Console.WriteLine(res[i].RecognitionText);

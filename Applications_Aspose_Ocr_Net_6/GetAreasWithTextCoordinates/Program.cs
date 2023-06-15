@@ -1,7 +1,7 @@
-﻿using Aspose.OCR;
+﻿using Aspose.Drawing;
+using Aspose.OCR;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace RecognizePNG
 {
