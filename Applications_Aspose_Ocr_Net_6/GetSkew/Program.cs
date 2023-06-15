@@ -1,5 +1,6 @@
 ﻿using Aspose.OCR;
 using System;
+using System.Collections.Generic;
 
 namespace RecognizePNG
 {
@@ -17,23 +18,31 @@ namespace RecognizePNG
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
 
+            // Create OcrInput object to containerize images
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add("test1.jpg");
+
             // You can put in parameters MemoryStream with image
             // The result is the degree of skew
-            float result = api.CalculateSkew("test1.jpg");
+            List<SkewOutput> result = api.CalculateSkew(input);
             Console.WriteLine("RESULT");
             Console.ResetColor();
             Console.WriteLine("------------------------------------------------------------------------------");
 
             Console.WriteLine("SKEW IMAGE 1:");
-            Console.WriteLine(result);
+            Console.WriteLine(result[0].Angle);
 
-            result = api.CalculateSkew("test2.png");
+            input.Clear();
+            input.Add("test2.png");
+            result = api.CalculateSkew(input);
             Console.WriteLine("\nSKEW IMAGE 2:");
-            Console.WriteLine(result);
+            Console.WriteLine(result[0].Angle);
 
-            result = api.CalculateSkew("test3.png");
+            input.Clear();
+            input.Add("test3.png");
+            result = api.CalculateSkew(input);
             Console.WriteLine("\nSKEW IMAGE 3:");
-            Console.WriteLine(result);
+            Console.WriteLine(result[0].Angle);
 
             PrintEnd();
         }

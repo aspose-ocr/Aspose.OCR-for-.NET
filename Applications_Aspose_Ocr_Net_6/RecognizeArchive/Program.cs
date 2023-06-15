@@ -19,10 +19,14 @@ namespace RecognizePNG
             // Create AsposeOcr instance.
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
+            // Create OcrInput object to containerize images
+            // Add filters as you need 
+            OcrInput input = new OcrInput(InputType.Zip/*, filters*/);
+            input.Add("test.zip");
 
             // you can recognize zip archive, images in folder or list of images
             // make sure that only supported formats and no subfolders are among the files
-            List<RecognitionResult> res = api.RecognizeMultipleImages("test.zip", new RecognitionSettings 
+            List<RecognitionResult> res = api.Recognize(input, new RecognitionSettings 
             {
                 //// allowed options
                 // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols

@@ -19,11 +19,15 @@ namespace RecognizePNG
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
 
+            // Create OcrInput object to containerize images
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add("test.png");
+
             // set
             // 1) the full path to the image
             // 2) type of areas to search
             // 3) set this to true for AreasType.LINES if you want to split lines after defining paragraphs     
-            List<Rectangle> result = api.GetRectangles("test.png", AreasType.PARAGRAPHS, detectAreas: true);
+            List<RectangleOutput> result = api.DetectRectangles(input, AreasType.PARAGRAPHS, detectAreas: true);
 
             Console.WriteLine("AREAS RECTANGLES COORDINATES:");
             Console.WriteLine("RESULT");
@@ -33,7 +37,9 @@ namespace RecognizePNG
             // Print the result
             for (int i = 0; i < result.Count; i++)
             {
-                Console.WriteLine($"X: {result[i].X} Y: {result[i].Y} Width: {result[i].Width} Height: {result[i].Height}");    
+                Console.WriteLine(result[i].Source);
+                foreach(Rectangle rect in result[i].Rectangles)
+                Console.WriteLine($"X: {rect.X} Y: {rect.Y} Width: {rect.Width} Height: {rect.Height}");    
             }
 
             PrintEnd();

@@ -18,15 +18,17 @@ namespace RecognizePNG
             // Create AsposeOcr instance.
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
+            // Create OcrInput object to containerize images
+            // Add filters as you need
+            OcrInput input = new OcrInput(InputType.PDF);
+            input.Add("test.pdf", 0, 2);
 
             // Set the options for recognition - start page and the pages number
-            List<RecognitionResult> res = api.RecognizePdf("test.pdf", new DocumentRecognitionSettings(0, 2)
+            List<RecognitionResult> res = api.Recognize(input, new RecognitionSettings
             {
                 //// allowed options
                 // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols
-                // AutoContrast = false, // use Contrast correction filter before recognition - good for images with noice 
                 // AutoSkew = true, // switch off if your image not rotated
-                // DetectAreas = true, // switch off if your image has a simple document structure (one column text without pictures)
                 // DetectAreasMode = DetectAreasMode.DOCUMENT, // depends on the structure of your image
                 // IgnoredCharacters = "*-!@#$%^&", // define the symbols you want to ignore in the recognition result
                 // Language = Language.Eng, // we support 26 languages

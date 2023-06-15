@@ -1,6 +1,7 @@
 ﻿using Aspose.OCR;
 using Aspose.OCR.Models.PreprocessingFilters;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace RecognizePNG
@@ -18,11 +19,19 @@ namespace RecognizePNG
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
 
-            string uri = "https://i.stack.imgur.com/0Jl54.png";
+            // Create OcrInput object to containerize images
+            // Add filters as you need 
+            // PreprocessingFilter filters = new PreprocessingFilter // we automaticaly preprocess your image, but if your recognition result still bad, you can set up the set of filters by your own
+            // {
+            //     PreprocessingFilter.Dilate()
+            // },
+            OcrInput input = new OcrInput(InputType.URL/*, filters*/);
+            input.Add("https://i.stack.imgur.com/0Jl54.png");
+
             Console.Write($"TEST URI:  ");
             Console.ResetColor();
-            Console.WriteLine($" {uri}");
-            RecognitionResult res = api.RecognizeImageFromUri(uri, new RecognitionSettings 
+            Console.WriteLine($" {input[0].Source}");
+            List<RecognitionResult> res = api.Recognize(input, new RecognitionSettings 
             {
                 //// allowed options
                 // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols
@@ -49,7 +58,7 @@ namespace RecognizePNG
             Console.WriteLine("\nRESULT");
             Console.ResetColor();
             Console.WriteLine("------------------------------------------------------------------------------");
-            ConsoleLogRecognitionResult(res);
+            ConsoleLogRecognitionResult(res[0]);
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Recognition is over.");
@@ -57,11 +66,13 @@ namespace RecognizePNG
 
             Console.WriteLine("\nNow you can enter your own link for recognition:");
             string ownUri = Console.ReadLine();
-            res = api.RecognizeImageFromUri(ownUri, new RecognitionSettings());
+            input.Clear();
+            input.Add(ownUri);
+            res = api.Recognize(input, new RecognitionSettings());
             Console.WriteLine("RESULT");
             Console.ResetColor();
             Console.WriteLine("------------------------------------------------------------------------------");
-            ConsoleLogRecognitionResult(res);
+            ConsoleLogRecognitionResult(res[0]);
 
             PrintEnd();
         }

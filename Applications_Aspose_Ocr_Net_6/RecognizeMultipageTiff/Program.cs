@@ -17,8 +17,18 @@ namespace RecognizePNG
             // Create AsposeOcr instance.
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
+
+            // Create OcrInput object to containerize images
+            // Add filters as you need 
+            // PreprocessingFilter filters = new PreprocessingFilter // we automaticaly preprocess your image, but if your recognition result still bad, you can set up the set of filters by your own
+            // {
+            //     PreprocessingFilter.Dilate()
+            // },
+            OcrInput input = new OcrInput(InputType.TIFF/*, filters*/);
+            input.Add("three_page.tif", 0, 3);
+
             // Set the options for recognition - start page and the pages number
-            var res = api.RecognizeTiff("three_page.tif", new DocumentRecognitionSettings(0, 3) 
+            var res = api.Recognize(input, new RecognitionSettings 
             {
                 //// allowed options
                 // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols

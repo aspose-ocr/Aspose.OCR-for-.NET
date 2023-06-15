@@ -18,16 +18,23 @@ namespace RecognizePNG
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
 
+            // Create OcrInput object to containerize images
             // Set:
             // 1) path to the image or MemruStream with the image.
             // 2) set of filters for preprocessing. You can call any number of filters.
-            MemoryStream memoryStream = api.PreprocessImage("test.jpg", new PreprocessingFilter { PreprocessingFilter.ContrastCorrectionFilter()});
+            OcrInput input = new OcrInput(InputType.SingleImage, new PreprocessingFilter { PreprocessingFilter.ContrastCorrectionFilter() });
+            input.Add("test.jpg");
+
+
+            OcrInput result = ImageProcessing.Render(input);
+            MemoryStream memoryStream = result[0].Stream;
 
             // Use Stream for further recognition or simply save it on the disk
             FileStream fs = new FileStream("corrected.jpg", FileMode.OpenOrCreate);
             memoryStream.WriteTo(fs);
             fs.Close();
-            memoryStream.Close();          
+            memoryStream.Close();
+            result.Clear();
 
             PrintEnd();
         }

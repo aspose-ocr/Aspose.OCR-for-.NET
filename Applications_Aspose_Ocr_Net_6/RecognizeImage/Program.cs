@@ -17,7 +17,17 @@ namespace RecognizePNG
             // Create AsposeOcr instance.
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
-            var res = api.RecognizeImage("test.png", new RecognitionSettings
+
+            // Create OcrInput object to containerize images
+            // Add filters as you need 
+            // PreprocessingFilter filters = new PreprocessingFilter // we automaticaly preprocess your image, but if your recognition result still bad, you can set up the set of filters by your own
+            // {
+            //     PreprocessingFilter.Dilate()
+            // },
+            OcrInput input = new OcrInput(InputType.SingleImage/*, filters*/);
+            input.Add("test.png");
+
+            var res = api.Recognize(input, new RecognitionSettings
             {
                 //// allowed options
                 // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols
@@ -27,11 +37,7 @@ namespace RecognizePNG
                 // DetectAreasMode = DetectAreasMode.DOCUMENT, // depends on the structure of your image
                 // IgnoredCharacters = "*-!@#$%^&", // define the symbols you want to ignore in the recognition result
                 // Language = Language.Eng, // we support 26 languages
-                // LinesFiltration = false, // this works slowly, so choose it only if your picture has lines and it they bad detected in TABLE ar DOCUMENT DetectAreasMode
-                // PreprocessingFilters = new PreprocessingFilter // we automaticaly preprocess your image, but if your recognition result still bad, you can set up the set of filters by your own
-                // {
-                //     PreprocessingFilter.Dilate()
-                // },
+                // LinesFiltration = false, // this works slowly, so choose it only if your picture has lines and it they bad detected in TABLE ar DOCUMENT DetectAreasMode              
                 // RecognitionAreas = new System.Collections.Generic.List<System.Drawing.Rectangle> // set this if you want to recognize only partiqular regions on the image
                 // {
                 //     new System.Drawing.Rectangle(0,0,10,20)
@@ -47,7 +53,7 @@ namespace RecognizePNG
             Console.ResetColor();
             Console.WriteLine("------------------------------------------------------------------------------");
 
-            ConsoleLogRecognitionResult(res);
+            ConsoleLogRecognitionResult(res[0]);
 
             PrintEnd();
         }
