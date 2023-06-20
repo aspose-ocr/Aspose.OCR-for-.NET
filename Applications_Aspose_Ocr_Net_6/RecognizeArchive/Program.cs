@@ -11,7 +11,8 @@ namespace RecognizePNG
     {
         static void Main(string[] args)
         {
-            PrintStart();
+            string zipName = args.Length > 0 ? args[0] : "images/test.zip";
+            PrintStart(zipName);
             // Set the license file
             //License lic = new License();
             //lic.SetLicense("Aspose.Total.lic");
@@ -22,7 +23,7 @@ namespace RecognizePNG
             // Create OcrInput object to containerize images
             // Add filters as you need 
             OcrInput input = new OcrInput(InputType.Zip/*, filters*/);
-            input.Add("test.zip");
+            input.Add(zipName);
 
             // you can recognize zip archive, images in folder or list of images
             // make sure that only supported formats and no subfolders are among the files
@@ -73,11 +74,11 @@ namespace RecognizePNG
             PrintEnd();
         }
 
-        static void PrintStart()
+        static void PrintStart(string fileName)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("This example will work without a license. The result will be reduced.\n");
-            Console.WriteLine("Recognition has begun. Please, wait...\n\n");
+            Console.WriteLine($"Recognition [{fileName}] has begun. Please, wait...\n\n");
         }
 
         static void PrintEnd()
@@ -86,7 +87,7 @@ namespace RecognizePNG
             Console.WriteLine("Recognition is over.");
             Console.ResetColor();
             Console.ReadKey();
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(1000);
         }
     }
 }

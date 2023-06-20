@@ -10,7 +10,8 @@ namespace RecognizePNG
     {
         static void Main(string[] args)
         {
-            PrintStart();
+            string uri = args.Length > 0 ? args[0] : "https://i.stack.imgur.com/0Jl54.png";
+            PrintStart(uri);
             // Set the license file
             //License lic = new License();
             //lic.SetLicense("Aspose.Total.lic");
@@ -26,7 +27,7 @@ namespace RecognizePNG
             //     PreprocessingFilter.Dilate()
             // },
             OcrInput input = new OcrInput(InputType.URL/*, filters*/);
-            input.Add("https://i.stack.imgur.com/0Jl54.png");
+            input.Add(uri);
 
             Console.Write($"TEST URI:  ");
             Console.ResetColor();
@@ -77,11 +78,11 @@ namespace RecognizePNG
             PrintEnd();
         }
 
-        static void PrintStart()
+        static void PrintStart(string uri)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("This example will work without a license. The result will be reduced.\n");
-            Console.WriteLine("Recognition has begun. Please, wait...\n\n");
+            Console.WriteLine($"Recognition [{uri}] has begun. Please, wait...\n\n");
         }
 
         static void PrintEnd()
@@ -90,7 +91,7 @@ namespace RecognizePNG
             Console.WriteLine("Recognition is over.");
             Console.ResetColor();
             Console.ReadKey();
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(1000);
         }
 
         static void ConsoleLogRecognitionResult(RecognitionResult result)

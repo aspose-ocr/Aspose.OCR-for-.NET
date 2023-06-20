@@ -10,7 +10,8 @@ namespace RecognizePNG
     {
         static void Main(string[] args)
         {
-            PrintStart();
+            string fileName = args.Length > 0 ? args[0] : "images/test.png";
+            PrintStart(fileName);
             // Set the license file
             //License lic = new License();
             //lic.SetLicense("Aspose.Total.lic");
@@ -25,7 +26,7 @@ namespace RecognizePNG
                 //PreprocessingFilter.Dilate()
             };
             OcrInput input = new OcrInput(InputType.SingleImage, filters);
-            input.Add("test.png");
+            input.Add(fileName);
 
             List<RecognitionResult> res = api.Recognize(input, new RecognitionSettings 
             {
@@ -53,16 +54,16 @@ namespace RecognizePNG
             // 3) set true if you want to correct the mistakes in the words
             // 4) set the language if you want to correct the mistakes
             // 5) you can set your own dictionary for spell-check
-            res[0].Save("result.json", SaveFormat.Json, false);        
+            res[0].Save("out/result.json", SaveFormat.Json, false);        
 
             PrintEnd();
         }
 
-        static void PrintStart()
+        static void PrintStart(string fileName)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("This example will work without a license. The result will be reduced.\n");
-            Console.WriteLine("Recognition has begun. Please, wait...\n\n");
+            Console.WriteLine($"Recognition [{fileName}] has begun. Please, wait...\n\n");
         }
 
         static void PrintEnd()
@@ -76,7 +77,7 @@ namespace RecognizePNG
             Console.WriteLine("The json file was saved by the name result.json. Check the folder.");
 
             Console.ReadKey();
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(1000);
         }
     }
 }

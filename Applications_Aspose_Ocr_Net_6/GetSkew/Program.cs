@@ -8,7 +8,8 @@ namespace RecognizePNG
     {
         static void Main(string[] args)
         {
-            PrintStart();
+            string fileName = args.Length > 0 ? args[0] : "images/test1.jpg";
+            PrintStart(fileName);
 
             // Set the license file
             //License lic = new License();
@@ -20,7 +21,7 @@ namespace RecognizePNG
 
             // Create OcrInput object to containerize images
             OcrInput input = new OcrInput(InputType.SingleImage);
-            input.Add("test1.jpg");
+            input.Add(fileName);
 
             // You can put in parameters MemoryStream with image
             // The result is the degree of skew
@@ -29,29 +30,17 @@ namespace RecognizePNG
             Console.ResetColor();
             Console.WriteLine("------------------------------------------------------------------------------");
 
-            Console.WriteLine("SKEW IMAGE 1:");
-            Console.WriteLine(result[0].Angle);
-
-            input.Clear();
-            input.Add("test2.png");
-            result = api.CalculateSkew(input);
-            Console.WriteLine("\nSKEW IMAGE 2:");
-            Console.WriteLine(result[0].Angle);
-
-            input.Clear();
-            input.Add("test3.png");
-            result = api.CalculateSkew(input);
-            Console.WriteLine("\nSKEW IMAGE 3:");
+            Console.WriteLine("SKEW IMAGE:");
             Console.WriteLine(result[0].Angle);
 
             PrintEnd();
         }
 
-        static void PrintStart()
+        static void PrintStart(string fileName)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("This example will work without a license. The result will be reduced.\n");
-            Console.WriteLine("Recognition has begun. Please, wait...\n\n");
+            Console.WriteLine($"Recognition [{fileName}] has begun. Please, wait...\n\n");
         }
 
         static void PrintEnd()
@@ -60,7 +49,7 @@ namespace RecognizePNG
             Console.WriteLine("Recognition is over.");
             Console.ResetColor();
             Console.ReadKey();
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(1000);
         }
     }
 }

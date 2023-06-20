@@ -1,17 +1,21 @@
 The source images: test.zip
 The source code:
 
-            // Set the license file
+           // Set the license file
             //License lic = new License();
             //lic.SetLicense("Aspose.Total.lic");
 
             // Create AsposeOcr instance.
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
+            // Create OcrInput object to containerize images
+            // Add filters as you need 
+            OcrInput input = new OcrInput(InputType.Zip/*, filters*/);
+            input.Add(zipName);
 
             // you can recognize zip archive, images in folder or list of images
             // make sure that only supported formats and no subfolders are among the files
-            RecognitionResult[] res = api.RecognizeMultipleImages("test.zip", new RecognitionSettings 
+            List<RecognitionResult> res = api.Recognize(input, new RecognitionSettings 
             {
                 //// allowed options
                 // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols
@@ -40,7 +44,7 @@ The source code:
             Console.WriteLine("RESULT");
             Console.ResetColor();
             Console.WriteLine("------------------------------------------------------------------------------");
-            for (int i = 0; i < res.Length; i++)
+            for (int i = 0; i < res.Count; i++)
             {
                 Console.WriteLine($"IMAGE {i + 1}\n------------------------------");
                 Console.WriteLine(res[i].RecognitionText);

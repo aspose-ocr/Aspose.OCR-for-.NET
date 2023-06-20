@@ -1,15 +1,25 @@
 The source images: three_page.tif
 The source code:
 
-          	// Set the license file
+        // Set the license file
             //License lic = new License();
             //lic.SetLicense("Aspose.Total.lic");
 
             // Create AsposeOcr instance.
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
+
+            // Create OcrInput object to containerize images
+            // Add filters as you need 
+            // PreprocessingFilter filters = new PreprocessingFilter // we automaticaly preprocess your image, but if your recognition result still bad, you can set up the set of filters by your own
+            // {
+            //     PreprocessingFilter.Dilate()
+            // },
+            OcrInput input = new OcrInput(InputType.TIFF/*, filters*/);
+            input.Add(fileName, pageStart, pageCount);
+
             // Set the options for recognition - start page and the pages number
-            var res = api.RecognizeTiff("three_page.tif", new DocumentRecognitionSettings(0, 3) 
+            var res = api.Recognize(input, new RecognitionSettings 
             {
                 //// allowed options
                 // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols
@@ -46,4 +56,3 @@ The source code:
 
             // you can also save result as one multipage document
             // AsposeOcr.SaveMultipageDocument("result.pdf", SaveFormat.Pdf, res);
-

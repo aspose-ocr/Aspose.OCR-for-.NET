@@ -9,7 +9,8 @@ namespace RecognizePNG
     {
         static void Main(string[] args)
         {
-            PrintStart();
+            string fileName = args.Length > 0 ? args[0] : "images/test.png";
+            PrintStart(fileName);
             // Set the license file
             //License lic = new License();
             //lic.SetLicense("Aspose.Total.lic");
@@ -25,7 +26,7 @@ namespace RecognizePNG
             //     PreprocessingFilter.Dilate()
             // },
             OcrInput input = new OcrInput(InputType.SingleImage/*, filters*/);
-            input.Add("test.png");
+            input.Add(fileName);
 
             var res = api.Recognize(input, new RecognitionSettings
             {
@@ -58,11 +59,11 @@ namespace RecognizePNG
             PrintEnd();
         }
 
-        static void PrintStart()
+        static void PrintStart(string fileName)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("This example will work without a license. The result will be reduced.\n");
-            Console.WriteLine("Recognition has begun. Please, wait...\n\n");
+            Console.WriteLine($"Recognition [{fileName}] has begun. Please, wait...\n\n");
         }
 
         static void PrintEnd()
@@ -71,7 +72,7 @@ namespace RecognizePNG
             Console.WriteLine("Recognition is over.");
             Console.ResetColor();
             Console.ReadKey();
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(1000);
         }
 
         static void ConsoleLogRecognitionResult(RecognitionResult result)

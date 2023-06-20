@@ -2,14 +2,18 @@
 using Aspose.OCR;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 
 namespace RecognizePNG
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            PrintStart();
+        {            
+            string fileName = args.Length > 0 ? args[0] : "images/test.png";
+            PrintStart(fileName);
+
 
             // Set the license file
             //License lic = new License();
@@ -21,7 +25,7 @@ namespace RecognizePNG
 
             // Create OcrInput object to containerize images
             OcrInput input = new OcrInput(InputType.SingleImage);
-            input.Add("test.png");
+            input.Add(fileName);
 
             // set
             // 1) the full path to the image
@@ -45,11 +49,11 @@ namespace RecognizePNG
             PrintEnd();
         }
 
-        static void PrintStart()
+        static void PrintStart(string fileName)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("This example will work without a license. The result will be reduced.\n");
-            Console.WriteLine("Recognition has begun. Please, wait...\n\n");
+            Console.WriteLine($"Recognition [{fileName}] has begun. Please, wait...\n\n");
         }
 
         static void PrintEnd()
@@ -58,7 +62,7 @@ namespace RecognizePNG
             Console.WriteLine("Recognition is over.");
             Console.ResetColor();
             Console.ReadKey();
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(1000);
         }
     }
 }

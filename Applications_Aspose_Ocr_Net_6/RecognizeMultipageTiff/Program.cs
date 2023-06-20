@@ -9,7 +9,10 @@ namespace RecognizePNG
     {
         static void Main(string[] args)
         {
-            PrintStart();
+            string fileName = args.Length > 0 ? args[0] : "images/three_page.tif";
+            int pageStart = args.Length > 1 ? Int32.Parse(args[1]) : 0;
+            int pageCount = args.Length > 2 ? Int32.Parse(args[2]) : 2;
+            PrintStart(fileName);
             // Set the license file
             //License lic = new License();
             //lic.SetLicense("Aspose.Total.lic");
@@ -25,7 +28,7 @@ namespace RecognizePNG
             //     PreprocessingFilter.Dilate()
             // },
             OcrInput input = new OcrInput(InputType.TIFF/*, filters*/);
-            input.Add("three_page.tif", 0, 3);
+            input.Add(fileName, pageStart, pageCount);
 
             // Set the options for recognition - start page and the pages number
             var res = api.Recognize(input, new RecognitionSettings 
@@ -69,11 +72,11 @@ namespace RecognizePNG
             PrintEnd();
         }
 
-        static void PrintStart()
+        static void PrintStart(string fileName)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("This example will work without a license. The result will be reduced.\n");
-            Console.WriteLine("Recognition has begun. Please, wait...\n\n");
+            Console.WriteLine($"Recognition [{fileName}] has begun. Please, wait...\n\n");
         }
 
         static void PrintEnd()
@@ -82,7 +85,7 @@ namespace RecognizePNG
             Console.WriteLine("Recognition is over.");
             Console.ResetColor();
             Console.ReadKey();
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(1000);
         }
     }
 }

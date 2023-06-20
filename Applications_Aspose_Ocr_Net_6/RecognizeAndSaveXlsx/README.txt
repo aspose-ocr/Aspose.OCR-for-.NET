@@ -1,14 +1,22 @@
 The source images: table.png
 The source code:
 
-            // Set the license file
+         // Set the license file
             //License lic = new License();
             //lic.SetLicense("Aspose.Total.lic");
 
             // Create AsposeOcr instance.
             // You can use the overloaded constructor to set characters restriction.
             AsposeOcr api = new AsposeOcr();
-            var result = api.RecognizeImage("table.png", new RecognitionSettings 
+            // Create OcrInput object to containerize images
+            // Add filters as you need 
+            // PreprocessingFilter filters = new PreprocessingFilter // we automaticaly preprocess your image, but if your recognition result still bad, you can set up the set of filters by your own
+                // {
+                //     PreprocessingFilter.Dilate()
+                // }
+            OcrInput input = new OcrInput(InputType.SingleImage/*, filters*/);
+            input.Add(fileName);
+            var result = api.Recognize(input, new RecognitionSettings 
             { 
                 DetectAreasMode = DetectAreasMode.PHOTO
                 //// allowed options
@@ -20,10 +28,7 @@ The source code:
                 // IgnoredCharacters = "*-!@#$%^&", // define the symbols you want to ignore in the recognition result
                 // Language = Language.Eng, // we support 26 languages
                 // LinesFiltration = false, // this works slowly, so choose it only if your picture has lines and it they bad detected in TABLE ar DOCUMENT DetectAreasMode
-                // PreprocessingFilters = new PreprocessingFilter // we automaticaly preprocess your image, but if your recognition result still bad, you can set up the set of filters by your own
-                // {
-                //     PreprocessingFilter.Dilate()
-                // },
+               
                 // RecognitionAreas = new System.Collections.Generic.List<System.Drawing.Rectangle> // set this if you want to recognize only partiqular regions on the image
                 // {
                 //     new System.Drawing.Rectangle(0,0,10,20)
@@ -38,8 +43,8 @@ The source code:
             Console.WriteLine("RESULT");
             Console.ResetColor();
             Console.WriteLine("------------------------------------------------------------------------------");
-            Console.WriteLine($"\nText: {result.RecognitionText}");
-            Console.WriteLine($"\nSkew: {result.Skew}");
+            Console.WriteLine($"\nText: {result[0].RecognitionText}");
+            Console.WriteLine($"\nSkew: {result[0].Skew}");
             // you can print here additional information and spell-check the result
             // also you can save each page result in your prefered file format
             // res.Save(...);
@@ -54,4 +59,4 @@ The source code:
             // 3) set true if you want to correct the mistakes in the words
             // 4) set the language if you want to correct the mistakes
             // 5) you can set your own dictionary for spell-check
-            result.Save("result.xlsx", SaveFormat.Xlsx);
+            result[0].Save("result.xlsx", SaveFormat.Xlsx);
