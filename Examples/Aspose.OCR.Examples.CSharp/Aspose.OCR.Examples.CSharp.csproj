@@ -7,6 +7,8 @@
 
   <ItemGroup>
     <PackageReference Include="Aspose.OCR" Version="24.1.0" />
+    <PackageReference Include="Aspose.OCR.Models.Handwritten" Version="24.1.0" />
+    <PackageReference Include="Aspose.OCR.Models.TextInWild" Version="24.1.0" />
   </ItemGroup>
 
 </Project>

@@ -35,11 +35,16 @@ namespace Aspose.OCR.Examples.CSharp
             //GetRectanglesLines.Run();
             //GetRectanglesParagraphs.Run();
             //GetResultAsJson.Run();
+            //ImageTextFinder.Run();
+            //OCRCarPlate.Run();
             //OCRDetectAreasMode.Run();
+            //OCRHandwritten.Run();
             //OCROperationWithArchive.Run();
             //OCROperationWithFolder.Run();
             //OCROperationWithList.Run();
             //OCROperationWithLanguageSelection.Run();
+            //OCRPassports.Run();
+            //OCRStreetPhoto.Run();
             PerformOCROnImage.Run();
             //PerformOCROnImageFromUrl.Run();
             //PrepareRectangles.Run();
@@ -58,7 +63,6 @@ namespace Aspose.OCR.Examples.CSharp
             //SpecifyAllowedCharacters.Run();
             //SpecifyIgnoredCharacters.Run();
             //WorkingWithDifferentLanguages.Run();
-
             // Stop before exiting
             Console.WriteLine(Environment.NewLine + "Program Finished. Press any key to exit....");
             Console.ReadKey();
