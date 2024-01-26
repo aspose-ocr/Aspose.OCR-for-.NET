@@ -20,12 +20,20 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Image Path
             string fullPath = dataDir + "sample.png";
 
-            // Recognize image           
-            List<Rectangle> rectangles = api.GetRectangles(fullPath, AreasType.PARAGRAPHS, true);// if you want to get a paragraphs  - don't set detect_areas = false
+            // Create OcrInput object and add image
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add(fullPath);
 
-            // Print result           
-            Console.WriteLine("Areas coordinates:");
-            rectangles.ForEach(a => Console.WriteLine($"x:{a.X} y:{a.Y} width:{a.Width} height:{a.Height}"));
+            // Recognize image           
+            List<RectangleOutput> output = api.DetectRectangles(input, AreasType.PARAGRAPHS, true);// if you want to get a paragraphs  - don't set detect_areas = false
+
+            // return null without license
+            //foreach (var rectanglesOut in output)
+            //{
+            //    // Print result           
+            //    Console.WriteLine("Areas coordinates:");
+            //    rectanglesOut.Rectangles.ForEach(a => Console.WriteLine($"x:{a.X} y:{a.Y} width:{a.Width} height:{a.Height}"));
+            //}
             // ExEnd:1
 
             Console.WriteLine("GetRectanglesParagraphs executed successfully");

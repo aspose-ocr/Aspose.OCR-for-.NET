@@ -17,16 +17,19 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Initialize an instance of AsposeOcr
             AsposeOcr api = new AsposeOcr();
 
-            // Image Path
+            // Create OcrInput object and add images
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add(dataDir + "0001460985.Jpeg");
+            input.Add(dataDir + "sample.png");
 
             // Recognize image           
-            RecognitionResult[] result = api.RecognizeMultipleImages(new List<String> { dataDir + "0001460985.Jpeg", dataDir + "sample.png" }, new RecognitionSettings
+            List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings
             {
                //default or custom
             });
 
             // Print result
-            for (int i = 0; i < result.Length; i++)
+            for (int i = 0; i < result.Count; i++)
             {
                  Console.WriteLine($"Image: {i}\n Result:\n {result[i].RecognitionText}");
             }

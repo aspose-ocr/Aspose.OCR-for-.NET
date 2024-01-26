@@ -1,46 +1,26 @@
 The source images: test.jpg
 The source code:
 
-		    // Set the license file
+            string fileName = args.Length > 0 ? args[0] : "images/test.jpg";
+            PrintStart(fileName);
+            // Set the license file
             //License lic = new License();
             //lic.SetLicense("Aspose.Total.lic");
 
-            // Create AsposeOcr instance.
-            // You can use the overloaded constructor to set characters restriction.
-            AsposeOcr api = new AsposeOcr();
             // Create OcrInput object to containerize images
-            // Add filters as you need
-            PreprocessingFilter filters = new PreprocessingFilter // we automaticaly preprocess your image, but if your recognition result still bad, you can set up the set of filters by your own
-            {
-                //PreprocessingFilter.Dilate()
-            };
-            OcrInput input = new OcrInput(InputType.SingleImage, filters);
+            // Set:
+            // 1) path to the image or MemruStream with the image.
+            // 2) set of filters for preprocessing. You can call any number of filters.
+            OcrInput input = new OcrInput(InputType.SingleImage, new PreprocessingFilter { PreprocessingFilter.ContrastCorrectionFilter() });
             input.Add(fileName);
 
-            List<RecognitionResult> res = api.Recognize(input, new RecognitionSettings 
-            {
-                //// allowed options
-                // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols
-                // AutoSkew = true, // switch off if your image not rotated
-                // DetectAreasMode = DetectAreasMode.DOCUMENT, // depends on the structure of your image
-                // IgnoredCharacters = "*-!@#$%^&", // define the symbols you want to ignore in the recognition result
-                // Language = Language.Eng, // we support 26 languages
-                // LinesFiltration = false, // this works slowly, so choose it only if your picture has lines and it they bad detected in TABLE ar DOCUMENT DetectAreasMode
-             
-                // RecognitionAreas = new System.Collections.Generic.List<System.Drawing.Rectangle> // set this if you want to recognize only partiqular regions on the image
-                // {
-                //     new System.Drawing.Rectangle(0,0,10,20)
-                // },
-                // RecognizeSingleLine = false, // set this true if your image has only one text line (without other objects)
-                // ThreadsCount = 1, // by default our API use all you threads. But you can run it in one thread. Simply set up this here
-                // ThresholdValue = 150 // if you want to binarize image with your own threashold value, you can set up this here (from 1 to 255)
-            });
 
-            // Save the result
-            // Set:
-            // 1) path for new file
-            // 2) File format
-            // 3) set true if you want to correct the mistakes in the words
-            // 4) set the language if you want to correct the mistakes
-            // 5) you can set your own dictionary for spell-check
-            res[0].Save("result.json", SaveFormat.Json, false);        
+            OcrInput result = ImageProcessing.Render(input);
+            MemoryStream memoryStream = result[0].Stream;
+
+            // Use Stream for further recognition or simply save it on the disk
+            FileStream fs = new FileStream("out/corrected.jpg", FileMode.OpenOrCreate);
+            memoryStream.WriteTo(fs);
+            fs.Close();
+            memoryStream.Close();
+            result.Clear();   

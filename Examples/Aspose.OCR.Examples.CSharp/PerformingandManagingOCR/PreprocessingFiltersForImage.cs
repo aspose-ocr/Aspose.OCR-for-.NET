@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Aspose.OCR.Models.PreprocessingFilters;
 
@@ -33,22 +34,36 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
                 PreprocessingFilter.Dilate()
             };
 
+            // Create OcrInput object and add image
+            OcrInput input = new OcrInput(InputType.SingleImage, filters);
+            input.Add(fullPath);
+
+          
+
             // Preprocess and save image
-            MemoryStream img = api.PreprocessImage(fullPath, filters);
+            OcrInput output = ImageProcessing.Render(input);
             using (FileStream fs = new FileStream(dataDir + "preprocessed.png", FileMode.OpenOrCreate))
             {
-                img.WriteTo(fs);
+                output[0].Stream.WriteTo(fs);
             }
-            img.Dispose();
+
+            // Recognize image after preprocessing          
+            List<RecognitionResult> resultAfterPreprocessing = api.Recognize(output, new RecognitionSettings
+            {
+            });
+
+            // Print result
+            Console.WriteLine($"After preprocessing Text:\n {resultAfterPreprocessing[0].RecognitionText}");
+
+            output.Dispose();
 
             // Recognize image with custom preprocessing          
-            RecognitionResult result = api.RecognizeImage(fullPath, new RecognitionSettings
+            List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings
             {
-                PreprocessingFilters = filters
             });
            
             // Print result
-            Console.WriteLine($"Text:\n {result.RecognitionText}");
+            Console.WriteLine($"Result with preprocessing Text:\n {result[0].RecognitionText}");
             // ExEnd:1
 
             Console.WriteLine("PreprocessingFiltersForImage executed successfully");

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Aspose.OCR;
 
@@ -15,8 +16,12 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Initialize an instance of AsposeOcr
             AsposeOcr api = new AsposeOcr();
 
+            // Create OcrInput object and add image
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add(dataDir + "table.png");
+
             // Recognize image
-            RecognitionResult result = api.RecognizeImage(dataDir + "table.png", new RecognitionSettings
+            List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings
             {
                 DetectAreasMode = DetectAreasMode.PHOTO
                 // DetectAreasMode.NONE - faster but can recognize only simple text
@@ -26,7 +31,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             });
 
             // Display the recognized text
-            Console.WriteLine(result.RecognitionText);
+            Console.WriteLine(result[0].RecognitionText);
             // ExEnd:1
 
             Console.WriteLine("OCRDetectAreasMode executed successfully");

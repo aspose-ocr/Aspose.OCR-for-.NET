@@ -1,7 +1,5 @@
-using System.IO;
-
-using Aspose.OCR;
 using System;
+using System.Collections.Generic;
 
 namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 {
@@ -16,17 +14,21 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Initialize an instance of AsposeOcr
             AsposeOcr api = new AsposeOcr();
 
+            // Create OcrInput object and add image
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add(dataDir + "SpanishOCR.bmp");
+
             // Recognize image
-            RecognitionResult result = api.RecognizeImage(dataDir + "SpanishOCR.bmp", new RecognitionSettings
+            List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings
             {
-                IgnoredCharacters = "ab1"
+                IgnoredSymbols = "ab1"
             });
 
             // Display the recognized text
-            Console.WriteLine(result.RecognitionText);
+            Console.WriteLine(result[0].RecognitionText);
             // ExEnd:1
 
-            Console.WriteLine("WorkingWithDifferentLanguages executed successfully");
+            Console.WriteLine("SpecifyIgnoredCharacters executed successfully");
         }
     }
 }

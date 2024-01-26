@@ -13,7 +13,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // ExStart:1   
             // The path to the documents directory.
             string dataDir = RunExamples.GetDataDir_OCR();
-            float angle = 0;
+            List<SkewOutput> angle = null;
 
             // Initialize an instance of AsposeOcr
             AsposeOcr api = new AsposeOcr();
@@ -23,11 +23,15 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             using (FileStream file = new FileStream(dataDir + "skew_image.png", FileMode.Open, FileAccess.Read))
             {
                 file.CopyTo(ms);
-                angle = api.CalculateSkew(ms);
+
+                // Create OcrInput object and add stream
+                OcrInput input = new OcrInput(InputType.SingleImage);
+                input.Add(ms);
+                angle = api.CalculateSkew(input);
             }
 
             // Display the result
-            Console.WriteLine(angle);
+            Console.WriteLine(angle[0].Angle);
             // ExEnd:1
 
             Console.WriteLine("CalculateSkewAngleFromStream executed successfully");

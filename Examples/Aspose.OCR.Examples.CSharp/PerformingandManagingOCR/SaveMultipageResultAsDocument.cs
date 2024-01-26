@@ -17,8 +17,13 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Initialize an instance of AsposeOcr
             AsposeOcr api = new AsposeOcr();
 
+            // Create OcrInput object and add images
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add(dataDir + "sample_bad.png");
+            input.Add(dataDir + "sample.png");
+
             // Recognize image
-            List<RecognitionResult> result = api.RecognizeMultipleImages(new List<string> { dataDir + "sample.png", dataDir + "sample_bad.png" }, new RecognitionSettings { }).ToList();
+            List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings { });
 
             // Save the result in your preferred format
             AsposeOcr.SaveMultipageDocument(RunExamples.GetDataDir_OCR()+"sample.docx", SaveFormat.Docx, result);

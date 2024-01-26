@@ -17,11 +17,15 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Initialize an instance of AsposeOcr
             AsposeOcr api = new AsposeOcr();
 
+            // Create OcrInput object and add image
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add(dataDir + "skew_image.png");
+
             // Calculate Angle
-            float angle = api.CalculateSkew(dataDir + "skew_image.png");
+            List<SkewOutput> angle = api.CalculateSkew(input);
 
             // Display the result
-            Console.WriteLine(angle);
+            Console.WriteLine(angle[0].Angle);
             // ExEnd:1
 
             Console.WriteLine("CalculateSkewAngle executed successfully");

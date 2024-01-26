@@ -15,18 +15,22 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 			// Initialize an instance of AsposeOcr
 			AsposeOcr api = new AsposeOcr();
 
+			// Create OcrInput object and add image
+			OcrInput input = new OcrInput(InputType.SingleImage);
+			input.Add(dataDir + "sample_bad.png");
+
 			// Recognize image           
-			RecognitionResult result = api.RecognizeImage(dataDir + "sample_bad.png", new RecognitionSettings(Language.Eng));
+			List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings { Language = Language.Eng });
 
 			// Get result
-			Console.WriteLine("BEFORE CORRECTION:\n" + result.RecognitionText);
+			Console.WriteLine("BEFORE CORRECTION:\n" + result[0].RecognitionText);
 
 			// Get corrected result
-			string correctedResult = result.GetSpellCheckCorrectedText(SpellCheckLanguage.Eng);
+			string correctedResult = result[0].GetSpellCheckCorrectedText(SpellCheckLanguage.Eng);
 			Console.WriteLine("AFTER CORRECTION:\n" + correctedResult);
 
 			//Get list of misspelled words with suggestions
-			List<SpellCheckError> errorsList = result.GetSpellCheckErrorList(SpellCheckLanguage.Eng);
+			List<SpellCheckError> errorsList = result[0].GetSpellCheckErrorList(SpellCheckLanguage.Eng);
 			foreach (var word in errorsList)
 			{
 				Console.Write("Word:" + word.Word);
@@ -46,12 +50,12 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 
 			//Upload cusom dictionary
 			// Get corrected result
-			string correctedResultUserDict = result.GetSpellCheckCorrectedText(SpellCheckLanguage.Eng, dataDir+"dictionary.txt");
+			string correctedResultUserDict = result[0].GetSpellCheckCorrectedText(SpellCheckLanguage.Eng, dataDir+"dictionary.txt");
 			Console.WriteLine("AFTER CORRECTION WITH USER DICTIONARY:\n" + correctedResultUserDict);
 
 			// ExEnd:1
 
-			Console.WriteLine("WorkingWithDifferentLanguages executed successfully");
+			Console.WriteLine("ResultCorrectionWithSpellChecking executed successfully");
         }
     }
 }

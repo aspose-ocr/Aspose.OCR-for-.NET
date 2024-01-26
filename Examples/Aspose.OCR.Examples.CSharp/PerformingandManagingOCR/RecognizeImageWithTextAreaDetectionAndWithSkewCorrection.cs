@@ -1,12 +1,11 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using Aspose.OCR;
 using Aspose.OCR.Models.PreprocessingFilters;
 
 namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 {
-    public class SetThresholdValue
+    public class RecognizeImageWithTextAreaDetectionAndWithSkewCorrection
     {
         public static void Run()
         {
@@ -20,7 +19,7 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Set preprocessing filters
             PreprocessingFilter filters = new PreprocessingFilter
             {
-                PreprocessingFilter.Threshold(230)
+                PreprocessingFilter.AutoSkew()
             };
 
             // Create OcrInput object and add image
@@ -28,14 +27,16 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             input.Add(dataDir + "sample.png");
 
             // Recognize image
-            List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings
+            System.Collections.Generic.List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings
             {
+                DetectAreasMode = DetectAreasMode.COMBINE
             });
+
             // Display the recognized text
             Console.WriteLine(result[0].RecognitionText);
             // ExEnd:1
 
-            Console.WriteLine("SetThresholdValue executed successfully");
+            Console.WriteLine("RecognizeImageWithTextAreaDetectionAndWithSkewCorrection executed successfully");
         }
     }
 }

@@ -20,14 +20,23 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Image Path
             string fullPath = dataDir + "sample.png";
 
+            // Create OcrInput object and add image
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add(fullPath);
+
             // Recognize image           
             // if you set detect_areas = false you will get lines defined across the entire width of the image (useful for images with text only).
             // if you set detect_areas = true you will get lines defined in the paragrathes (useful for images with columns, pictures, and difficult structure).
-            List<Rectangle> lines = api.GetRectangles(fullPath, AreasType.LINES, false);
+            List<RectangleOutput> output = api.DetectRectangles(input, AreasType.LINES, false);
 
-            // Print result           
-            Console.WriteLine("Areas coordinates:");
-            lines.ForEach(a => Console.WriteLine($"x:{a.X} y:{a.Y} width:{a.Width} height:{a.Height}"));
+            // return null without license
+
+            //foreach (var rectanglesOut in output)
+            //{
+            //    // Print result           
+            //    Console.WriteLine("Areas coordinates:");
+            //    rectanglesOut.Rectangles.ForEach(a => Console.WriteLine($"x:{a.X} y:{a.Y} width:{a.Width} height:{a.Height}"));
+            //}
             // ExEnd:1
 
             Console.WriteLine("GetRectanglesLines executed successfully");

@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using Aspose.OCR;
-using Aspose.OCR.Models;
+using Aspose.OCR.Models.PreprocessingFilters;
 
 namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 {
@@ -21,26 +19,34 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Initialize an instance of AsposeOcr
             AsposeOcr api = new AsposeOcr();
 
-            // Recognize image           
-            RecognitionResult result = api.RecognizeImageFromUri(uri, new RecognitionSettings
+            // Set preprocessing filters
+            PreprocessingFilter filters = new PreprocessingFilter
             {
-                DetectAreas = true,
+                PreprocessingFilter.AutoSkew()
+            };
+
+            // Create OcrInput object and add URL
+            OcrInput input = new OcrInput(InputType.URL, filters);
+            input.Add(uri);
+
+            // Recognize image           
+            List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings
+            {
                 RecognizeSingleLine = false,
-                AutoSkew = true,
-                RecognitionAreas = new List<Rectangle>()
+                RecognitionAreas = new List<Aspose.Drawing.Rectangle>()
                 {
-                    new Rectangle(1,3,390,70),
-                    new Rectangle(1,72,390,70)
+                    new Aspose.Drawing.Rectangle(1,3,390,70),
+                    new Aspose.Drawing.Rectangle(1,72,390,70)
                 }
             });
 
             // Print result
-            Console.WriteLine($"Text:\n {result.RecognitionText}");
+            Console.WriteLine($"Text:\n {result[0].RecognitionText}");
             Console.WriteLine("Areas:");
-            result.RecognitionAreasText.ForEach(a => Console.WriteLine($"{a}"));
+            result[0].RecognitionAreasText.ForEach(a => Console.WriteLine($"{a}"));
             Console.WriteLine("Warnings:");
-            result.Warnings.ForEach(w => Console.WriteLine($"{w}"));
-            Console.WriteLine($"JSON: {result.GetJson()}");
+            result[0].Warnings.ForEach(w => Console.WriteLine($"{w}"));
+            Console.WriteLine($"JSON: {result[0].GetJson()}");
             // ExEnd:1
 
             Console.WriteLine("PerformOCROnImageFromUrl executed successfully");

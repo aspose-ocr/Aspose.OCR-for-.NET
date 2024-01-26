@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Aspose.OCR;
 
@@ -15,11 +16,15 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Initialize an instance of AsposeOcr
             AsposeOcr api = new AsposeOcr();
 
+            // Create OcrInput object and add image
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add(dataDir + "sample.png");
+
             // Recognize image
-            string result = api.RecognizeImage(dataDir + "sample.png");
+            List<RecognitionResult> result = api.Recognize(input);
 
             // Display the recognized text
-            Console.WriteLine(result);
+            Console.WriteLine(result[0].RecognitionText);
             // ExEnd:1
 
             Console.WriteLine("PerformOCROnImage executed successfully");

@@ -20,8 +20,12 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Image Path
             string fullPath = dataDir + "multi_page_1.pdf";
 
+            // Create OcrInput object and add document
+            OcrInput input = new OcrInput(InputType.PDF);
+            input.Add(fullPath, startPage: 2, pagesCount: 2);
+
             // Recognize image           
-            List<RecognitionResult> results = api.RecognizePdf(fullPath, new DocumentRecognitionSettings { StartPage = 2, PagesNumber = 2});
+            List<RecognitionResult> results = api.Recognize(input, new RecognitionSettings { });
 
             // Print result
             int pageCounter = 0;

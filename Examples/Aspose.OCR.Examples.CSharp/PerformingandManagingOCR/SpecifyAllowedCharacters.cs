@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Aspose.OCR;
 
@@ -14,27 +15,33 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
 
             // The first case:
             // Initialize an instance of AsposeOcr with allowed symbols
-            AsposeOcr api = new AsposeOcr("0123456789");
+            AsposeOcr api = new AsposeOcr();
+
+            // Create OcrInput object and add image
+            OcrInput input = new OcrInput(InputType.SingleImage);
+            input.Add(dataDir + "0001460985.Jpeg");
 
             // Recognize image
-            string result = api.RecognizeLine(dataDir + "0001460985.Jpeg");
+            List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings
+            {
+                RecognizeSingleLine = true,
+                AllowedSymbols = "0123456789"
+            });
 
             // Display the recognized text
-            Console.WriteLine(result);
+            Console.WriteLine(result[0].RecognitionText);
 
             // The second case:
-            // Initialize an instance of AsposeOcr with allowed symbols
-            AsposeOcr api2 = new AsposeOcr();
 
             // Recognize image            
-            RecognitionResult result2 = api2.RecognizeImage(dataDir + "0001460985.Jpeg", 
+            List<RecognitionResult> result2 = api.Recognize(input, 
                 new RecognitionSettings { 
                     AllowedCharacters = CharactersAllowedType.DIGITS,
                     RecognizeSingleLine = true
                 });
 
             // Display the recognized text
-            Console.WriteLine(result2.RecognitionText);
+            Console.WriteLine(result2[0].RecognitionText);
             // ExEnd:1
 
             Console.WriteLine("SpecifyAllowedCharacters executed successfully");

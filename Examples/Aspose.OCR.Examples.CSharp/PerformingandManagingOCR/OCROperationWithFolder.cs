@@ -20,14 +20,18 @@ namespace Aspose.OCR.Examples.CSharp.PerformingandManagingOCR
             // Image Path
             string fullPath = dataDir + "OCR";
 
+            // Create OcrInput object and add folder
+            OcrInput input = new OcrInput(InputType.Directory);
+            input.Add(fullPath);
+
             // Recognize image           
-            RecognitionResult[] result = api.RecognizeMultipleImages(fullPath, new RecognitionSettings
+            List<RecognitionResult> result = api.Recognize(input, new RecognitionSettings
             {
                 //default or custom
             });
 
             // Print result
-            for (int i = 0; i < result.Length; i++)
+            for (int i = 0; i < result.Count; i++)
             {
                 Console.WriteLine($"Image: {i}\n Result:\n {result[i].RecognitionText}");
             }
