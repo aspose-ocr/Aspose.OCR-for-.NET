@@ -27,6 +27,10 @@ namespace Aspose.OCR.Examples.CSharp
             //// =====================================================
             //// =====================================================
 
+            ////  Download resources if you need  
+            //Resources.SetLocalPath("path");
+            //Resources.FetchAll();
+
             //CalculateSkewAngle.Run();
             //CalculateSkewAngleFromStream.Run();
             //CalculateSkewAngleFromUri.Run();
