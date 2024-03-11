@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Recognize": {
-      "commandName": "Project",
-      "commandLineArgs": "--source \"sample.png\""
-    }
-  }
-}

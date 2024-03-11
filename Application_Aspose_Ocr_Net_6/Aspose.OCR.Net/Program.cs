@@ -11,12 +11,12 @@ namespace Aspose.OCR.Net
     {
         static void Main(string[] args)
         {
-            InputParams inputParams =  ArgsReader.Run(args);
+            InputParams inputParams = ArgsReader.Run(args);
             if (inputParams == null)
                 return;
 
             // Set the license file
-            if(inputParams.licensePath != null)
+            if (inputParams.licensePath != null)
             {
                 License lic = new License();
                 lic.SetLicense(inputParams.licensePath);
@@ -39,9 +39,9 @@ namespace Aspose.OCR.Net
             {
                 //// allowed options
                 // AllowedCharacters = CharactersAllowedType.LATIN_ALPHABET, // ignore not latin symbols
-                 DetectAreasMode = DetectAreasMode.TABLE, // depends on the structure of your image
-                // IgnoredSymbols = "*-!@#$%^&", // define the symbols you want to ignore in the recognition result
-                   Language = inputParams.language, // we support 26 languages
+                DetectAreasMode = DetectAreasMode.TABLE, // depends on the structure of your image
+                                                         // IgnoredSymbols = "*-!@#$%^&", // define the symbols you want to ignore in the recognition result
+                Language = inputParams.language, // we support 26 languages
                 // LinesFiltration = false, // this works slowly, so choose it only if your picture has lines and it they bad detected in TABLE ar DOCUMENT DetectAreasMode              
                 // RecognitionAreas = new System.Collections.Generic.List<Aspose.Drawing.Rectangle> // set this if you want to recognize only partiqular regions on the image
                 // {
@@ -51,7 +51,7 @@ namespace Aspose.OCR.Net
                 // ThreadsCount = 1, // by default our API use all you threads. But you can run it in one thread. Simply set up this here
             });
 
-            if(inputParams.outputPath == null)
+            if (inputParams.outputPath == null)
             {
                 foreach (var item in res)
                 {
@@ -61,7 +61,7 @@ namespace Aspose.OCR.Net
             }
             else
             {
-                AsposeOcr.SaveMultipageDocument(inputParams.outputPath, SaveFormat.Text, res);
+                 AsposeOcr.SaveMultipageDocument(inputParams.outputPath, SaveFormat.Text, res);
             }
         }
 

@@ -17,7 +17,7 @@ namespace Aspose.OCR.Net
             try
             {
                 m_args = (args ?? throw new ArgumentNullException(nameof(args))).ToList();
-                
+
                 var language = ReadLanguageOption();
                 var SourcePath = ReadSourceOption();
                 var OutputPath = ReadOutputOption();
@@ -33,7 +33,7 @@ namespace Aspose.OCR.Net
 
                 var input = File.Exists(SourcePath)
                     ? SourcePath
-                    : throw new ArgsReaderException("File doesn't exist.");
+                    : throw new ArgsReaderException("Missing input file.");
 
                 return new InputParams
                 {
@@ -89,7 +89,7 @@ namespace Aspose.OCR.Net
         public static Language ReadLanguageOption()
         {
             var value = ReadOption("language");
-            if(value == null)
+            if (value == null)
             {
                 return Language.None;
             }

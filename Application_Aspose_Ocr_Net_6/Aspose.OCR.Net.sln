@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.OCR.Net", "Recognize\Aspose.OCR.Net.csproj", "{CBD3975C-2DC3-4FBA-96EC-39246D57C5B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.OCR.Net", "Aspose.OCR.Net\Aspose.OCR.Net.csproj", "{6F65C282-C839-4E8D-817C-37EF87B0C705}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CBD3975C-2DC3-4FBA-96EC-39246D57C5B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBD3975C-2DC3-4FBA-96EC-39246D57C5B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBD3975C-2DC3-4FBA-96EC-39246D57C5B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBD3975C-2DC3-4FBA-96EC-39246D57C5B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F65C282-C839-4E8D-817C-37EF87B0C705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F65C282-C839-4E8D-817C-37EF87B0C705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F65C282-C839-4E8D-817C-37EF87B0C705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F65C282-C839-4E8D-817C-37EF87B0C705}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D1C585CA-83C9-4AB9-83CC-414DB9461326}
+		SolutionGuid = {D7072824-F8D2-4688-B46F-5B6A7AAA7C28}
 	EndGlobalSection
 EndGlobal
